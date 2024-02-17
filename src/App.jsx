@@ -1,8 +1,12 @@
 import './App.css';
 export default function App() {
   return (
-    <h1 className="text-3xl font-normal underline">
-      React + Tailwindcss + Vite
-    </h1>
+      <>
+              <button type="submit" className="p-4 mr-4 bg-midnight rounded-xl text-white">Hapus</button>
+              <button type="submit" className="p-4 bg-primary text-white rounded-2xl">Hapus</button>
+              <button type="submit" className=""></button>
+              <button type="submit" className=""></button>
+              <button type="submit" className=""></button>
+      </>
   )
 }
