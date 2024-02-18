@@ -18,7 +18,8 @@ export default {
     },
     extend: {},
     fontFamily:{
-      Inter: ["Inter","sans-serif"]
+      poppins: [ "Poppins", "sans-serif" ],
+      cabin: ["Cabin", "sans-serif"]
     },
   },
   plugins: [],
