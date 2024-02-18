@@ -17,6 +17,9 @@ export default {
       orangelight: '#FFEAC5'
     },
     extend: {},
+    fontFamily:{
+      Inter: ["Inter","sans-serif"]
+    },
   },
   plugins: [],
 }
