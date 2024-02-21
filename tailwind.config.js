@@ -24,8 +24,8 @@ export default {
   },
   theme: {
     fontFamily:{
-      // poppins: [ "Poppins", "sans-serif" ],
-      // cabin: ["Cabin", "sans-serif"]
+      poppins: [ "Poppins", "sans-serif" ],
+      cabin: ["Cabin", "sans-serif"]
     },
 
   },
