@@ -8,24 +8,24 @@ import WhatsNext from "../components/WhatsNext.jsx";
 const Home = () => {
     return (
         <>
-            <div className="mx-auto max-w-screen-xl px-4 font-poppin">
+            <div className="mx-auto max-w-screen-xl px-4 font-poppins">
                 {/*header*/}
-                <HeroSection />
+                <HeroSection/>
                 {/*End header*/}
                 {/* Explore*/}
-                <HeroCarousel />
+                <HeroCarousel/>
                 {/*Explore.jsx */}
                 {/*Destination Popular*/}
-                <PopularDestination />
+                <PopularDestination/>
                 {/*End Destination Popular*/}
                 {/* WhatsNExt */}
-                <WhatsNext />
+                <WhatsNext/>
                 {/* End Ehats */}
                 {/* Get Tips from Travellers */}
-                <GetTips />
+                <GetTips/>
                 {/* END Get Tips from Travellers */}
                 {/* Review dan Testimonial */}
-                <Review />
+                <Review/>
                 {/* END Review dan Testimonial */}
             </div>
         </>
