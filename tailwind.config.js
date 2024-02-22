@@ -20,6 +20,17 @@ export default {
         ],
     },
     theme: {
+        colors: {
+            primary: "#00B5EF",
+            midnight: "#304862",
+            secondary: "#8C9FB5",
+            bluelight: "#E6F1FF",
+            white: "#FFFFFF",
+            darkgreen: "#14A7A0",
+            greenlight: "#57CBB9",
+            orange: "#FFCC73",
+            orangelight: "#FFEAC5",
+        },
         fontFamily: {
             poppins: ["Poppins", "sans-serif"],
             cabin: ["Cabin", "sans-serif"],
