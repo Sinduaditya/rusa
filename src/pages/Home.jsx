@@ -1,6 +1,8 @@
+import GetTips from "../components/GetTips.jsx";
 import HeroCarousel from "../components/HeroCarousel.jsx";
 import HeroSection from "../components/HeroSection.jsx";
 import PopularDestination from "../components/PopularDestination.jsx";
+import Review from "../components/Review.jsx";
 import WhatsNext from "../components/WhatsNext.jsx";
 
 const Home = () => {
@@ -19,6 +21,12 @@ const Home = () => {
                 {/* WhatsNExt */}
                 <WhatsNext />
                 {/* End Ehats */}
+                {/* Get Tips from Travellers */}
+                <GetTips />
+                {/* END Get Tips from Travellers */}
+                {/* Review dan Testimonial */}
+                <Review />
+                {/* END Review dan Testimonial */}
             </div>
         </>
     );
