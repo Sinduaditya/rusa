@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.jsx";
 import Home from "./pages/Home.jsx";
 import Explore from "./pages/Explore.jsx";
+import DetailExplore from "./components/DetailExplore.jsx";
 
 
 
@@ -18,6 +19,11 @@ function App() {
                 {
                     path: "/explore",
                     element: <Explore/>,
+                },
+
+                {
+                    path: "/detail-explore/:id",
+                    element: <DetailExplore />,
                 },
             ],
         },

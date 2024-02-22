@@ -1,11 +1,19 @@
 import {Link, useLocation} from "react-router-dom";
-import {useState} from "react";
+import React, {useState} from "react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
+    const [activePage, setActivePage] = useState('');
+
+    // Set active page based on current location
+    React.useEffect(() => {
+        const pathname = location.pathname.split('/')[1];
+        setActivePage(pathname.charAt(0).toUpperCase() + pathname.slice(1));
+    }, [location]);
     return (
         <>
-            <div className="navbar bg-white font-poppins">
+            <div className="navbar bg-white font-poppins ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,16 +49,36 @@ const Header = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li>
-                            <Link to="/" className="hover:font-semibold">Home</Link>
+                            <Link
+                                to="/"
+                                className={`nav-link ${location.pathname === '/' ? 'font-bold' : ''}`}
+                            >
+                                Home
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/explore" className="hover:font-semibold">Explore</Link>
+                            <Link
+                                to="/explore"
+                                className={`nav-link ${location.pathname === '/explore' ? 'font-bold' : ''}`}
+                            >
+                                Explore
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/stories" className="hover:font-semibold">Stories</Link>
+                            <Link
+                                to="/stories"
+                                className={`nav-link ${location.pathname === '/stories' ? 'font-bold' : ''}`}
+                            >
+                                Stories
+                            </Link>
                         </li>
                         <li>
-                            <Link to="/about" className="hover:font-semibold">About</Link>
+                            <Link
+                                to="/about"
+                                className={`nav-link ${location.pathname === '/about' ? 'font-bold' : ''}`}
+                            >
+                                About
+                            </Link>
                         </li>
                     </ul>
                 </div>
