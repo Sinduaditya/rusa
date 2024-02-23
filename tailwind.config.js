@@ -33,7 +33,7 @@ export default {
         },
         fontFamily: {
             poppins: ["Poppins", "sans-serif"],
-            cabin: ["Cabin", "sans-serif"],
+            cabin: ["Poppins", "sans-serif"],
         },
     },
 };
