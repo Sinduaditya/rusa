@@ -2,7 +2,7 @@ import Loc from "../assets/location2.svg";
 import Love from "../assets/explore/heart.svg";
 import {useParams} from "react-router-dom";
 import {exploreData} from "./data/exploreData.jsx";
-import React from 'react';
+import React, {useState} from 'react';
 import getCategoryImage from "./data/categoryImages.jsx";
 import Maps from "../assets/explore/map.svg";
 
@@ -12,6 +12,12 @@ function DetailExplore(){
     if (!selectedItem) {
         return <div>Item tidak ditemukan</div>;
     }
+    const [expanded, setExpanded] = useState(false);
+    const originalText = "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.";
+
+    const handleClick = () => {
+        setExpanded(!expanded);
+    };
 
     return(
         <>
@@ -61,7 +67,7 @@ function DetailExplore(){
                         {/*Content*/}
                         <div className="md:w-1/2">
                             <div className="mb-12">
-                                <h2 className="text-slate-700 text-2xl mb-4 font-semibold font-poppins">About</h2>
+                                <h2 className="text-slate-700 text-3xl mb-4 font-bold font-poppins">About</h2>
                                 <p className="text-black text-medium font-normal font-cabin ">{selectedItem.description}</p>
                             </div>
                             <div className="space-y-6">
@@ -96,7 +102,7 @@ function DetailExplore(){
                                     </div>
 
                                 </details>
-                                <details className="group [&_summary::-webkit-details-marker]:hidden" >
+                                <details className="group [&_summary::-webkit-details-marker]:hidden">
                                     <summary
                                         className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg "
                                     >
@@ -119,11 +125,12 @@ function DetailExplore(){
                                     </div>
 
                                 </details>
-                                <details className="group [&_summary::-webkit-details-marker]:hidden" >
+                                <details className="group [&_summary::-webkit-details-marker]:hidden">
                                     <summary
                                         className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg "
                                     >
-                                        <h2 className="text-slate-700 text-2xl mb-4 font-semibold font-poppins">Additiona information</h2>
+                                        <h2 className="text-slate-700 text-2xl mb-4 font-semibold font-poppins">Additiona
+                                            information</h2>
 
                                         <svg
                                             className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -150,7 +157,265 @@ function DetailExplore(){
                     </div>
 
                 </div>
+                {/*    arek says*/}
+                <section className="bg-white">
+                    <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                        <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+                            Apa yang Arek lain katakan ?
+                        </h2>
 
+                        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+                            <blockquote
+                                className="rounded-2xl bg-white p-6 shadow-sm sm:p-8 border-[1px] border-bluelight">
+                                <div className="flex items-center gap-4">
+                                    <img
+                                        alt=""
+                                        src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                        className="size-14 rounded-full object-cover"
+                                    />
+
+                                    <div>
+                                        <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex mt-3 justify-start gap-0.5 text-green-500">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 className="font-poppins font-semibold mt-2">Unforgettable hiking</h3>
+                                <div>
+                                    <p className="mt-2 text-gray-700 font-cabin">
+                                        {expanded ? originalText : `${originalText.slice(0, 100)}...`}
+                                    </p>
+                                    <button className="text-secondary mt-1 font-cabin" onClick={handleClick}>
+                                        {expanded ? 'Lebih sedikit..' : 'Baca Semua..'}
+                                    </button>
+                                </div>
+                                <div className="text-sm font-poppins font-light">
+                                    <p>Dikunjungi <span
+                                        className="font-semibold">December 2023</span>
+                                    </p>
+                                    <p>Ditulis 6 Januari 2024</p>
+                                </div>
+                            </blockquote>
+                            <blockquote
+                                className="rounded-2xl bg-white p-6 shadow-sm sm:p-8 border-[1px] border-bluelight">
+                                <div className="flex items-center gap-4">
+                                    <img
+                                        alt=""
+                                        src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                        className="size-14 rounded-full object-cover"
+                                    />
+
+                                    <div>
+                                        <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex mt-3 justify-start gap-0.5 text-green-500">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 className="font-poppins font-semibold mt-2">Unforgettable hiking</h3>
+                                <div>
+                                    <p className="mt-2 text-gray-700 font-cabin">
+                                        {expanded ? originalText : `${originalText.slice(0, 100)}...`}
+                                    </p>
+                                    <button className="text-secondary mt-1 font-cabin" onClick={handleClick}>
+                                        {expanded ? 'Lebih sedikit..' : 'Baca Semua..'}
+                                    </button>
+                                </div>
+                                <div className="text-sm font-poppins font-light">
+                                    <p>Dikunjungi <span
+                                        className="font-semibold">December 2023</span>
+                                    </p>
+                                    <p>Ditulis 6 Januari 2024</p>
+                                </div>
+                            </blockquote>
+                            <blockquote
+                                className="rounded-2xl bg-white p-6 shadow-sm sm:p-8 border-[1px] border-bluelight">
+                                <div className="flex items-center gap-4">
+                                    <img
+                                        alt=""
+                                        src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                        className="size-14 rounded-full object-cover"
+                                    />
+
+                                    <div>
+                                        <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex mt-3 justify-start gap-0.5 text-green-500">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="orange"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                                        />
+                                    </svg>
+                                </div>
+                                <h3 className="font-poppins font-semibold mt-2">Unforgettable hiking</h3>
+                                <div>
+                                    <p className="mt-2 text-gray-700 font-cabin">
+                                        {expanded ? originalText : `${originalText.slice(0, 100)}...`}
+                                    </p>
+                                    <button className="text-secondary mt-1 font-cabin" onClick={handleClick}>
+                                        {expanded ? 'Lebih sedikit..' : 'Baca Semua..'}
+                                    </button>
+                                </div>
+                                <div className="text-sm font-poppins font-light">
+                                    <p>Dikunjungi <span
+                                        className="font-semibold">December 2023</span>
+                                    </p>
+                                    <p>Ditulis 6 Januari 2024</p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </section>
+                {/*    arek says end*/
+                }
             </div>
         </>
     )
