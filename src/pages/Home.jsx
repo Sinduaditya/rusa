@@ -1,9 +1,9 @@
-import GetTips from "../components/GetTips.jsx";
-import HeroCarousel from "../components/HeroCarousel.jsx";
-import HeroSection from "../components/HeroSection.jsx";
-import PopularDestination from "../components/PopularDestination.jsx";
-import Review from "../components/Review.jsx";
-import WhatsNext from "../components/WhatsNext.jsx";
+import GetTips from "../components/Home/GetTips.jsx";
+import HeroCarousel from "../components/Home/HeroCarousel.jsx";
+import HeroSection from "../components/Home/HeroSection.jsx";
+import PopularDestination from "../components/Home/PopularDestination.jsx";
+import Review from "../components/Home/Review.jsx";
+import WhatsNext from "../components/Home/WhatsNext.jsx";
 
 const Home = () => {
     return (

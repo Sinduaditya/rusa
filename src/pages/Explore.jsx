@@ -11,8 +11,6 @@ import getCategoryImage from "../components/data/categoryImages.jsx";
 
 
 function Explore() {
-
-
     // Untuk Search Data
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredData, setFilteredData] = useState(exploreData);
@@ -40,7 +38,7 @@ function Explore() {
         <>
             <div className="mx-auto max-w-screen-xl px-4 font-poppins mt-12">
                 <div
-                    className="hero lg:h-[240px] h-screen relative bg-white bg-cover bg-center mt-8 mx-auto md:w-full rounded-2xl"
+                    className="hero lg:h-[300px] h-screen relative bg-white bg-cover bg-center mt-8 mx-auto md:w-full rounded-2xl"
                     style={{backgroundImage: `url(${Hero})`}}>
                     <div className="hero-content text-center flex flex-col justify-center">
                         <div className="">
