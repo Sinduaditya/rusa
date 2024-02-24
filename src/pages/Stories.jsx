@@ -4,6 +4,7 @@ import {storiesData} from "../components/data/storiesData.jsx";
 import  Save from "../assets/stories/archive.svg";
 
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
 function Stories(){
     // Untuk Search Data
@@ -24,7 +25,7 @@ function Stories(){
                 <div
                     className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
                 <div
-                    className="absolute right-0 -top-44 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
+                    className="absolute right-0 top-10 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
                 <div
                     className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
                 <div className="mx-auto max-w-screen-xl px-4 font-poppins pt-[20px]">
@@ -97,20 +98,22 @@ function Stories(){
                     <section className="flex items-center py-10 bg-transparent lg:py-4 font-poppins">
                         <div className="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto text-left lg:py-2">
                             {filteredData.map((item, index) => (
-                                <article key={index}
-                                         className="mx-auto my-2 flex max-w-md flex-col rounded-2xl  px-4  md:max-w-5xl md:flex-row md:items-center">
-                                    <div className="shrink-0 md:mr-8 md:max-w-xs">
-                                        <img className="rounded-2xl w-[200px] h-[190px]  object-cover"
-                                             src={item.image}
-                                             alt={item.title}/>
-                                    </div>
-                                    <div className="py-4 sm:py-8">
-                                        <span className="text-secondary uppercase ">{item.category}</span>
-                                        <p className="mb-2 block text-2xl font-semibold text-gray-700">{item.title}</p>
-                                        <span className="text-sm text-secondary">{item.date}</span>
-                                        <p className="mb-6 text-gray-500">{item.description}</p>
-                                    </div>
-                                </article>
+                                <Link key={index} to={`detail-stories/${item.id}`}>
+                                    <article
+                                             className="mx-auto my-2 flex max-w-md flex-col   px-4  md:max-w-5xl md:flex-row bg-white/30 p-3 rounded-3xl shadow border border-white/40  backdrop-blur-xl md:items-center">
+                                        <div className="shrink-0 md:mr-8 md:max-w-xs">
+                                            <img className="rounded-2xl w-[200px] h-[190px]  object-cover"
+                                                 src={item.image}
+                                                 alt={item.title}/>
+                                        </div>
+                                        <div className="py-4 sm:py-8">
+                                            <span className="text-secondary uppercase ">{item.category}</span>
+                                            <p className="mb-2 block text-2xl font-semibold text-gray-700">{item.title}</p>
+                                            <span className="text-sm text-secondary">{item.date}</span>
+                                            <p className="mb-6 text-gray-500">{item.description}</p>
+                                        </div>
+                                    </article>
+                                </Link>
                             ))}
                         </div>
                     </section>
