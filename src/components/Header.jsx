@@ -65,7 +65,7 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/explore"
-                                className={`nav-link ${location.pathname === '/explore' ? 'font-bold' : ''}`}
+                                className={`nav-link ${location.pathname === '/Explore'   ? 'font-bold' : ''}`}
                             >
                                 Explore
                             </Link>
@@ -89,7 +89,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end pr-[110px] gap-5 hidden md:flex">
-                    <Link to="/login" className="hover:font-semibold rounded-3xl p-2 pl-4 pr-4 bg-bluelight  text-black">About</Link>
+                    <Link to="/login" className="hover:font-semibold rounded-3xl p-2 pl-4 pr-4 bg-bluelight  text-black">Login</Link>
 
                     <a className="bg-primary rounded-3xl p-2 pl-4 pr-4 text-white">Sign up</a>
                 </div>
