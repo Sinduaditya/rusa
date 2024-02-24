@@ -4,7 +4,7 @@ function GetTips() {
     return (
         <>
             {/* Bagian Tips */}
-            <div className="flex font-poppins max-w-screen-lg mx-auto my-12 px-12 py-6  shadow-2xl justify-between">
+            <div className="grid gap-6 md:gap-0 lg:flex font-poppins max-w-screen-lg mx-auto my-12 px-12 py-6  shadow-2xl justify-between">
                 {/* bagian Text dan CTA */}
                 <div className="text-blue-950 grid gap-4  w-72 h-fit my-auto">
                     <div className="grid gap-2">
