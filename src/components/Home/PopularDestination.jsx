@@ -15,15 +15,21 @@ function PopularDestination() {
                         <h2 className="text-left text-4xl sm:text-2xl font-semibold tracking-tight text-gray-900">
                             Destinasi Populer
                         </h2>
-                        <a href="#" className="text-secondary pt-4 text-sm underline">Lihat Semua</a>
+                        <a
+                            href="#"
+                            className="text-secondary pt-4 text-sm underline"
+                        >
+                            Lihat Semua
+                        </a>
                     </div>
 
-                    <p className="text-left font-light text-secondary mt-2">Kunjungi tempat populer pilihan travellers</p>
+                    <p className="text-left font-light text-secondary mt-2">
+                        Kunjungi tempat populer pilihan travellers
+                    </p>
 
                     <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 justify-center">
-                        <PopDestiCard/>
-                        <PopDestiCard/>
-                        <PopDestiCard/>
+                        {/* sudah difilter di PopDestiCard. hanya tampil yang "Pilihan Terbaik" saja dilimit ke 3 teratas. */}
+                        <PopDestiCard />
                     </div>
                 </div>
             </section>
