@@ -1,5 +1,6 @@
 import {Link, useLocation} from "react-router-dom";
 import React, {useState} from "react";
+import LogoDr from "../assets/header/dolanrek.svg";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +14,8 @@ const Header = () => {
     }, [location]);
     return (
         <>
-            <div className="navbar bg-white font-poppins ">
-                <div className="navbar-start">
+            <div className="navbar bg-bluelight font-poppins ">
+                <div className="navbar-start mt-3">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -37,14 +38,19 @@ const Header = () => {
                             <li>
                                 <Link to="/about" className="hover:font-semibold">About</Link>
                             </li>
-                            <li><a className=" p-2 pl-4 pr-4 bg-white font-bold text-black">Log in</a></li>
+                            <li>
+                                <Link to="/login" className="hover:font-semibold p-2 pl-4 pr-4 bg-white font-bold text-black">Login</Link>
+                            </li>
                             <li><a className="p-2 pl-4 pr-4 text-black font-bold ">Sign up</a></li>
 
                         </ul>
                     </div>
-                    <a className="md:pl-[110px] font-bold text-3xl">
-                        Dolan<span className="text-primary">Rek.</span>
-                    </a>
+                    <div   className="md:pl-[80px]  flex gap-2">
+                        <img src={LogoDr} className="h-10 w-10" alt=""/>
+                        <a href="#" className="font-bold text-3xl mt-2">
+                            Dolan<span className="text-primary">Rek.</span>
+                        </a>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -83,7 +89,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end pr-[110px] gap-5 hidden md:flex">
-                    <a className="rounded-3xl p-2 pl-4 pr-4 bg-white text-black">Log in</a>
+                    <Link to="/login" className="hover:font-semibold rounded-3xl p-2 pl-4 pr-4 bg-bluelight  text-black">About</Link>
+
                     <a className="bg-primary rounded-3xl p-2 pl-4 pr-4 text-white">Sign up</a>
                 </div>
             </div>

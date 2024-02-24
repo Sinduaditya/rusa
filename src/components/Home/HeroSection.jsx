@@ -9,9 +9,9 @@ function HeroSection(){
     return (
         <>
             {/*[1150px]*/}
-            <div className="hero lg:h-[500px] relative md:h-screen bg-white bg-cover bg-center mt-8 mx-auto md:w-full rounded-2xl h-screen" style={{backgroundImage: `url(${Hero})`}}>
-                <div className="hero-content text-center">
-                    <div className="max-w-md">
+            <div className="hero lg:h-[500px]  relative md:h-screen bg-white bg-cover bg-center  mx-auto md:w-full rounded-2xl h-screen" style={{backgroundImage: `url(${Hero})`}}>
+                <div className="hero-content text-center ">
+                    <div className="max-w-md ">
                         <div
                             className="lg:absolute md:relative bottom-[160px] text-center text-white items-center sm:bottom-[120px] sm:left-14">
                             <div className="flex">
