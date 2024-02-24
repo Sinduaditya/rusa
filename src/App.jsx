@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import Explore from "./pages/Explore.jsx";
 import DetailExplore from "./components/explore/DetailExplore.jsx";
 import Stories from "./pages/Stories.jsx";
+import Login from "./pages/Login.jsx";
 
 
 
@@ -16,6 +17,11 @@ function App() {
                 {
                     path: "/",
                     element: <Home/>,
+                },
+
+                {
+                    path: "/login",
+                    element: <Login/>,
                 },
                 {
                     path: "/explore",
