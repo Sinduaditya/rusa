@@ -4,7 +4,7 @@ function ReviewCard() {
     return (
         <>
             <div className="w-fit h-36 bg-gradient-to-r from-blue-400 via-blue-300 to-transparent p-0.5 rounded-2xl">
-                <div className="grid bg-white border w-fit h-full p-4 rounded-2xl justify-between">
+                <div className="grid bg-white w-fit h-full p-4 rounded-2xl justify-between">
                     <img src={Quote} alt="" />
                     <h1 className="text-xs font-semibold text-secondary">
                         Simpel dan efektif! DolanRek membuat perjalanan wisata
