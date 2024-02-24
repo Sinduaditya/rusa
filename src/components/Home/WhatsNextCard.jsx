@@ -1,63 +1,61 @@
-import JatimPark from "../../assets/jatim-park-2.jpg";
+import React, { useEffect, useState } from "react";
 import Love2 from "../../assets/heartko.svg";
-import React from "react";
-// import ZeroLove from "../assets/heartko.svg";
+import { exploreData } from "../data/exploreData";
 
-function PopDestiCard() {
+function WhatsNextCard() {
+    const [destinations, setDestinations] = useState([]);
+
+    useEffect(() => {
+        // Mengatur data destinasi dari exploreData.jsx ke state
+        const filteredDestinations = exploreData.filter(
+            (destination) => !destination.categories.includes("Pilihan Terbaik")
+        );
+        // Mengambil hanya 3 data pertama setelah dilakukan filter
+        const limitedDestinations = filteredDestinations.slice(0, 3);
+        setDestinations(limitedDestinations);
+    }, []);
+
     return (
         <>
-            {/* Card dari Destinasi Populer */}
-            <a href="">
-                <div className="card card-compact w-full relative">
-                    <figure className="relative">
-                        <img
-                            src={JatimPark}
-                            className="rounded-3xl  w-90"
-                            alt="Shoes"
-                        />
-                        <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white ">
-                            <img src={Love2} className="h-5 w-5 m-1" alt="" />
-                        </div>
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">Jatim Park</h2>
-                        <div className="flex gap-3">
-                            <div className="rating rating-sm">
-                                <input
-                                    type="radio"
-                                    name="rating-6"
-                                    className="mask mask-star-2 bg-orange"
-                                />
-                                <input
-                                    type="radio"
-                                    name="rating-6"
-                                    className="mask mask-star-2 bg-orange"
-                                    checked
-                                />
-                                <input
-                                    type="radio"
-                                    name="rating-6"
-                                    className="mask mask-star-2 bg-orange"
-                                />
-                                <input
-                                    type="radio"
-                                    name="rating-6"
-                                    className="mask mask-star-2 bg-orange"
-                                />
-                                <input
-                                    type="radio"
-                                    name="rating-6"
-                                    className="mask mask-star-2 bg-orange"
+            {destinations.map((destination) => (
+                <div
+                    className="card card-compact w-full relative"
+                    key={destination.id}
+                >
+                    <a
+                        href={`/detail-explore/${destination.id}`}
+                        key={destination.id}
+                    >
+                        <figure className="relative">
+                            <img
+                                src={destination.image}
+                                className="rounded-3xl w-90 aspect-video"
+                                alt={destination.name}
+                            />
+                            <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white">
+                                <img
+                                    src={Love2}
+                                    className="h-5 w-5 m-1"
+                                    alt=""
                                 />
                             </div>
-                            <p className="text-secondary">224</p>
+                        </figure>
+                        <div className="card-body">
+                            <h2 className="card-title">{destination.name}</h2>
+                            <div className="flex gap-3">
+                                <div className="rating rating-sm">
+                                    {/* Tambahkan kode untuk menampilkan bintang rating */}
+                                </div>
+                                <p className="text-secondary">
+                                    {destination.rating}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </a>
-            {/* End Card dari Destinasi Populer */}
+            ))}
         </>
     );
 }
 
-export default PopDestiCard;
+export default WhatsNextCard;
