@@ -24,7 +24,7 @@ function Review() {
                 </div>
                 {/* Review - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
                 {/* Review - Bagian Card */}
-                <div className="flex gap-4">
+                <div className="grid md:flex gap-2 md:gap-4">
                     <ReviewCard />
                     <ReviewCard />
                     <ReviewCard />

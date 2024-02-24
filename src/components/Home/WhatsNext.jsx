@@ -4,7 +4,7 @@ function WhatsNext(params) {
     return (
         <>
             {/* Mungkin Kamu Suka - Start */}
-            <div className="grid gap-2 font-poppins max-w-screen-lg mx-auto my-6">
+            <div className="grid gap-8 md:gap-2 font-poppins max-w-screen-lg mx-auto my-6">
                 {/* Mungkin Kamu Suka - Bagian Atas (Tulisan dan link "Lihat Semua") */}
                 <div className="flex w-full justify-between">
                     <div className="">
@@ -23,7 +23,7 @@ function WhatsNext(params) {
                 </div>
                 {/* Mungkin Kamu Suka - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
                 {/* Mungkin Kamu Suka - Bagian Card */}
-                <div className=" w-full flex gap-4">
+                <div className="grid w-full px-8 md:p-0 md:flex gap-4 justify-center">
                     <WhatsNextCard />
                     <WhatsNextCard />
                     <WhatsNextCard />
