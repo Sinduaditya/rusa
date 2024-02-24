@@ -9,15 +9,7 @@ function HeroCarousel() {
     return (
         <>
             <section
-                className="overflow-hidden bg-white pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] z-10 font-poppins relative">
-                <div className="">
-                    <div
-                        className="absolute  left-40 top-7 w-72 z-[-1]  h-72 bg-purple rounded-full mix-blend-multiply  filter blur-xl opacity-70 animate-blob animation-delay-100"></div>
-                    <div
-                        className="absolute top-7 right-52 w-72 h-72 z-[-1]   bg-yellow rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-100"></div>
-                    <div
-                        className="absolute bottom-8 right-[600px] w-80 z-[-1]  h-80 bg-pink rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-100"></div>
-                </div>
+                className="overflow-hidden bg-transparent mt-[50px] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] font-poppins ">
                 <div className="container  mx-auto">
                     <div className=" flex flex-wrap items-center justify-between -mx-4">
                         <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
