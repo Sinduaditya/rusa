@@ -1,5 +1,6 @@
-import Bromo from "../../assets/gunung-bromo.jpg";
-import Star from "../../assets/star-1.svg";
+import JatimPark from "../../assets/jatim-park-2.jpg";
+import Love2 from "../../assets/heartko.svg";
+import React from "react";
 // import ZeroLove from "../assets/heartko.svg";
 
 function PopDestiCard() {
@@ -7,30 +8,49 @@ function PopDestiCard() {
         <>
             {/* Card dari Destinasi Populer */}
             <a href="">
-                <div className="inline-grid gap-1">
-                    {/* Start Gambar */}
-                    <div>
+                <div className="card card-compact w-full relative">
+                    <figure className="relative">
                         <img
-                            className="w-[250px] h-[175px] rounded-3xl"
-                            src={Bromo}
-                            alt=""
+                            src={JatimPark}
+                            className="rounded-3xl  w-90"
+                            alt="Shoes"
                         />
-                    </div>
-                    {/* end Gambar */}
-                    {/* Start Keterangan */}
-                    <div className="font-poppins">
-                        <h1 className="text-xl font-poppins font-semibold text-sky-950">
-                            Kawah Ijen
-                        </h1>
-                        <div className="flex gap-2">
-                            <div className="flex">
-                                <img src={Star} alt="" />
-                                <img src={Star} alt="" />
-                                <img src={Star} alt="" />
-                                <img src={Star} alt="" />
-                                <img src={Star} alt="" />
+                        <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white ">
+                            <img src={Love2} className="h-5 w-5 m-1" alt="" />
+                        </div>
+                    </figure>
+                    <div className="card-body">
+                        <h2 className="card-title">Jatim Park</h2>
+                        <div className="flex gap-3">
+                            <div className="rating rating-sm">
+                                <input
+                                    type="radio"
+                                    name="rating-6"
+                                    className="mask mask-star-2 bg-orange"
+                                />
+                                <input
+                                    type="radio"
+                                    name="rating-6"
+                                    className="mask mask-star-2 bg-orange"
+                                    checked
+                                />
+                                <input
+                                    type="radio"
+                                    name="rating-6"
+                                    className="mask mask-star-2 bg-orange"
+                                />
+                                <input
+                                    type="radio"
+                                    name="rating-6"
+                                    className="mask mask-star-2 bg-orange"
+                                />
+                                <input
+                                    type="radio"
+                                    name="rating-6"
+                                    className="mask mask-star-2 bg-orange"
+                                />
                             </div>
-                            <p>224</p>
+                            <p className="text-secondary">224</p>
                         </div>
                     </div>
                 </div>
