@@ -1,10 +1,12 @@
-import Loc from "../assets/location2.svg";
-import Love from "../assets/explore/heart.svg";
+import Loc from "../../assets/location2.svg";
+import Love from "../../assets/explore/heart.svg";
+import Love2 from "../../assets/heartko.svg";
 import {useParams} from "react-router-dom";
-import {exploreData} from "./data/exploreData.jsx";
+import {exploreData} from "../data/exploreData.jsx";
 import React, {useState} from 'react';
-import getCategoryImage from "./data/categoryImages.jsx";
-import Maps from "../assets/explore/map.svg";
+import getCategoryImage from "../data/categoryImages.jsx";
+import Maps from "../../assets/explore/map.svg";
+import KawahWurung from "../../assets/kawah-wurung.jpg";
 
 function DetailExplore(){
     const {id} = useParams();
@@ -155,8 +157,44 @@ function DetailExplore(){
                                  alt="About Kawah Ijen"/>
                         </div>
                     </div>
-
                 </div>
+                {/*    Destinasi lain*/}
+                <section className="bg-white">
+                    <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+                        <h2 className="text-left text-4xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
+                            Destinasi lain sekitarnya
+                        </h2>
+                        <p className="text-left font-light text-secondary">Temukan destinasi terbaik lainnya di
+                            sekitar</p>
+
+                        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 justify-center">
+                            <div className="card card-compact w-96 relative">
+                                <figure className="relative">
+                                    <img src={KawahWurung} className="rounded-3xl  w-90" alt="Shoes"/>
+                                    <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white ">
+                                        <img src={Love2} className="h-5 w-5 m-1" alt=""/>
+                                    </div>
+                                </figure>
+                                <div className="card-body">
+                                    <h2 className="card-title">Kawah Wurung</h2>
+                                    <div className="flex gap-3">
+                                        <div className="rating rating-sm">
+                                            <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange"/>
+                                            <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange"
+                                                   checked/>
+                                            <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange"/>
+                                            <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange"/>
+                                            <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange"/>
+                                        </div>
+                                        <p className="text-secondary">224</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                {/*    destinasi lain end*/}
                 {/*    arek says*/}
                 <section className="bg-white">
                     <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">

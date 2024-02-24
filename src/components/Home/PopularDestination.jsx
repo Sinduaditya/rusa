@@ -1,7 +1,7 @@
-import Hero from "../assets/hero.jpg";
-import Star from "../assets/fullstar.svg";
-import ZeroLove from "../assets/heartko.svg";
-import PopDestiCard from "./PopDestiCard";
+import Hero from "../../assets/hero.jpg";
+import Star from "../../assets/fullstar.svg";
+import ZeroLove from "../../assets/heartko.svg";
+import PopDestiCard from "./PopDestiCard.jsx";
 
 function PopularDestination() {
     return (

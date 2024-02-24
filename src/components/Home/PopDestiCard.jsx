@@ -1,5 +1,5 @@
-import Bromo from "../assets/gunung-bromo.jpg";
-import Star from "../assets/star-1.svg";
+import Bromo from "../../assets/gunung-bromo.jpg";
+import Star from "../../assets/star-1.svg";
 // import ZeroLove from "../assets/heartko.svg";
 
 function PopDestiCard() {
@@ -11,7 +11,7 @@ function PopDestiCard() {
                     {/* Start Gambar */}
                     <div>
                         <img
-                            className="w-[250px] h-[175px] rounded-3xl"
+                            className="w-[304px] h-[175px] rounded-3xl"
                             src={Bromo}
                             alt=""
                         />
