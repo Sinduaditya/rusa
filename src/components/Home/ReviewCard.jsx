@@ -1,4 +1,4 @@
-import Quote from "../assets/quote-down.svg";
+import Quote from "../../assets/quote-down.svg";
 
 function ReviewCard() {
     return (
