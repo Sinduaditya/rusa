@@ -15,6 +15,10 @@ export default {
                     greenlight: "#57CBB9",
                     orange: "#FFCC73",
                     orangelight: "#FFEAC5",
+                    purple:"#d8b4fe",
+                    yellow:"#fde047",
+                    pink:"#f9a8d4"
+
                 },
             },
         ],
@@ -30,6 +34,9 @@ export default {
             greenlight: "#57CBB9",
             orange: "#FFCC73",
             orangelight: "#FFEAC5",
+            purple:"#d8b4fe",
+            yellow:"#fde047",
+            pink:"#f9a8d4"
         },
         fontFamily: {
             poppins: ["Poppins", "sans-serif"],

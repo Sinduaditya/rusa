@@ -1,4 +1,4 @@
-import Bromo from "../assets/gunung-bromo.jpg";
+import Bromo from "../../assets/gunung-bromo.jpg";
 
 function GetTipsCard() {
     return (

@@ -1,4 +1,4 @@
-import GetTipsCard from "./GetTIpsCard";
+import GetTipsCard from "./GetTIpsCard.jsx";
 
 function GetTips() {
     return (

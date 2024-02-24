@@ -1,4 +1,4 @@
-import WhatsNextCard from "./WhatsNextCard";
+import WhatsNextCard from "./WhatsNextCard.jsx";
 
 function WhatsNext(params) {
     return (
