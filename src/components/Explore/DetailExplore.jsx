@@ -100,12 +100,12 @@ function DetailExplore(){
                                             </svg>
                                         </summary>
                                         <div className="mt-4 px-4 leading-relaxed font-medium">
-                                            <h3>Wisatawan</h3>
+                                            <h3>Wisatawan:</h3>
                                             <ul>
                                                 <li>IDR 5.000 (Hari Biasa)</li>
                                                 <li>IDR 7.000 (Hari Libur)</li>
                                             </ul>
-                                            <h3 className="mt-3">Wisatawan</h3>
+                                            <h3 className="mt-3">Wisatawan Mancanegara:</h3>
                                             <ul>
                                                 <li>IDR 5.000 (Hari Biasa)</li>
                                                 <li>IDR 7.000 (Hari Libur)</li>
@@ -133,7 +133,11 @@ function DetailExplore(){
                                             </svg>
                                         </summary>
                                         <div className="mt-4 px-4 leading-relaxed font-medium">
-                                            <h3>Content</h3>
+                                            <h2>Blue Fire di Kawah Ijen, Rute pendakian pertama menuju puncak Kawah Ijen yang
+                                                berada pada ketinggian 2.799 meter di atas permukaan laut telah dibuka sejak
+                                                pukul 01.00 WIB dari pos Pal Tuding. Dengan estimasi waktu pendakian normal antara 2 hingga 3 jam,
+                                                Anda akan tiba di puncak tertinggi Gunung Ijen. Antara pukul 03.00 hingga 04.00, Anda masih bisa menikmati
+                                                keindahan dan fenomena unik Blue Fire di sekitar Danau Kawah Ijen.</h2>
                                         </div>
 
                                     </details>
@@ -231,6 +235,8 @@ function DetailExplore(){
                                             <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
                                         </div>
                                     </div>
+
+
 
                                     <div className="flex mt-3 justify-start gap-0.5 text-green-500">
                                         <svg
