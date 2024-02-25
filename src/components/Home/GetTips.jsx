@@ -3,7 +3,7 @@ import GetTipsCard from "./GetTIpsCard.jsx";
 function GetTips() {
     return (
         <>
-           {/* Bagian Tips */}
+            {/* Bagian Tips */}
             <div className="justify-center grid gap-6 md:gap-0 md:flex font-poppins max-w-screen-lg mx-auto my-12 px-12 py-6  shadow-2xl md:justify-between">
                 {/* bagian Text dan CTA */}
                 <div className="text-blue-950 grid gap-4  w-72 h-fit my-auto">
@@ -35,8 +35,6 @@ function GetTips() {
                 {/* bagian Text dan CTA */}
                 {/* Bagian Item  of Tips*/}
                 <div>
-                    <GetTipsCard />
-                    <GetTipsCard />
                     <GetTipsCard />
                 </div>
                 {/* END Bagian Item  of Tips*/}
