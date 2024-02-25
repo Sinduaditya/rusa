@@ -65,7 +65,7 @@ const Header = () => {
                         <li>
                             <Link
                                 to="/explore"
-                                className={`nav-link ${location.pathname === '/Explore'   ? 'font-bold' : ''}`}
+                                className={`nav-link ${location.pathname === '/explore'   ? 'font-bold' : ''}`}
                             >
                                 Explore
                             </Link>

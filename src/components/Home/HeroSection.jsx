@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../../assets/hero.jpg";
 import Loc from "../../assets/location.svg";
 import Nature from "../../assets/naturev2.svg";
