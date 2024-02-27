@@ -15,10 +15,10 @@ function GetTipsCard() {
         <>
             {destinations.map((story) => (
                 <a href="" key={story.id}>
-                    <div className="flex px-2 py-2 gap-2 max-w-sm">
+                    <div className="flex px-2 py-5 gap-4 max-w-sm">
                         <img
                             src={story.image}
-                            className="w-24 h-24 items-center rounded-2xl"
+                            className="w-24 h-24 object-cover items-center rounded-2xl"
                             alt={story.title}
                         />
                         {/* Caption dan Keterangan */}
