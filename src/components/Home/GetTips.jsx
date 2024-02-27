@@ -16,7 +16,7 @@ function GetTips() {
                                 </span>
                             </h1>
                             <div className=" px-6">
-                                <ul className="list-disc">
+                                <ul className="list-disc grid gap-2">
                                     <li>
                                         <p className="text-sm">
                                             Tips berwisata
@@ -31,8 +31,8 @@ function GetTips() {
                             </div>
                         </div>
                         <a
-                            href=""
-                            className="btn btn-square btn-info text-white w-fit px-4 rounded-full"
+                            href={"/explore/"}
+                            className="btn btn-square btn-info text-white w-fit px-8 rounded-full"
                         >
                             Explore Stories
                         </a>
@@ -46,8 +46,10 @@ function GetTips() {
                 </div>
                 {/* END OF Bagian Tips */}
 
+                {/* blobs */}
                 <div className="w-56 h-56 sm:w-80 sm:h-80 -right-[10px] -top-[50px] bg-gradient-to-tl from-blob to-skyblue z-[-1] rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
-                <div className="w-36 h-36 sm:w-72 sm:h-72 -left-[20px] sm:-right-[100px] -bottom-[65px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-[-1] rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                <div className="w-36 h-36 sm:w-72 sm:h-72 -left-[20px] sm:-right-[100px] -bottom-[90px] lg:-bottom-[170px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-[-1] rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                {/* blobs */}
             </div>
         </>
     );
