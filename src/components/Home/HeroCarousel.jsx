@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
-import Bromo from "../../assets/gunung-bromo-explore.jpg";
-import JatimPark from "../../assets/jatim-park-2.jpg";
-import Suro from "../../assets/patung-suro-boyo.jpg";
+import Bromo from "../../assets/home/subhero-1.png";
+import JatimPark from "../../assets/home/subhero-2.png";
+import Suro from "../../assets/home/subhero-3.png";
 
 function HeroCarousel() {
     return (
@@ -17,8 +17,8 @@ function HeroCarousel() {
                                     {/* <span className="block mb-2 text-5xl font-bold ">*/}
                                     {/*    Dolan<span className="text-primary">Rek.</span>*/}
                                     {/*</span>*/}
-                                    <h2 className="mb-1 text-5xl font-bold">
-                                        Rasakan Petualangan
+                                    <h2 className="mb-1 text-4xl font-bold">
+                                        Rasakan <br/> Petualangan
                                     </h2>
                                     <h2 className="text-4xl font-bold text-primary">
                                         <TypeAnimation
@@ -34,16 +34,18 @@ function HeroCarousel() {
                                             repeat={Infinity}
                                         />
                                     </h2>
-                                    <p className=" mt-3 text-midnight font-medium">
-                                        Mulai rencanakan perjalanan Anda sekarang dan temukan pesona eksklusif Jawa
-                                        Timur.
-                                    </p>
-                                    <p className="mb-8 text-midnight font-medium">
-                                        Petualangan tanpa hambatan pesona Jatim Dalam Genggaman 🤳
-                                    </p>
+                                    <div className="pt-8">
+                                        <p className=" mt-3 text-midnight font-medium">
+                                            Mulai rencanakan perjalanan Anda sekarang dan temukan pesona eksklusif Jawa
+                                            Timur.
+                                        </p>
+                                        <p className="mb-8 text-midnight font-medium">
+                                            Petualangan tanpa hambatan pesona Jatim Dalam Genggaman 🤳
+                                        </p>
+                                    </div>
                                     <a
                                         href="#"
-                                        className="inline-flex items-center justify-center py-2 text-base font-medium text-center text-white border border-transparent rounded-3xl px-7 bg-primary hover:bg-opacity-90"
+                                        className="inline-flex  items-center justify-center py-2 text-base font-medium text-center text-white border border-transparent rounded-3xl px-7 bg-primary hover:bg-opacity-90"
                                     >
                                         Explore
                                     </a>
@@ -57,7 +59,7 @@ function HeroCarousel() {
                                             <img
                                                 src={Bromo}
                                                 alt=""
-                                                className="object-cover w-full rounded-2xl"
+                                                className="object-cover  rounded-2xl"
                                             />
                                         </div>
                                         <div className="py-3 sm:py-4">

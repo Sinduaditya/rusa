@@ -24,24 +24,17 @@ function DetailExplore(){
 
     return(
         <>
-            <div className="bg-bluelight relative z-10">
-                <div
-                    className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div
-                    className="absolute right-0 top-10 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div
-                    className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-
+            <div className="bg-bluelight ">
                 <div className="mx-auto max-w-screen-xl px-4 font-poppins pt-[80px]">
-                    <div className="container mx-auto px-4 md:px-0">
+                    <div className="container  mx-auto px-4 md:px-0">
                         <div className="mb-12">
-                            <h1 className="text-black text-5xl font-bold font-poppins">{selectedItem.name}</h1>
-                            <div className="flex items-center pt-5 gap-4">
+                            <h1 className="text-black text-6xl pb-3 font-bold font-poppins">{selectedItem.name}</h1>
+                            <div className="flex items-center pb-3 gap-2">
                                 <img src={Loc} className="w-6 h-6" alt=""/>
                                 <div className="text-secondary text-base font-medium font-cabin">{selectedItem.location}
                                 </div>
                             </div>
-                            <div className="rating rating-sm pt-2">
+                            <div className="rating rating-sm pb-3">
                                 {[...Array(5)].map((_, i) => (
                                     <input
                                         key={i}
@@ -172,8 +165,12 @@ function DetailExplore(){
                                 </div>
                             </div>
                             <div className="md:w-1/2">
-                                <img className="rounded-2xl h-[600px] w-[500px]" src={Maps}
-                                     alt="About Kawah Ijen"/>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31603.34018797576!2d114.23211339300163!3d-8.058823085985411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd149f2110ae607%3A0x7c04ef029d5e39bc!2sGn.%20Ijen!5e0!3m2!1sid!2sid!4v1709187816719!5m2!1sid!2sid"
+                                    width="600" height="450"  allowFullScreen="" loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                {/*<img className="rounded-2xl h-[600px] w-[500px]" src={Maps}*/}
+                                {/*     alt="About Kawah Ijen"/>*/}
                             </div>
                         </div>
                     </div>
@@ -181,7 +178,7 @@ function DetailExplore(){
                     <section className="bg-transparent">
                         <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                             <h2 className="text-left text-4xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
-                                Destinasi lain sekitarnya
+                            Destinasi lain sekitarnya
                             </h2>
                             <p className="text-left font-light text-secondary">Temukan destinasi terbaik lainnya di
                                 sekitar</p>
