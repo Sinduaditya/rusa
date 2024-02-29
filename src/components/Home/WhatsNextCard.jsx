@@ -6,30 +6,25 @@ function WhatsNextCard() {
     const [destinations, setDestinations] = useState([]);
 
     useEffect(() => {
-        // Mengatur data destinasi dari exploreData.jsx ke state
-        const filteredDestinations = exploreData.filter(
-            (destination) => !destination.categories.includes("Pilihan Terbaik")
-        );
-        // Mengambil hanya 3 data pertama setelah dilakukan filter
-        const limitedDestinations = filteredDestinations.slice(0, 3);
-        setDestinations(limitedDestinations);
+        // Mengambil seluruh data destinasi dari exploreData.jsx
+        setDestinations(exploreData);
     }, []);
 
     return (
-        <>
+        <div className="flex overflow-x-scroll gap-4">
             {destinations.map((destination) => (
                 <div
-                    className="card card-compact w-full relative"
+                    className="card card-compact w-[250px]"
                     key={destination.id}
                 >
                     <a
                         href={`/detail-explore/${destination.id}`}
                         key={destination.id}
                     >
-                        <figure className="relative">
+                        <figure className="w-[250px] h-[175px] aspect-video">
                             <img
                                 src={destination.image}
-                                className="rounded-3xl w-90 aspect-video"
+                                className="rounded-3xl w-[250px] h-[175px] object-cover"
                                 alt={destination.name}
                             />
                             <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white">
@@ -54,7 +49,7 @@ function WhatsNextCard() {
                     </a>
                 </div>
             ))}
-        </>
+        </div>
     );
 }
 
