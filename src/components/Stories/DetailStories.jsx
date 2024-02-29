@@ -1,15 +1,32 @@
 import Save from "../../assets/stories/archive.svg";
+import {storiesData} from "../data/storiesData.jsx";
+import {useParams} from "react-router-dom";
+import React from "react";
+
+
 function DetailStories(){
+    const {id} = useParams();
+    const selectedItem = storiesData.find((item) => item.id === parseInt(id));
+    if (!selectedItem) {
+        return <div>Item tidak ditemukan</div>;
+    }
     return (
         <>
-            <div className="bg-bluelight">
+            <div className="bg-bluelight relative z-10">
+                <div
+                    className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
+                <div
+                    className="absolute right-0 top-10 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
+                <div
+                    className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
+
                 <div className="mx-auto max-w-screen-xl px-4  pt-[40px] font-poppins">
                     <main className="mt-10">
                         <div className="mb-4 md:mb-0 w-full mx-auto relative">
                             <div className="px-4 lg:px-0">
-                                <span className="text-secondary font-light text-md">Activities</span>
+                                <span className="text-secondary font-light text-md">{selectedItem.category}</span>
                                 <h2 className="sm:text-xl md:text-6xl font-semibold text-gray-800 leading-tight">
-                                    Petualangan Sehari di Jawa Timur: 5 Aktivitas yang Wajib Dicoba
+                                    {selectedItem.title}
                                 </h2>
                                 <div className="flex justify-between mb-5">
                                     <div
@@ -22,8 +39,8 @@ function DetailStories(){
                                                 Mira
                                             </div>
                                             <div
-                                                className="text-secondary text-xs font-normal font-poppins">5
-                                                Februari 2024
+                                                className="text-secondary text-xs font-normal font-poppins">
+                                                {selectedItem.date}
                                             </div>
                                         </div>
                                     </div>
@@ -37,7 +54,7 @@ function DetailStories(){
                                 </div>
                             </div>
                             <img
-                                src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+                                src={selectedItem.image}
                                 className="w-full object-cover rounded-2xl"
                                 style={{height: "28em"}}
                             />
@@ -45,12 +62,7 @@ function DetailStories(){
                         <div className="flex flex-col lg:flex-row lg:space-x-12">
                             <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
                                 <p className="pb-6">
-                                    Advantage old had otherwise sincerity dependent additions. It in
-                                    adapted natural hastily is justice. Six draw you him full not mean
-                                    evil. Prepare garrets it expense windows shewing do an. She
-                                    projection advantages resolution son indulgence. Part sure on no
-                                    long life am at ever. In songs above he as drawn to. Gay was
-                                    outlived peculiar rendered led six.
+                                    {selectedItem.description}
                                 </p>
                                 <p className="pb-6">
                                     Difficulty on insensible reasonable in. From as went he they.
