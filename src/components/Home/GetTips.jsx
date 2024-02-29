@@ -5,7 +5,7 @@ function GetTips() {
         <>
             <div className="relative z-10">
                 {/* Bagian Tips */}
-                <div className="justify-center grid gap-6 md:gap-0 md:flex font-poppins max-w-screen-lg mx-auto my-12 px-12 py-6 bg-white bg-opacity-40 rounded-3xl border-2 border-white border-opacity-50 backdrop-blur-4xl md:justify-between">
+                <div className="justify-center grid gap-6 md:gap-0 md:flex font-poppins max-w-screen-lg mx-auto my-12 px-12 py-6 bg-glass bg-opacity-70 rounded-[48px] border-2 border-white border-opacity-50 backdrop-blur-4xl md:justify-between">
                     {/* bagian Text dan CTA */}
                     <div className="text-blue-950 grid gap-16  mt-10 w-72 h-full my-auto">
                         <div className="grid gap-2">

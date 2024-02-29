@@ -21,14 +21,8 @@ function Stories(){
     };
     return(
         <>
-            <div className="bg-bluelight relative z-10">
-                <div
-                    className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div
-                    className="absolute right-0 top-10 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div
-                    className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div className="mx-auto max-w-screen-xl px-4 font-poppins pt-[20px]">
+            <div className="bg-bluelight ">
+             <div className="mx-auto max-w-screen-xl px-4 font-poppins pt-[20px]">
                     <div
                         className="hero lg:h-[300px] h-screen relative bg-white bg-cover bg-center mt-8 mx-auto md:w-full rounded-2xl"
                         style={{backgroundImage: `url(${Hero})`}}>
@@ -98,9 +92,9 @@ function Stories(){
                     <section className="flex items-center py-10 bg-transparent lg:py-4 font-poppins">
                         <div className="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto text-left lg:py-2">
                             {filteredData.map((item, index) => (
-                                <Link key={index} to={`detail-stories/${item.id}`}>
+                                <Link key={index} to={`/detail-stories/${item.id}`}>
                                     <article
-                                             className="mx-auto my-2 flex max-w-md flex-col   px-4  md:max-w-5xl md:flex-row bg-white/30 p-3 rounded-3xl shadow border border-white/40  backdrop-blur-xl md:items-center">
+                                             className="mx-auto my-2 flex max-w-md flex-col  px-4  md:max-w-5xl md:flex-row  p-3 rounded-3xl  md:items-center">
                                         <div className="shrink-0 md:mr-8 md:max-w-xs">
                                             <img className="rounded-2xl w-[200px] h-[190px]  object-cover"
                                                  src={item.image}
