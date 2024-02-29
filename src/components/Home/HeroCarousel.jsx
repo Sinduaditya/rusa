@@ -113,7 +113,7 @@ function HeroCarousel() {
                                                     alt=""
                                                 />
                                                 <p className="text-xs text-midnight">
-                                                    Jatim Park 2
+                                                    Patung Sura dan Baya
                                                 </p>
                                             </div>
                                             <img
