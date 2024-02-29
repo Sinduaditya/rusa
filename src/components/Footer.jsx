@@ -1,16 +1,11 @@
+import { Route, useLocation } from "react-router-dom";
 import BGImage from "../assets/footer/footerIllustration.png";
 import Logo from "../assets/header/dolanrek.svg";
 
-function Footer() {
+function FooterContent() {
     return (
         <>
             <div className="bg-bluelight ">
-                <img
-                    src={BGImage}
-                    className="w-96 md:w-full md:max-w-3xl  mx-auto"
-                    alt=""
-                />
-                <div className="bg-[#576B81] w-full h-[51px] -mt-12"></div>
                 <div className="relative w-full h-full bg-midnight pb-12">
                     <div className="relative z-10 flex justify-center items-center text-white">
                         <footer className="bg-transparent">
@@ -232,6 +227,39 @@ function Footer() {
                     </div>
                 </div>
             </div>
+        </>
+    );
+}
+
+function FooterIllustration() {
+    return (
+        <>
+            <div className="bg-bluelight">
+                <img
+                    src={BGImage}
+                    className="w-96 md:w-full md:max-w-3xl  mx-auto"
+                    alt=""
+                />
+                <div className="bg-[#576B81] w-full h-[51px] -mt-12"></div>
+            </div>
+        </>
+    );
+}
+
+function Footer() {
+    const location = useLocation();
+
+    if (window.location.pathname === "/") {
+        return (
+            <>
+                <FooterIllustration />
+                <FooterContent />
+            </>
+        );
+    }
+    return (
+        <>
+            <FooterContent />
         </>
     );
 }
