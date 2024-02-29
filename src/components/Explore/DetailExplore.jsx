@@ -3,7 +3,7 @@ import Love from "../../assets/explore/heart.svg";
 import Love2 from "../../assets/heartko.svg";
 import {useParams} from "react-router-dom";
 import {exploreData} from "../data/exploreData.jsx";
-import React, {useState} from 'react';
+import {useState} from 'react';
 import getCategoryImage from "../data/categoryImages.jsx";
 import Maps from "../../assets/explore/map.svg";
 import KawahWurung from "../../assets/kawah-wurung.jpg";
@@ -14,6 +14,7 @@ function DetailExplore(){
     if (!selectedItem) {
         return <div>Item tidak ditemukan</div>;
     }
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [expanded, setExpanded] = useState(false);
     const originalText = "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.";
 
@@ -27,7 +28,7 @@ function DetailExplore(){
                 <div
                     className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
                 <div
-                    className="absolute right-0 -top-44 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
+                    className="absolute right-0 top-10 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
                 <div
                     className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
 
@@ -133,10 +134,14 @@ function DetailExplore(){
                                             </svg>
                                         </summary>
                                         <div className="mt-4 px-4 leading-relaxed font-medium">
-                                            <h2>Blue Fire di Kawah Ijen, Rute pendakian pertama menuju puncak Kawah Ijen yang
-                                                berada pada ketinggian 2.799 meter di atas permukaan laut telah dibuka sejak
-                                                pukul 01.00 WIB dari pos Pal Tuding. Dengan estimasi waktu pendakian normal antara 2 hingga 3 jam,
-                                                Anda akan tiba di puncak tertinggi Gunung Ijen. Antara pukul 03.00 hingga 04.00, Anda masih bisa menikmati
+                                            <h2>Blue Fire di Kawah Ijen, Rute pendakian pertama menuju puncak Kawah Ijen
+                                                yang
+                                                berada pada ketinggian 2.799 meter di atas permukaan laut telah dibuka
+                                                sejak
+                                                pukul 01.00 WIB dari pos Pal Tuding. Dengan estimasi waktu pendakian
+                                                normal antara 2 hingga 3 jam,
+                                                Anda akan tiba di puncak tertinggi Gunung Ijen. Antara pukul 03.00
+                                                hingga 04.00, Anda masih bisa menikmati
                                                 keindahan dan fenomena unik Blue Fire di sekitar Danau Kawah Ijen.</h2>
                                         </div>
 
@@ -235,7 +240,6 @@ function DetailExplore(){
                                             <p className="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
                                         </div>
                                     </div>
-
 
 
                                     <div className="flex mt-3 justify-start gap-0.5 text-green-500">

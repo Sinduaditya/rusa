@@ -4,6 +4,8 @@ import HeroSection from "../components/Home/HeroSection.jsx";
 import PopularDestination from "../components/Home/PopularDestination.jsx";
 import Review from "../components/Home/Review.jsx";
 import WhatsNext from "../components/Home/WhatsNext.jsx";
+import Ai from "../assets/home/ai.svg";
+import IntroAi from "../components/Home/IntroAi.jsx";
 
 const Home = () => {
     return (
@@ -21,6 +23,9 @@ const Home = () => {
                     {/* WhatsNExt */}
                     <WhatsNext/>
                     {/* End Ehats */}
+                    {/*Introduce AI*/}
+                    <IntroAi/>
+                    {/*End Introduce*/}
                     {/* Get Tips from Travellers */}
                     <GetTips/>
                     {/* END Get Tips from Travellers */}

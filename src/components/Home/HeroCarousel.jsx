@@ -8,7 +8,7 @@ function HeroCarousel() {
         <>
             <div className="relative z-10 mt-20">
                 <section
-                    className="overflow-hidden rounded-[48px] bg-white bg-opacity-70 p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl  lg:pt-[10px] lg:pb-[40px] relative z-20  font-poppins ">
+                    className="overflow-hidden rounded-[48px] bg-glass bg-opacity-70 p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl  lg:pt-[10px] lg:pb-[40px] relative z-20  font-poppins ">
 
                     <div className="container mx-auto">
                         <div className=" flex flex-wrap items-center justify-between -mx-4">
@@ -17,10 +17,10 @@ function HeroCarousel() {
                                     {/* <span className="block mb-2 text-5xl font-bold ">*/}
                                     {/*    Dolan<span className="text-primary">Rek.</span>*/}
                                     {/*</span>*/}
-                                    <h2 className="mb-1 text-5xl font-bold">
+                                    <h2 className="mb-1 text-4xl sm:text-5xl font-bold">
                                         Rasakan Petualangan
                                     </h2>
-                                    <h2 className="text-5xl font-bold text-primary">
+                                    <h2 className=" text-4xl sm:text-5xl font-bold text-primary">
                                         <TypeAnimation
                                             sequence={[
                                                 'Tanpa Hambatan',
