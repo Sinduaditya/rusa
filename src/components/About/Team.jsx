@@ -49,7 +49,7 @@ const Team = () => {
     return (
         <>
             <div className="relative z-10 pb-20">
-                <div className=" border-white border-opacity-50 backdrop-blur-3xl bg-white/20 pb-20 shadow-lg rounded-[48px] relative z-20 mx-auto py-2 w-full
+                <div className="border-white border-opacity-50 backdrop-blur-3xl bg-glass bg-opacity-70 pb-20 shadow-lg rounded-[64px] relative z-20 mx-auto py-2 w-full
          font-poppins ">
 
                     {/* :TITLE CONTAINER */}
