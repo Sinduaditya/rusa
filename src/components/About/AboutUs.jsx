@@ -4,7 +4,7 @@ function AboutUs() {
     return (
         <>
             <div className="relative z-10">
-                <section className="overflow-hidden rounded-[48px] bg-white bg-opacity-40 border-2 border-white border-opacity-50 backdrop-blur-3xl mt-[20px] relative z-20  font-poppins">
+                <section className="overflow-hidden rounded-[64px] border-white border-opacity-50 backdrop-blur-3xl bg-glass bg-opacity-70 mt-[20px] relative z-20  font-poppins">
                     <div className="container mx-auto ">
                         <div className="flex flex-wrap items-center justify-evenly">
                             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">

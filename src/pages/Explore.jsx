@@ -1,5 +1,5 @@
 import Hero from "../assets/gunung-bromo-explore.jpg";
-import React, { useState } from "react";
+import {useState} from "react";
 import Search from "../assets/explore/search-normal.svg";
 import Nature from "../assets/naturev2.svg";
 import Frame from "../assets/explore/Frame.svg";
@@ -37,20 +37,16 @@ function Explore() {
     };
     return (
         <>
-            <div className="bg-bluelight relative z-10">
-                <div className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div className="absolute right-0 -top-44 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-
+            <div className="bg-bluelight">
                 <div className="mx-auto max-w-screen-xl px-4 bg-transparent pt-[40px] font-poppins">
                     <div
                         className="hero lg:h-[300px] h-screen relative bg-white bg-cover bg-center  mx-auto md:w-full rounded-2xl"
-                        style={{ backgroundImage: `url(${Hero})` }}
+                        style={{backgroundImage: `url(${Hero})`}}
                     >
                         <div className="hero-content text-center flex flex-col justify-center">
                             <div className="">
                                 <h1 className="text-6xl font-bold text-white">
-                                    Temukan Destinasi <br /> Favoritmu
+                                    Temukan Destinasi <br/> Favoritmu
                                 </h1>
                             </div>
                         </div>
@@ -162,7 +158,8 @@ function Explore() {
                                     key={index}
                                     to={`/detail-explore/${item.id}`}
                                 >
-                                    <div className="grid grid-cols-1 lg:grid-cols-[30%,1fr]  gap-x-6 gap-y-4 bg-white/30 p-3 rounded-3xl shadow border border-white/40  backdrop-blur-xl mb-8">
+                                    <div
+                                        className="grid grid-cols-1 lg:grid-cols-[30%,1fr]  gap-x-6 gap-y-4 b p-3 rounded-3xl mb-8">
                                         <img
                                             className="object-cover w-full  rounded-[16px] lg:w-80 h-80"
                                             src={item.image}
@@ -174,7 +171,7 @@ function Explore() {
                                                     {item.name}
                                                 </h1>
                                                 <p className="mt-3 text-sm text-gray-400 flex gap-2 lg:text-lg ">
-                                                    <img src={Loc} alt="" />
+                                                    <img src={Loc} alt=""/>
                                                     {item.location}
                                                 </p>
                                                 <div className="rating rating-sm pt-2">
@@ -188,7 +185,7 @@ function Explore() {
                                                                     i <
                                                                     Math.round(
                                                                         item.rating /
-                                                                            40
+                                                                        40
                                                                     )
                                                                         ? "checked"
                                                                         : ""

@@ -7,8 +7,8 @@ import Stories from "./pages/Stories.jsx";
 import Login from "./pages/Login.jsx";
 import DetailStories from "./components/Stories/DetailStories.jsx";
 import About from "./pages/About.jsx";
-
-
+import AiLayout from "./layouts/AiLayout.jsx";
+import IntroAi from "./components/Home/IntroAi.jsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -20,13 +20,12 @@ function App() {
                     path: "/",
                     element: <Home/>,
                 },
-
                 {
                     path: "/login",
                     element: <Login/>,
                 },
                 {
-                    path: "/Explore",
+                    path: "/explore",
                     element: <Explore/>,
                 },
                 {
@@ -34,7 +33,7 @@ function App() {
                     element: <Stories/>,
                 },
                 {
-                    path: "/detail-stories/",
+                    path: "/detail-stories/:id",
                     element: <DetailStories/>,
                 },
                 {
@@ -42,12 +41,23 @@ function App() {
                     element: <About/>,
                 },
                 {
-                    path: "/detail-Explore/:id",
+                    path: "/detail-explore/:id",
                     element: <DetailExplore />,
                 },
             ],
         },
+        {
+            path: "/dolanrek-ai",
+            element: <AiLayout/>,
+            children: [
+                {
+                    path: '/dolanrek-ai',
+                    element: <IntroAi/>
+                }
+            ],
+        },
     ]);
+
     return <RouterProvider router={router} />;
 }
 
