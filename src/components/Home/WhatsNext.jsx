@@ -27,7 +27,7 @@ function WhatsNext(params) {
                     </div>
                     {/* Mungkin Kamu Suka - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
                     {/* Mungkin Kamu Suka - Bagian Card */}
-                    <div className="grid overflow-x-scroll md:flex gap-4 justify-center">
+                    <div className="overflow-x-scroll -mx-8 lg:mx-0 grid md:flex justify-center">
                         <WhatsNextCard />
                     </div>
                     <div className="flex w-full justify-end md:hidden">
