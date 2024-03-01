@@ -219,7 +219,7 @@ function Explore() {
                                                     )}
                                                 </div>
                                                 <p className="hidden mt-4 leading-7 text-gray-700 md:block lg:text-lg ">
-                                                    {item.description}
+                                                    {item.description.length > 280 ? `${item.description.substring(0, 280)}...` : item.description}
                                                 </p>
                                             </div>
                                         </div>
