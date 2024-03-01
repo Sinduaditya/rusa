@@ -11,7 +11,7 @@ function WhatsNextCard() {
     }, []);
 
     return (
-        <div className="flex overflow-x-scroll gap-4">
+        <div className="flex pl-8 lg:pl-0 overflow-auto scroll-m-0 gap-4">
             {destinations.map((destination) => (
                 <div
                     className="card card-compact w-[250px]"
