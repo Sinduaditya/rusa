@@ -7,63 +7,58 @@ import IconLocation from "../../assets/location2.svg";
 function HeroCarousel() {
     return (
         <>
-            <div className="relative z-10 mt-20">
-                <section className="overflow-hidden rounded-[64px] bg-glass bg-opacity-70 p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl  lg:pt-[10px] lg:pb-[40px] relative z-20  font-poppins ">
+            <div className="relative z-10 my-20">
+                <section className="overflow-hidden rounded-[64px] bg-glass bg-opacity-70 px-8 py-10 lg:p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl lg:pt-[10px] lg:pb-[40px] relative z-20  font-poppins">
                     <div className="container mx-auto">
-                        <div className=" flex flex-wrap items-center justify-between -mx-4">
-                            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-                                {/* text */}
-                                <div className="grid gap-10 mt-2 lg:mt-0 pl-8 ">
-                                    <div className="grid gap-3">
-                                        {/* Rasakan petualangan Tanpa.... */}
-                                        <div>
-                                            <h2 className="mb-1 text-[43px] leading-none font-bold">
-                                                Rasakan Petualangan
-                                            </h2>
-                                            <h2 className="text-[43px] leading-none font-bold text-primary">
-                                                <TypeAnimation
-                                                    sequence={[
-                                                        "Tanpa Hambatan",
-                                                        2000,
-                                                        "Tanpa Gangguan",
-                                                        2000,
-                                                        () => {
-                                                            console.log(
-                                                                "Berhasil"
-                                                            );
-                                                        },
-                                                    ]}
-                                                    repeat={Infinity}
-                                                />
-                                            </h2>
-                                        </div>
-                                        {/* Rasakan petualangan Tanpa.... */}
-                                        <p className="text-sm mt-3 text-midnight font-medium max-w-72">
-                                            Temukan pesona eksklusif Jawa Timur
-                                            dan Mulai rencanakan perjalananmu
-                                            bersama
-                                            <span className="text-midnight font-bold">
-                                                {" "}
-                                                Dolan
-                                            </span>
-                                            <span className="text-primary font-bold">
-                                                Rek!
-                                            </span>
-                                        </p>
+                        <div className="grid gap-8 lg:flex lg:flex-wrap items-center justify-between">
+                            {/* text */}
+                            <div className="grid gap-4 lg:gap-10">
+                                <div className="grid gap-1 lg:gap-3">
+                                    {/* Rasakan petualangan Tanpa.... */}
+                                    <div>
+                                        <h2 className="text-midnight mb-1 text-2xl lg:text-[43px] leading-none font-bold">
+                                            Rasakan Petualangan
+                                        </h2>
+                                        <h2 className="text-2xl lg:text-[43px] leading-none font-bold text-primary">
+                                            <TypeAnimation
+                                                sequence={[
+                                                    "Tanpa Hambatan",
+                                                    2000,
+                                                    "Tanpa Gangguan",
+                                                    2000,
+                                                    () => {
+                                                        console.log("Berhasil");
+                                                    },
+                                                ]}
+                                                repeat={Infinity}
+                                            />
+                                        </h2>
                                     </div>
-
-                                    <a
-                                        href={"/explore"}
-                                        className="w-fit inline-flex items-center justify-center py-2 text-base font-medium text-center text-white border border-transparent rounded-3xl px-8 bg-primary hover:bg-opacity-90"
-                                    >
-                                        Explore
-                                    </a>
+                                    {/* Rasakan petualangan Tanpa.... */}
+                                    <p className="text-xs lg:text-sm mt-3 text-midnight font-medium max-w-72">
+                                        Temukan pesona eksklusif Jawa Timur dan
+                                        Mulai rencanakan perjalananmu bersama
+                                        <span className="text-midnight font-bold">
+                                            {" "}
+                                            Dolan
+                                        </span>
+                                        <span className="text-primary font-bold">
+                                            Rek!
+                                        </span>
+                                    </p>
                                 </div>
-                                {/* end text */}
+
+                                <a
+                                    href={"/explore"}
+                                    className="w-fit inline-flex items-center justify-center py-2 text-sm lg:text-base font-medium text-center text-white border border-transparent rounded-3xl px-8 bg-primary hover:bg-opacity-90"
+                                >
+                                    Explore
+                                </a>
                             </div>
+                            {/* end text */}
                             {/* caroursel */}
                             <div className="w-full px-4 lg:w-6/12 pr-8">
-                                <div className="flex gap-4 max-w-[540px] w-full max-h-[424px] h-full justify-center">
+                                <div className="grid lg:flex gap-4 max-w-[540px] w-full lg:max-h-[424px] h-full justify-center">
                                     {/* bagian 1. Bromo dan Jatim Park 2 */}
                                     <div className="grid gap-4">
                                         {/* bromo */}
