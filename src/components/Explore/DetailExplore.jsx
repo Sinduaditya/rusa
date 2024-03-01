@@ -5,8 +5,8 @@ import {useParams} from "react-router-dom";
 import {exploreData} from "../data/exploreData.jsx";
 import {useState} from 'react';
 import getCategoryImage from "../data/categoryImages.jsx";
-import Maps from "../../assets/explore/map.svg";
 import KawahWurung from "../../assets/kawah-wurung.jpg";
+import explore from "../../assets/explore/export.svg";
 
 function DetailExplore(){
     const {id} = useParams();
@@ -80,7 +80,7 @@ function DetailExplore(){
                                         <summary
                                             className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg "
                                         >
-                                            <h2 className="text-slate-700 text-2xl mb-4 font-semibold font-poppins">Harga</h2>
+                                            <h2 className="text-slate-700 text-2xl mb-4 font-semibold font-poppins">Harga {selectedItem.price}</h2>
 
                                             <svg
                                                 className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
@@ -94,16 +94,23 @@ function DetailExplore(){
                                             </svg>
                                         </summary>
                                         <div className="mt-4 px-4 leading-relaxed font-medium">
-                                            <h3>Wisatawan:</h3>
+                                            <h3>{selectedItem.kategori}</h3>
                                             <ul>
-                                                <li>IDR 5.000 (Hari Biasa)</li>
-                                                <li>IDR 7.000 (Hari Libur)</li>
+                                                <li className="ml-10">{selectedItem.priceAdult}</li>
                                             </ul>
-                                            <h3 className="mt-3">Wisatawan Mancanegara:</h3>
+                                            <h3 className="mt-3">{selectedItem.kategori2}</h3>
                                             <ul>
-                                                <li>IDR 5.000 (Hari Biasa)</li>
-                                                <li>IDR 7.000 (Hari Libur)</li>
+                                                <li className="ml-10">{selectedItem.priceChild}</li>
                                             </ul>
+                                            <h3 className="mt-3">{selectedItem.kategori3}</h3>
+                                            <ul>
+                                                <li className="ml-10">{selectedItem.hargaKategori3}</li>
+                                            </ul>
+                                            <h3 className="mt-3">{selectedItem.kategori4}</h3>
+                                            <ul>
+                                                <li className="ml-10">{selectedItem.hargaKategori4}</li>
+                                            </ul>
+                                            <p className="mt-5 font-bold border p-2 rounded-3xl text-center">{selectedItem.diskon}</p>
                                         </div>
 
                                     </details>
@@ -126,16 +133,8 @@ function DetailExplore(){
                                                       d="M19 9l-7 7-7-7"/>
                                             </svg>
                                         </summary>
-                                        <div className="mt-4 px-4 leading-relaxed font-medium">
-                                            <h2>Blue Fire di Kawah Ijen, Rute pendakian pertama menuju puncak Kawah Ijen
-                                                yang
-                                                berada pada ketinggian 2.799 meter di atas permukaan laut telah dibuka
-                                                sejak
-                                                pukul 01.00 WIB dari pos Pal Tuding. Dengan estimasi waktu pendakian
-                                                normal antara 2 hingga 3 jam,
-                                                Anda akan tiba di puncak tertinggi Gunung Ijen. Antara pukul 03.00
-                                                hingga 04.00, Anda masih bisa menikmati
-                                                keindahan dan fenomena unik Blue Fire di sekitar Danau Kawah Ijen.</h2>
+                                        <div className="mt-4 px-4 leading-relaxed font-normal">
+                                            <p>{selectedItem.expect}</p>
                                         </div>
 
                                     </details>
@@ -157,20 +156,19 @@ function DetailExplore(){
                                                       d="M19 9l-7 7-7-7"/>
                                             </svg>
                                         </summary>
-                                        <div className="mt-4 px-4 leading-relaxed font-medium">
-                                            <h3>Content</h3>
+                                        <div className="mt-4 px-4 leading-relaxed font-normal">
+                                            <p>{selectedItem.addInfo}</p>
                                         </div>
 
                                     </details>
                                 </div>
                             </div>
-                            <div className="md:w-1/2">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31603.34018797576!2d114.23211339300163!3d-8.058823085985411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd149f2110ae607%3A0x7c04ef029d5e39bc!2sGn.%20Ijen!5e0!3m2!1sid!2sid!4v1709187816719!5m2!1sid!2sid"
-                                    width="600" height="450"  allowFullScreen="" loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"></iframe>
-                                {/*<img className="rounded-2xl h-[600px] w-[500px]" src={Maps}*/}
-                                {/*     alt="About Kawah Ijen"/>*/}
+                            <div className="md:w-1/2 -mt-[150px]">
+                                <img src={selectedItem.image} className="rounded-xl" alt=""/>
+                                <a href={selectedItem.link} className="flex justify-center items-center gap-4" target="_blank">
+                                    <p className="text-center mt-2">Lihat di Google Maps</p>
+                                    <img src={explore} className="h-4 w-4 mt-1" alt=""/>
+                                </a>
                             </div>
                         </div>
                     </div>
