@@ -1,7 +1,9 @@
+import Sidebar from "./sidebar.jsx";
+
 function AiPage(){
     return (
         <>
-            <h1>ini adalah ai</h1>
+            <Sidebar/>
         </>
     )
 }
