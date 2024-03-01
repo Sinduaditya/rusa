@@ -9,6 +9,7 @@ import DetailStories from "./components/Stories/DetailStories.jsx";
 import About from "./pages/About.jsx";
 import AiLayout from "./layouts/AiLayout.jsx";
 import IntroAi from "./components/Home/IntroAi.jsx";
+import AuthLayout from "./layouts/AuthLayout.jsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -53,6 +54,16 @@ function App() {
                 {
                     path: '/dolanrek-ai',
                     element: <IntroAi/>
+                }
+            ],
+        },
+        {
+            path: "/login",
+            element: <AuthLayout/>,
+            children: [
+                {
+                    path: '/login',
+                    element: <Login/>
                 }
             ],
         },

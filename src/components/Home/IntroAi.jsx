@@ -3,30 +3,57 @@ import Ai from "../../assets/home/ai.svg";
 function IntroAi() {
     return (
         <>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={Ai}
-                         className="max-w-sm rounded-lg shadow-2xl"/>
-                    <div className="mx-auto flex max-w-3xl flex-col gap-8">
-                        <h2 className="text-4xl font-bold leading-tight tracking-wide text-black  xl:text-5xl">
-                            Dolan<span className="text-primary relative">Rek.<small
-                            className="absolute text-xl -top-1">Assistant</small> </span>
-                        </h2>
+            <div
+                className='main-container flex w-[1024px] pt-[24px] pr-[48px] pb-[24px] pl-[48px] justify-between items-center flex-nowrap rounded-[48px] relative mx-auto my-0'>
+                <div
+                    className='flex w-[960px] pt-[24px] pr-[48px] pb-[24px] pl-[48px] justify-between items-center shrink-0 flex-nowrap relative'>
+                    <div
+                        className='w-[304px] h-[304px] shrink-0 bg-[url(../assets/images/c1a7348b-5e3a-411f-8aba-0e9e0d229855.png)] bg-cover bg-no-repeat relative z-[1]'/>
+                    <div
+                        className='flex w-[425px] flex-col gap-[48px] justify-center items-end shrink-0 flex-nowrap relative z-[2]'>
+                        <div
+                            className='flex w-[425px] flex-col gap-[24px] items-end shrink-0 flex-nowrap relative z-[3]'>
+                            <div
+                                className="w-[425px] shrink-0 font-['Poppins'] text-[43px] font-bold leading-[43px] tracking-[0.13px] relative text-right z-[4]">
+              <span
+                  className="font-['Poppins'] text-[43px] font-bold leading-[43px] text-[#031d39] tracking-[0.13px] relative text-right">
+                Liburan Cerdas Bersama Halo
+              </span>
+                                <span
+                                    className="font-['Poppins'] text-[43px] font-bold leading-[43px] tracking-[0.13px] relative text-right">
+                Rek
+              </span>
+                                <span
+                                    className="font-['Poppins'] text-[43px] font-bold leading-[43px] tracking-[0.13px] relative text-right">
+                AI
+              </span>
+                            </div>
+                            <div
+                                className="w-[339px] shrink-0 font-['Poppins'] text-[14px] font-normal leading-[22.652px] tracking-[0.04px] relative text-right z-[5]">
+              <span
+                  className="font-['Poppins'] text-[14px] font-normal leading-[22.652px] text-[#304862] tracking-[0.04px] relative text-right">
+                Jelajahi Pesona Jawa Timur dengan Lebih Mudah dan Efektif
+                bersama
+              </span>
+                                <span
+                                    className="font-['Poppins'] text-[14px] font-bold leading-[22.652px] tracking-[0.04px] relative text-right">
+                AI Assistance
+              </span>
+                                <span
+                                    className="font-['Poppins'] text-[14px] font-normal leading-[22.652px] text-[#304862] tracking-[0.04px] relative text-right">
 
-                        <p className="text-lg text-neutral-600 dark:text-neutral-400">
-                            Mari jelajahi Jawa Timur dengan lebih dalam. Tanyakan apapun tentang destinasi,
-                            budaya, atau hal lain yang ingin Anda ketahui,
-                            dan biarkan AI kami memberikan jawaban yang informatif dan bermanfaat
-                        </p>
-
-                        <div className="space-x-8">
-                            <a
-                                href="#"
-                                className="rounded-md bg-midnight px-10 py-3 text-sm font-semibold text-neutral-900 shadow-sm ring-1 ring-inset ring-neutral-500 hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-500 dark:text-neutral-100 dark:ring-neutral-600 dark:hover:bg-neutral-800 dark:focus-visible:outline-neutral-400"
-                            >
-                                Mulai Sekarang
-                            </a>
+                kami, Sahabat Terpercaya yang Siap Membantu Merencanakan
+                Perjalanan Impianmu
+              </span>
+                            </div>
                         </div>
+                        <button
+                            className='flex w-[114px] pt-[8px] pr-[32px] pb-[8px] pl-[32px] gap-[10px] items-start shrink-0 flex-nowrap rounded-[48px] border-none relative z-[6] pointer'>
+            <span
+                className="h-[23px] shrink-0 basis-auto font-['Poppins'] text-[14px] font-normal leading-[22.652px] text-[#fff] tracking-[0.04px] relative text-left whitespace-nowrap z-[7]">
+              Explore
+            </span>
+                        </button>
                     </div>
                 </div>
             </div>

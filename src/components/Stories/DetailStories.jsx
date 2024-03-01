@@ -12,14 +12,7 @@ function DetailStories(){
     }
     return (
         <>
-            <div className="bg-bluelight relative z-10">
-                <div
-                    className="absolute -left-[450px] top-32 w-[900px] h-[900px]  z-[-1] bg-yellow rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div
-                    className="absolute right-0 top-10 w-[500px] h-[500px]  z-[-1] bg-primary rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-                <div
-                    className="absolute right-0 top-[1000px] w-[500px] h-[400px]  z-[-1] bg-greenlight rounded-[100%] mix-blend-multiply  filter blur-2xl opacity-15 animate-blob animation-delay-100"></div>
-
+            <div className="bg-bluelight">
                 <div className="mx-auto max-w-screen-xl px-4  pt-[40px] font-poppins">
                     <main className="mt-10">
                         <div className="mb-4 md:mb-0 w-full mx-auto relative">
