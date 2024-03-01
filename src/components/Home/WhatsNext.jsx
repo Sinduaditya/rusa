@@ -27,9 +27,12 @@ function WhatsNext(params) {
                     </div>
                     {/* Mungkin Kamu Suka - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
                     {/* Mungkin Kamu Suka - Bagian Card */}
-                    <div className="overflow-x-scroll -mx-8 lg:mx-0 grid md:flex justify-center">
-                        <WhatsNextCard />
+                    <div className="overflow-hidden">
+                        <div className="-mx-8 lg:mx-0 grid md:flex justify-center">
+                            <WhatsNextCard />
+                        </div>
                     </div>
+
                     <div className="flex w-full justify-end md:hidden">
                         <a
                             href={`/explore/`}
