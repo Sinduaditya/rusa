@@ -59,7 +59,7 @@ function Explore() {
                                 <input
                                     type="text"
                                     placeholder="Cari destinasi..."
-                                    className="border border-primary rounded-3xl py-2 px-4 pl-10 mb-4"
+                                    className="border border-primary bg-bluelight rounded-3xl py-2 px-4 pl-10 mb-4"
                                     value={searchTerm}
                                     onChange={handleSearch}
                                 />
@@ -165,7 +165,9 @@ function Explore() {
                                             src={item.image}
                                             alt={item.name}
                                         />
+
                                         <div className="flex items-center">
+
                                             <div>
                                                 <h1 className="text-4xl font-bold font-poppin">
                                                     {item.name}

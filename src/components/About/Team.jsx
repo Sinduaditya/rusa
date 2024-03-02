@@ -13,7 +13,7 @@ const Team = () => {
             lastname: "Aditya",
             role: "Hustler And Frontend Dev",
             picture: Sindu,
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolores ea est explicabo mollitia quo saepe tenetur ullam unde voluptatem. Architecto aspernatur culpa dolor, doloremque error ipsam, labore necessitatibus nesciunt non nostrum repudiandae sit temporibus ut? Asperiores nisi nulla omnis!",
+            description: "Halo semuanya 👋, Perkenalkan nama saya Sindu Aditya Janadi seorang mahasiswa semester 2 dari Universitas Dian Nuswantoro Semarang",
             facebookURL: "#link",
             twitterURL: "#link",
             linkedinURL: "#link",
