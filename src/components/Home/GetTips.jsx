@@ -31,7 +31,7 @@ function GetTips() {
                             </div>
                         </div>
                         <a
-                            href={"/explore/"}
+                            href={"/stories/"}
                             className="btn btn-square btn-info text-white w-fit px-8 rounded-full"
                         >
                             Explore Stories
