@@ -1,6 +1,5 @@
 import React from "react";
-import AiIcon from "../../assets/home/ai.svg";
-import AiIllustration from "../../assets/home/image_AI.svg";
+import AiIllustration from "../../assets/home/aiintro.png";
 
 function IntroAi() {
     return (
