@@ -1,12 +1,12 @@
 import Loc from "../../assets/location2.svg";
 import Love from "../../assets/explore/heart.svg";
-import Love2 from "../../assets/heartko.svg";
 import {useParams} from "react-router-dom";
 import {exploreData} from "../data/exploreData.jsx";
 import {useState} from 'react';
 import getCategoryImage from "../data/categoryImages.jsx";
-import KawahWurung from "../../assets/kawah-wurung.jpg";
 import explore from "../../assets/explore/export.svg";
+import DestinasiSekitar from "./DestinasiSekitar.jsx";
+
 
 function DetailExplore(){
     const {id} = useParams();
@@ -28,7 +28,8 @@ function DetailExplore(){
                 <div className="mx-auto max-w-screen-xl px-4 font-poppins pt-[80px]">
                     <div className="container  mx-auto px-4 md:px-0">
                         <div className="mb-12">
-                            <h1 className="text-black text-6xl pb-3 font-bold font-poppins">{selectedItem.name}</h1>
+                            <a href={`/explore/`} className="pl-4 pt-2 pb-2 rounded-3xl hover:bg-midnight hover:text-white items-center border pr-4">Kembali</a>
+                            <h1 className="text-black sm:text-6xl text-4xl pb-3 mt-10 font-bold font-poppins">{selectedItem.name}</h1>
                             <div className="flex items-center pb-3 gap-2">
                                 <img src={Loc} className="w-6 h-6" alt=""/>
                                 <div className="text-secondary text-base font-medium font-cabin">{selectedItem.location}
@@ -110,7 +111,7 @@ function DetailExplore(){
                                             <ul>
                                                 <li className="ml-10">{selectedItem.hargaKategori4}</li>
                                             </ul>
-                                            <p className="mt-5 font-bold border p-2 rounded-3xl text-center">{selectedItem.diskon}</p>
+                                            {/*<p className="mt-5 font-bold border p-2 rounded-3xl text-center">{selectedItem.diskon}</p>*/}
                                         </div>
 
                                     </details>
@@ -163,7 +164,7 @@ function DetailExplore(){
                                     </details>
                                 </div>
                             </div>
-                            <div className="md:w-1/2 -mt-[150px]">
+                            <div className="md:w-1/2 mt-10">
                                 <img src={selectedItem.image} className="rounded-xl" alt=""/>
                                 <a href={selectedItem.link} className="flex justify-center items-center gap-4" target="_blank">
                                     <p className="text-center mt-2">Lihat di Google Maps</p>
@@ -173,44 +174,27 @@ function DetailExplore(){
                         </div>
                     </div>
                     {/*    Destinasi lain*/}
-                    <section className="bg-transparent">
-                        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-                            <h2 className="text-left text-4xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
-                            Destinasi lain sekitarnya
-                            </h2>
-                            <p className="text-left font-light text-secondary">Temukan destinasi terbaik lainnya di
-                                sekitar</p>
-
-                            <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 justify-center">
-                                <div className="card card-compact w-96 relative">
-                                    <figure className="relative">
-                                        <img src={KawahWurung} className="rounded-3xl  w-90" alt="Shoes"/>
-                                        <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white ">
-                                            <img src={Love2} className="h-5 w-5 m-1" alt=""/>
-                                        </div>
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Kawah Wurung</h2>
-                                        <div className="flex gap-3">
-                                            <div className="rating rating-sm">
-                                                <input type="radio" name="rating-6"
-                                                       className="mask mask-star-2 bg-orange"/>
-                                                <input type="radio" name="rating-6"
-                                                       className="mask mask-star-2 bg-orange"
-                                                       checked/>
-                                                <input type="radio" name="rating-6"
-                                                       className="mask mask-star-2 bg-orange"/>
-                                                <input type="radio" name="rating-6"
-                                                       className="mask mask-star-2 bg-orange"/>
-                                                <input type="radio" name="rating-6"
-                                                       className="mask mask-star-2 bg-orange"/>
-                                            </div>
-                                            <p className="text-secondary">224</p>
-                                        </div>
-                                    </div>
+                    <section className="bg-bluelight mt-12">
+                        <div className=" grid gap-4 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 lg:py-16">
+                            {/* Destinasi Populer - Bagian Atas (Tulisan dan link "Lihat Semua") */}
+                            <div className=" flex w-full ml-2 justify-between">
+                                <div className="">
+                                    <h1 className="text-sky-950 font-semibold text-2xl">
+                                        Destinasi lain sekitarnya
+                                    </h1>
+                                    <p className="text-md mt-2 text-secondary">
+                                        Temukan destinasi terbaik lainnya di sekitar {selectedItem.name} !
+                                    </p>
                                 </div>
 
                             </div>
+                            {/* Destinasi Populer - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
+
+                            <div className=" grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 justify-center">
+                                {/* sudah difilter di PopDestiCard. hanya tampil yang "Pilihan Terbaik" saja dilimit ke 3 teratas. */}
+                                <DestinasiSekitar/>
+                            </div>
+
                         </div>
                     </section>
                     {/*    destinasi lain end*/}

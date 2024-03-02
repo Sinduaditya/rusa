@@ -14,8 +14,10 @@ function DetailStories(){
                 <div className="mx-auto max-w-screen-xl px-4  pt-[40px] font-poppins">
                     <main className="mt-10">
                         <div className="mb-4 md:mb-0 w-full mx-auto relative">
-                            <div className="px-4 lg:px-0">
-                                <span className="text-secondary font-light ml-1 text-md">{selectedItem.category}</span>
+                            <a href={`/stories/`}
+                               className="pl-4 pt-2 pb-2 rounded-3xl hover:bg-midnight hover:text-white items-center border pr-4">Kembali</a>
+                            <div className="px-4 lg:px-0 mt-10">
+                                <span className="text-secondary font-light ml-1  text-md">{selectedItem.category}</span>
                                 <h2 className="sm:text-xl md:text-6xl mt-2 font-semibold text-gray-800 leading-tight">
                                     {selectedItem.title}
                                 </h2>
