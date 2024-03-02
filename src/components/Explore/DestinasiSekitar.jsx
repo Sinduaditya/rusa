@@ -1,36 +1,42 @@
-import React, { useEffect, useState } from "react";
+import {exploreData} from "../data/exploreData.jsx";
+import React from "react";
+
 import Love2 from "../../assets/heartko.svg";
-import { exploreData } from "../data/exploreData";
+function DestinasiSekitar(){
+    const [nearestDestinations, setNearestDestinations] = React.useState([]);
 
-function PopDestiCard() {
-    const [destinations, setDestinations] = useState([]);
+    const getRandomIDs = () => {
+        const allIDs = exploreData.map(dest => dest.id);
+        const shuffledIDs = allIDs.sort(() => 0.5 - Math.random());
+        return shuffledIDs.slice(0, 3);
+    };
 
-    useEffect(() => {
-        // Mengatur data destinasi dari exploreData.jsx ke state
-        const filteredDestinations = exploreData.filter((destination) =>
-            destination.categories.includes("Pilihan Terbaik")
-        );
-        // Mengambil hanya 3 data pertama setelah dilakukan filter
-        const limitedDestinations = filteredDestinations.slice(0, 3);
-        setDestinations(limitedDestinations);
+
+    const getDestinationByID = (id) => {
+        return exploreData.find(dest => dest.id === id);
+    };
+
+    React.useEffect(() => {
+        const randomIDs = getRandomIDs();
+        const nearestDestinationsData = randomIDs.map(id => getDestinationByID(id));
+        setNearestDestinations(nearestDestinationsData);
     }, []);
-
     return (
         <>
-            {destinations.map((destination) => (
+        {nearestDestinations.map(dest => (
                 <div
                     className="card card-compact w-full relative"
-                    key={destination.id}
+                    key={dest.id}
                 >
                     <a
-                        href={`/detail-explore/${destination.id}`}
-                        key={destination.id}
+                        href={`/detail-explore/${dest.id}`}
+                        key={dest.id}
                     >
                         <figure className="relative">
                             <img
-                                src={destination.image}
+                                src={dest.image}
                                 className="rounded-3xl w-90 aspect-video"
-                                alt={destination.name}
+                                alt={dest.name}
                             />
                             <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white">
                                 <img
@@ -41,7 +47,7 @@ function PopDestiCard() {
                             </div>
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title">{destination.name}</h2>
+                            <h2 className="card-title">{dest.name}</h2>
                             <div className="flex gap-3">
                                 <div className="rating rating-sm">
                                     {[...Array(5)].map(
@@ -52,7 +58,7 @@ function PopDestiCard() {
                                                 className={`mask mask-star-2 bg-orange ${
                                                     i <
                                                     Math.round(
-                                                        destination.rating /
+                                                        dest.rating /
                                                         40
                                                     )
                                                         ? "checked"
@@ -61,17 +67,18 @@ function PopDestiCard() {
                                             />
                                         )
                                     )}
-                                 </div>
+                                </div>
                                 <p className="text-secondary">
-                                    {destination.rating}
+                                    {dest.rating}
                                 </p>
                             </div>
                         </div>
                     </a>
                 </div>
-            ))}
+            )
+        )}
         </>
-    );
+    )
 }
 
-export default PopDestiCard;
+export default DestinasiSekitar;

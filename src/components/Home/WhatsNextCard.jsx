@@ -39,7 +39,23 @@ function WhatsNextCard() {
                             <h2 className="card-title">{destination.name}</h2>
                             <div className="flex gap-3">
                                 <div className="rating rating-sm">
-                                    {/* Tambahkan kode untuk menampilkan bintang rating */}
+                                    {[...Array(5)].map(
+                                        (_, i) => (
+                                            <input
+                                                key={i}
+                                                type="radio"
+                                                className={`mask mask-star-2 bg-orange ${
+                                                    i <
+                                                    Math.round(
+                                                        destination.rating /
+                                                        40
+                                                    )
+                                                        ? "checked"
+                                                        : ""
+                                                }`}
+                                            />
+                                        )
+                                    )}
                                 </div>
                                 <p className="text-secondary">
                                     {destination.rating}
