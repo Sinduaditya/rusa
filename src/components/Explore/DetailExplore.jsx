@@ -2,6 +2,7 @@ import Loc from "../../assets/location2.svg";
 import Love from "../../assets/explore/heart.svg";
 import {useParams} from "react-router-dom";
 import {exploreData} from "../data/exploreData.jsx";
+import {arekSayData} from "../data/arekSayData.jsx";
 import {useState} from 'react';
 import getCategoryImage from "../data/categoryImages.jsx";
 import explore from "../../assets/explore/export.svg";
@@ -14,6 +15,7 @@ function DetailExplore(){
     if (!selectedItem) {
         return <div>Item tidak ditemukan</div>;
     }
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [expanded, setExpanded] = useState(false);
     const originalText = "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.";
