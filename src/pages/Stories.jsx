@@ -3,7 +3,7 @@ import Search from "../assets/explore/search-normal.svg";
 import {storiesData} from "../components/data/storiesData.jsx";
 import  Save from "../assets/stories/archive.svg";
 
-import React, {useState} from "react";
+import {useState} from "react";
 import {Link} from "react-router-dom";
 
 function Stories(){
@@ -40,7 +40,7 @@ function Stories(){
                                 <input
                                     type="text"
                                     placeholder="Cari destinasi..."
-                                    className="border border-primary rounded-3xl py-2 px-4 pl-10 mb-4"
+                                    className="border border-primary bg-bluelight rounded-3xl py-2 px-4 pl-10 mb-4"
                                     value={searchTerm}
                                     onChange={handleSearch}
                                 />
@@ -59,25 +59,25 @@ function Stories(){
                                         </a>
                                         <a
                                             href="#"
-                                            className="inline-flex shrink-0 items-center gap-2 bg-white text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-3xl"
+                                            className="inline-flex shrink-0 items-center gap-2 bg-bluelight text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-3xl"
                                         >
                                             Activities
                                         </a>
                                         <a
                                             href="#"
-                                            className="inline-flex shrink-0 items-center gap-2 bg-white text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-3xl"
+                                            className="inline-flex shrink-0 items-center gap-2 bg-bluelight text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-3xl"
                                         >
                                             Knowledge
                                         </a>
                                         <a
                                             href="#"
-                                            className="inline-flex shrink-0 items-center gap-2 bg-white text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-3xl"
+                                            className="inline-flex shrink-0 items-center gap-2 bg-bluelight text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-3xl"
                                         >
                                             Tips & Advice
                                         </a>
                                         <a
                                             href="#"
-                                            className="inline-flex shrink-0 items-center gap-2 bg-white text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-2xl"
+                                            className="inline-flex shrink-0 items-center gap-2 bg-bluelight text-secondary   border-secondary  border-2 px-5 pb-2 pt-2 text-sm font-medium rounded-2xl"
                                         >
                                             Cerita Tersimpan
                                             <img src={Save} className="h-5 w-5" alt=""/>
@@ -104,7 +104,9 @@ function Stories(){
                                             <span className="text-secondary uppercase ">{item.category}</span>
                                             <p className="mb-2 block text-2xl font-semibold text-gray-700">{item.title}</p>
                                             <span className="text-sm text-secondary">{item.date}</span>
-                                            <p className="mb-6 text-gray-500">{item.description}</p>
+                                            <p className="mb-6 text-gray-500">
+                                                {item.description.length > 280 ? `${item.description.substring(0, 280)}...` : item.description}
+                                            </p>
                                         </div>
                                     </article>
                                 </Link>
