@@ -31,7 +31,9 @@ function IntroAi() {
                     Perjalanan Impianmu
                 </p>
                 <button className="flex items-center py-2 px-8 rounded-full hover:bg-midnight bg-primary text-white">
-                    <span className="text-[14px] font-normal">Explore</span>
+                    <a href={"/dolanrek-ai"}>
+                        <span className="text-[14px] font-normal">Explore</span>
+                    </a>
                 </button>
             </div>
         </div>
