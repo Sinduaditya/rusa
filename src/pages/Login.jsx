@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LoginImg from "../assets/login/login.svg";
 import message from "../assets/login/sms.svg";
 import lock from "../assets/login/lock.svg";
-import eyeSlash from "../assets/login/eye-slash.svg"; // Memanggil eye-slash.svg
+import eyeSlash from "../assets/login/eye-slash.svg";
 import google from "../assets/login/google.svg";
 import fb from "../assets/login/facebook.svg";
 
@@ -29,20 +29,15 @@ function Login() {
         <div className="font-poppins bg-bluelight">
             <div className="grid md:grid-cols-3 items-center lg:gap-10 gap-4">
                 <ImageLogin />
-                {/* form start */}
                 <div className="w-full h-full md:col-span-2">
-                    {/* rounded start */}
-                    <div className="rounded-[64px]  flex md:w-[544px] py-12 flex-col gap-[8px] justify-center items-center flex-nowrap mx-auto my-0">
+                    <div className="rounded-[64px]  w-screen  flex md:w-[544px] py-12 flex-col gap-[8px] justify-center items-center flex-nowrap md:mx-auto my-0">
                         <form className="">
-                            {/* elemen dalam */}
-                            <div className="flex md:w-[480px] flex-col gap-10 items-start shrink-0 flex-nowrap">
-                                {/* tulisan */}
+                            <div className="flex w-screen px-6 md:w-[480px] flex-col gap-10 items-start shrink-0 flex-nowrap">
                                 <div className="flex md:w-[480px] flex-col gap-[48px] items-start shrink-0">
                                     <h1 className="font-poppins text-[40px] font-bold leading-[60px] text-midnight">
                                         Welcome Back
                                     </h1>
                                 </div>
-                                {/* placeholder */}
                                 <div className="w-full flex flex-col gap-[24px] items-start shrink-0 flex-nowrap ">
                                     <div className="w-full flex flex-col gap-[10px] items-start shrink-0 flex-nowrap">
                                         <label
@@ -51,7 +46,6 @@ function Login() {
                                         >
                                             Email
                                         </label>
-                                        {/* INput placeholder untuk Email */}
                                         <div className="w-full bg-white flex h-[64px] px-4 gap-2 justify-left items-start rounded-[9px] border-solid border-2 border-[#8c9fb5] overflow-hidden">
                                             <div className="grid px-4 h-full shrink-0 content-center">
                                                 <img
@@ -68,7 +62,6 @@ function Login() {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Untuk password */}
                                 <div className="w-full flex flex-col gap-[10px] items-start shrink-0 flex-nowrap">
                                     <div className="flex justify-between items-center self-stretch shrink-0 flex-wrap">
                                         <span className="h-[30px] basis-auto  text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap z-[14]">
@@ -78,7 +71,6 @@ function Login() {
                                             Forgot Password?
                                         </span>
                                     </div>
-                                    {/* Input placeholder untuk password */}
                                     <div className="w-full bg-white flex h-[64px] px-4 gap-2 justify-left items-start rounded-[9px] border-solid border-2 border-[#8c9fb5] overflow-hidden">
                                         <div className="grid px-4 h-full shrink-0 content-center">
                                             <img
@@ -97,7 +89,6 @@ function Login() {
                                             className="h-16 w-full font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
                                             placeholder="••••••••••••••••"
                                         />
-                                        {/* toggle for hide password */}
                                         <div
                                             className="grid px-4 h-full shrink-0 content-center"
                                             onClick={togglePasswordVisibility}
@@ -106,31 +97,30 @@ function Login() {
                                                 src={
                                                     showPassword
                                                         ? eyeSlash
-                                                        : eyeSlash // Menggunakan eye-slash.svg
+                                                        : eyeSlash
                                                 }
                                                 className="w-6 h-6 cursor-pointer"
                                                 alt=""
                                             />
                                         </div>
-                                        {/* end  toggle for hide password */}
                                     </div>
                                 </div>
 
-                                <div className="flex w-[457px] gap-[16px] items-start shrink-0 flex-nowrap  z-[28]">
-                                    <button className="flex w-[210px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] items-center shrink-0 flex-nowrap rounded-[8px] border-solid border-[#8c9fb5]  pointer">
+                                <div className="grid md:flex w-full md:w-[457px] gap-[16px] items-start shrink-0 flex-nowrap  z-[28]">
+                                    <button className="border w-full flex md:w-[210px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] justify-center shrink-0 flex-nowrap rounded-[8px] border-solid border-[#8c9fb5]  pointer">
                                         <img src={google} alt="" />
                                         <span className="h-[24px] shrink-0 basis-auto font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#304862]  text-left whitespace-nowrap ">
                                             Sign in with Google
                                         </span>
                                     </button>
-                                    <button className="flex w-[231px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] items-center shrink-0 flex-nowrap bg-[#316ff6] rounded-[8px] border-none  pointer">
+                                    <button className="flex w-full justify-center md:w-[231px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] items-center shrink-0 flex-nowrap bg-[#316ff6] rounded-[8px] border-none  pointer">
                                         <img src={fb} alt="" />
                                         <span className="h-[24px] shrink-0 basis-auto font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
                                             Sign in with Facebook
                                         </span>
                                     </button>
                                 </div>
-                                <button className="flex w-[480px] pt-[20px] pr-[16px] pb-[20px] pl-[16px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#9382f2] rounded-[8px] border-none  pointer">
+                                <button className="flex w-full md:w-[480px] pt-[20px] pr-[16px] pb-[20px] pl-[16px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#9382f2] rounded-[8px] border-none  pointer">
                                     <span className="h-[24px] shrink-0 basis-auto font-['Poppins'] text-[16px] font-bold leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
                                         Sign In
                                     </span>
