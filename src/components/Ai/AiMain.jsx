@@ -8,8 +8,8 @@ function AiMain() {
     return (
         <>
             {/* Main Content */}
-            <div className="main-container flex w-[616px] flex-col gap-[40px] items-start flex-nowrap relative mx-auto my-0">
-                <div className="flex w-[545px] flex-col items-start shrink-0 flex-nowrap relative">
+            <div className="main-container flex w-screen lg:w-[616px] flex-col gap-[40px] items-start flex-nowrap relative mx-auto my-0">
+                <div className="flex lg:w-[545px] flex-col items-start shrink-0 flex-nowrap relative">
                     <div className="w-[200px] shrink-0 font-['Poppins'] text-[43px] font-bold leading-[64.5px] tracking-[0.13px] relative text-left whitespace-nowrap z-[1]">
                         <span className="font-poppins text-[43px] font-bold leading-[64.5px] text-primary tracking-[0.13px] relative text-left">
                             Halo
@@ -18,11 +18,11 @@ function AiMain() {
                             Rek!
                         </span>
                     </div>
-                    <span className="h-[51px] shrink-0 basis-auto font-['Poppins'] text-[34px] font-normal leading-[51px] text-[#8c9fb5] tracking-[0.1px] relative text-left whitespace-nowrap z-[2]">
+                    <span className="h-[51px] shrink-0 basis-auto font-['Poppins'] text-[20px] lg:text-[34px] font-normal leading-[51px] text-[#8c9fb5] tracking-[0.1px] relative text-left whitespace-nowrap z-[2]">
                         Konsultasikan rencanamu disini
                     </span>
                 </div>
-                <div className="flex w-[616px] gap-[16px] items-start shrink-0 flex-nowrap relative z-[3]">
+                <div className="grid justify-center lg:flex w-screen lg:w-[616px] gap-[16px] items-start shrink-0 flex-nowrap relative z-[3]">
                     <div className="flex w-[300px] flex-col gap-[16px] items-start shrink-0 flex-nowrap  relative z-[4]">
                         <div className="flex w-[300px] bg-gradient-to-r from-[#1B8DFF] to-[#00B5EF] pt-[24px] pr-[72px] pb-[24px] pl-[24px] flex-col gap-[8px] items-start shrink-0 flex-nowrap rounded-[16px] relative z-[5]">
                             <div className="flex w-[186px] gap-[16px] items-center shrink-0 flex-nowrap rounded-[8px] relative z-[6]">
@@ -80,7 +80,7 @@ function AiMain() {
                         </div>
                     </div>
                 </div>
-                <div className="main-container flex w-[592px] mt-36  pt-[8px] pr-[8px] pb-[8px] pl-[16px] justify-between items-center flex-nowrap rounded-[16px] border-solid border border-[#304862] relative mx-auto my-0">
+                <div className="main-container flex w-screen lg:w-[592px] mt-36 mb-4  pt-[8px] pr-[8px] pb-[8px] pl-[16px] justify-between items-center flex-nowrap rounded-[16px] border-solid border border-[#304862] relative mx-auto my-0">
                     <span className="h-[23px] shrink-0 basis-auto font-['Poppins'] text-[14px] font-normal leading-[22.652px] text-[#8c9fb5] tracking-[0.04px] relative text-left whitespace-nowrap">
                         Masukkan perintah di sini
                     </span>
