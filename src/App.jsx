@@ -12,36 +12,41 @@ import AiLayout from "./layouts/AiLayout.jsx";
 import IntroAi from "./components/Home/IntroAi.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 import PageNotFound from "./pages/NotFound.jsx";
+import SignUp from "./pages/signup.jsx";
 
 function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <RootLayout/>,
+            element: <RootLayout />,
             children: [
                 {
                     path: "/",
-                    element: <Home/>,
+                    element: <Home />,
                 },
                 {
                     path: "/login",
-                    element: <Login/>,
+                    element: <Login />,
+                },
+                {
+                    path: "/signup",
+                    element: <SignUp />,
                 },
                 {
                     path: "/explore",
-                    element: <Explore/>,
+                    element: <Explore />,
                 },
                 {
                     path: "/stories",
-                    element: <Stories/>,
+                    element: <Stories />,
                 },
                 {
                     path: "/detail-stories/:id",
-                    element: <DetailStories/>,
+                    element: <DetailStories />,
                 },
                 {
                     path: "/about",
-                    element: <About/>,
+                    element: <About />,
                 },
                 {
                     path: "/detail-explore/:id",
@@ -51,29 +56,29 @@ function App() {
         },
         {
             path: "/dolanrek-ai",
-            element: <AiLayout/>,
+            element: <AiLayout />,
             children: [
                 {
-                    path: '/dolanrek-ai',
-                    element: <IntroAi/>
-                }
+                    path: "/dolanrek-ai",
+                    element: <IntroAi />,
+                },
             ],
         },
         {
             path: "/login",
-            element: <AuthLayout/>,
+            element: <AuthLayout />,
             children: [
                 {
-                    path: '/login',
-                    element: <Login/>
-                }
+                    path: "/login",
+                    element: <Login />,
+                },
             ],
         },
         // Route for Page Not Found
         {
             path: "*",
-            element: <PageNotFound/>
-        }
+            element: <PageNotFound />,
+        },
     ]);
 
     return <RouterProvider router={router} />;
