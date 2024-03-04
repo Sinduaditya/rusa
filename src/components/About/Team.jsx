@@ -30,12 +30,12 @@ const Team = () => {
             youtubeURL: "",
         },
         {
-            firstname: "Senarya",
-            lastname: "Samuel",
-            role: "Product Designer / UI UX",
+            firstname: "Sen",
+            lastname: "Arya",
+            role: "UI Design And Illustrator",
             picture: Arya,
             description:
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolores ea est explicabo mollitia quo saepe tenetur ullam unde voluptatem. Architecto aspernatur culpa dolor, doloremque error ipsam, labore necessitatibus nesciunt non nostrum repudiandae sit temporibus ut? Asperiores nisi nulla omnis!",
+                "Diam bukan berarti tak memperhatikanmu, halo semuanya aku, Gita!",
             facebookURL: "",
             twitterURL: "",
             linkedinURL: "",

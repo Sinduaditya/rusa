@@ -12,16 +12,16 @@ function HeroSection() {
                 className="hero lg:h-[500px]  relative md:h-screen bg-white bg-cover bg-center  mx-auto md:w-full rounded-2xl h-screen"
                 style={{ backgroundImage: `url(${Hero})` }}
             >
-                <div className="hero-content text-center ">
+                <div className="hero-content text-center w-full h-full bg-gradient-to-b from-midnight/10 to-[#000000]/80 rounded-2xl ">
                     <div className="max-w-md ">
-                        <div className="lg:absolute md:relative bottom-[160px] text-center text-white items-center sm:bottom-[120px] sm:left-14">
+                        <div className="lg:absolute md:relative bottom-[160px] text-center text-white items-center sm:bottom-24 sm:left-14">
                             <div className="flex">
                                 <img src={Loc} className="w-4 mr-3" alt="" />
                                 <p className="font-medium">
                                     Gunung Kawah Ijen, Jawa Timur
                                 </p>
                             </div>
-                            <h1 className="text-5xl font-bold sm:text-white sm:text-4xl">
+                            <h1 className="text-left text-5xl font-bold sm:text-white sm:text-5xl md:text-7xl">
                                 Kawah Ijen
                             </h1>
                         </div>

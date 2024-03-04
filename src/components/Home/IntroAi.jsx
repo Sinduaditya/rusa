@@ -32,7 +32,9 @@ function IntroAi() {
                 </p>
                 <button className="flex items-center py-2 px-8 rounded-full hover:bg-midnight bg-primary text-white">
                     <a href={"/dolanrek-ai"}>
-                        <span className="text-[14px] font-normal">Explore</span>
+                        <span className="text-[14px] font-normal">
+                            Coba Sekarang
+                        </span>
                     </a>
                 </button>
             </div>
