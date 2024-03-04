@@ -220,7 +220,7 @@ function FooterContent() {
                                 </div>
 
                                 <p className="font-bold text-gray-500">
-                                    Copyright 2024 &copy;JKT48 Dev
+                                    Copyright 2024 &copy;Div48 Dev
                                 </p>
                             </div>
                         </footer>
@@ -240,7 +240,7 @@ function FooterIllustration() {
                     className="w-96 md:w-full md:max-w-3xl  mx-auto"
                     alt=""
                 />
-                <div className="bg-[#576B81] w-full h-[51px] -mt-12"></div>
+                <div className="bg-[#576B81] w-full h-[51px] -mt-8"></div>
             </div>
         </>
     );
@@ -249,7 +249,10 @@ function FooterIllustration() {
 function Footer() {
     const location = useLocation();
 
-    if (window.location.pathname === "/") {
+    if (
+        window.location.pathname === "/" ||
+        window.location.pathname === "/about"
+    ) {
         return (
             <>
                 <FooterIllustration />
