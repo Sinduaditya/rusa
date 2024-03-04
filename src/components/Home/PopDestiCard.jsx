@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Love2 from "../../assets/heartko.svg";
 import { exploreData } from "../data/exploreData";
+import Star from "../Star.jsx";
 
 function PopDestiCard() {
     const [destinations, setDestinations] = useState([]);
@@ -41,27 +42,9 @@ function PopDestiCard() {
                             </div>
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title">{destination.name}</h2>
-                            <div className="flex gap-3">
-                                <div className="rating rating-sm">
-                                    {[...Array(5)].map(
-                                        (_, i) => (
-                                            <input
-                                                key={i}
-                                                type="radio"
-                                                className={`mask mask-star-2 bg-orange ${
-                                                    i <
-                                                    Math.round(
-                                                        destination.rating /
-                                                        40
-                                                    )
-                                                        ? "checked"
-                                                        : ""
-                                                }`}
-                                            />
-                                        )
-                                    )}
-                                 </div>
+                            <h2 className="card-title py-2 px-2">{destination.name}</h2>
+                            <div className="flex gap-3 px-1">
+                                <Star/>
                                 <p className="text-secondary">
                                     {destination.rating}
                                 </p>

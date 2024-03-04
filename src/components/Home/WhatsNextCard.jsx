@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Love2 from "../../assets/heartko.svg";
+import { useEffect, useState } from "react";
 import { exploreData } from "../data/exploreData";
+import Star from "../Star.jsx";
 
 function WhatsNextCard() {
     const [destinations, setDestinations] = useState([]);
@@ -27,32 +27,12 @@ function WhatsNextCard() {
                                 className="rounded-3xl w-[250px] h-[175px] object-cover"
                                 alt={destination.name}
                             />
-                            <div className="absolute rounded-3xl top-1 right-2 mt-2 mr-2 bg-white">
-                                <img
-                                    src={Love2}
-                                    className="h-5 w-5 m-1"
-                                    alt=""
-                                />
-                            </div>
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title">{destination.name}</h2>
-                            <div className="flex gap-3">
+                            <h2 className="card-title py-2 px-2">{destination.name}</h2>
+                            <div className="flex gap-3 px-1">
                                 <div className="rating rating-sm">
-                                    {[...Array(5)].map((_, i) => (
-                                        <input
-                                            key={i}
-                                            type="radio"
-                                            className={`mask mask-star-2 bg-orange ${
-                                                i <
-                                                Math.round(
-                                                    destination.rating / 40
-                                                )
-                                                    ? "checked"
-                                                    : ""
-                                            }`}
-                                        />
-                                    ))}
+                                    <Star/>
                                 </div>
                                 <p className="text-secondary">
                                     {destination.rating}

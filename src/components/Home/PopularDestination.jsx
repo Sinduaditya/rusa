@@ -1,5 +1,4 @@
 import PopDestiCard from "./PopDestiCard.jsx";
-import React from "react";
 
 function PopularDestination() {
     return (
