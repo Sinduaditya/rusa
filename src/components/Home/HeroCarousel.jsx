@@ -8,16 +8,16 @@ function HeroCarousel() {
     return (
         <>
             <div className="relative z-10 my-20">
-                <section className="overflow-hidden rounded-[64px] bg-glass bg-opacity-70 px-8 py-10 lg:p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl lg:pt-[10px] lg:pb-[40px] relative z-20  font-poppins">
-                    <div className="container mx-auto">
-                        <div className="grid gap-8 lg:flex lg:flex-wrap items-center justify-between">
+                <section className="max-w-6xl mx-auto overflow-hidden rounded-[64px] bg-glass bg-opacity-70 px-4 py-10 lg:p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl lg:pt-[10px] lg:pb-[40px] relative z-20 font-poppins">
+                    <div className="container max-w-5xl  mx-auto">
+                        <div className="grid gap-4 max-w-5xl mx-auto lg:flex items-center justify-between">
                             {/* text */}
-                            <div className="grid gap-4 lg:gap-10">
+                            <div className="grid gap-4 lg:gap-8">
                                 <div className="grid gap-1 lg:gap-3">
                                     {/* Rasakan petualangan Tanpa.... */}
                                     <div>
                                         <h2 className="text-midnight mb-1 text-2xl lg:text-[43px] leading-none font-bold">
-                                            Rasakan Petualangan
+                                            Rasakan <br /> Petualangan
                                         </h2>
                                         <h2 className="text-2xl lg:text-[43px] leading-none font-bold text-primary">
                                             <TypeAnimation
@@ -125,8 +125,8 @@ function HeroCarousel() {
                     </div>
                 </section>
 
-                <div className="w-56 h-56 sm:w-80 sm:h-80 -left-[140px] -top-[50px] bg-gradient-to-tl from-blob to-skyblue z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
-                <div className="w-36 h-36 sm:w-48 sm:h-48 -right-[10px] sm:-right-[100px] -bottom-[65px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                <div className="w-56 h-56 sm:w-80 sm:h-80 -left-[60px] -top-[50px] bg-gradient-to-tl from-blob to-skyblue z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                <div className="w-36 h-36 sm:w-48 sm:h-48 -right-[10px] sm:-right-[20px] -bottom-[45px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
             </div>
         </>
     );
