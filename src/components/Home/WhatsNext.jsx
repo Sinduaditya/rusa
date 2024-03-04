@@ -1,6 +1,6 @@
 import WhatsNextCard from "./WhatsNextCard.jsx";
 
-function WhatsNext(params) {
+function WhatsNext() {
     return (
         <>
             {/* Mungkin Kamu Suka - Start */}

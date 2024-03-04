@@ -8,6 +8,7 @@ import Loc from "../assets/location2.svg";
 import { Link } from "react-router-dom";
 import { exploreData } from "../components/data/exploreData.jsx";
 import getCategoryImage from "../components/data/categoryImages.jsx";
+import Star from "../components/Star.jsx";
 
 function Explore() {
     // Untuk Search Data
@@ -40,17 +41,15 @@ function Explore() {
             <div className="bg-bluelight">
                 <div className="mx-auto max-w-screen-xl px-4 bg-transparent pt-[40px] font-poppins">
                     <div
-                        className="hero lg:h-[300px] h-screen relative bg-white bg-cover bg-center  mx-auto md:w-full rounded-2xl"
-                        style={{backgroundImage: `url(${Hero})`}}
-                    >
-                        <div className="hero-content text-center flex flex-col justify-center">
-                            <div className="">
-                                <h1 className="text-6xl font-bold text-white">
-                                    Temukan Destinasi <br/> Favoritmu
-                                </h1>
-                            </div>
+                        className="hero lg:h-[300px] h-screen relative bg-white bg-cover bg-center mx-auto md:w-full rounded-2xl flex justify-center items-center"
+                        style={{backgroundImage: `url(${Hero})`}}>
+                        <div className="text-center">
+                            <h1 className="text-6xl font-bold text-white">
+                                Temukan Destinasi <br/> Favoritmu
+                            </h1>
                         </div>
                     </div>
+
 
                     {/*  kategori  */}
                     <div className="mt-12 m-20">
@@ -152,14 +151,14 @@ function Explore() {
                     </div>
                     {/*  end kategori  */}
                     <section className="flex items-center py-10  lg:py-4 font-poppins">
-                        <div className="justify-center flex-1 max-w-6xl px-4 py-4 mx-auto text-left lg:py-10  ">
+                        <div className="justify-center  flex-1 max-w-6xl px-4 py-4 mx-auto text-left lg:py-10  ">
                             {filteredData.map((item, index) => (
                                 <Link
                                     key={index}
                                     to={`/detail-explore/${item.id}`}
                                 >
                                     <div
-                                        className="grid grid-cols-1 lg:grid-cols-[30%,1fr]  gap-x-6 gap-y-4 b p-3 rounded-3xl mb-8">
+                                        className="grid grid-cols-1  lg:grid-cols-[30%,1fr]  gap-x-6 gap-y-4 b p-3 rounded-3xl mb-8">
                                         <img
                                             className="object-cover w-full  rounded-[16px] lg:w-80 h-80"
                                             src={item.image}
@@ -176,26 +175,9 @@ function Explore() {
                                                     <img src={Loc} alt=""/>
                                                     {item.location}
                                                 </p>
-                                                <div className="rating rating-sm pt-2">
-                                                    {[...Array(5)].map(
-                                                        (_, i) => (
-                                                            <input
-                                                                key={i}
-                                                                type="radio"
-                                                                name={`rating-${index}`}
-                                                                className={`mask mask-star-2 bg-orange ${
-                                                                    i <
-                                                                    Math.round(
-                                                                        item.rating /
-                                                                        40
-                                                                    )
-                                                                        ? "checked"
-                                                                        : ""
-                                                                }`}
-                                                            />
-                                                        )
-                                                    )}
-                                                    <p className="text-xs text-gray-400 pl-2">
+                                                <div className="flex gap-3 my-2 items-center">
+                                                    <Star/>
+                                                    <p className="text-normal text-gray-400 pl-2">
                                                         {item.rating}
                                                     </p>
                                                 </div>

@@ -12,14 +12,14 @@ function HeroCarousel() {
                     <div className="container max-w-5xl  mx-auto">
                         <div className="grid gap-4 max-w-5xl mx-auto lg:flex items-center justify-between">
                             {/* text */}
-                            <div className="grid gap-4 lg:gap-8">
-                                <div className="grid gap-1 lg:gap-3">
+                            <div className="grid gap-4 text-center lg:gap-8 lg:text-left">
+                                <div className="grid gap-1 lg:gap-3 ">
                                     {/* Rasakan petualangan Tanpa.... */}
                                     <div>
-                                        <h2 className="text-midnight mb-1 text-2xl lg:text-[43px] leading-none font-bold">
+                                        <h2 className="text-midnight mb-1 text-3xl lg:text-[43px] leading-none font-bold">
                                             Rasakan <br /> Petualangan
                                         </h2>
-                                        <h2 className="text-2xl lg:text-[43px] leading-none font-bold text-primary">
+                                        <h2 className="text-3xl lg:text-[43px] leading-none font-bold text-primary">
                                             <TypeAnimation
                                                 sequence={[
                                                     "Tanpa Hambatan",
@@ -39,7 +39,6 @@ function HeroCarousel() {
                                         Temukan pesona eksklusif Jawa Timur dan
                                         Mulai rencanakan perjalananmu bersama
                                         <span className="text-midnight font-bold">
-                                            {" "}
                                             Dolan
                                         </span>
                                         <span className="text-primary font-bold">
@@ -48,22 +47,25 @@ function HeroCarousel() {
                                     </p>
                                 </div>
 
-                                <a
-                                    href={"/explore"}
-                                    className="w-fit inline-flex items-center justify-center py-2 text-sm lg:text-base font-medium text-center text-white border border-transparent rounded-3xl px-8 bg-primary hover:bg-opacity-90"
-                                >
-                                    Explore
-                                </a>
+                                <div className=" flex justify-center lg:justify-start">
+                                    <a
+                                        href={"/explore"}
+                                        className="w-fit  py-2 text-sm lg:text-base font-medium text-center text-white border border-transparent rounded-3xl px-8 bg-primary hover:bg-opacity-90"
+                                    >
+                                        Explore
+                                    </a>
+                                </div>
                             </div>
                             {/* end text */}
                             {/* caroursel */}
-                            <div className="w-full px-4 lg:w-6/12 pr-8">
-                                <div className="grid lg:flex gap-4 max-w-[540px] w-full lg:max-h-[424px] h-full justify-center">
+                            <div className="w-full px-4 lg:w-6/12 pr-8 ">
+                                <div
+                                    className="grid lg:flex gap-4 max-w-[540px] w-full lg:max-h-[424px] h-full justify-center">
                                     {/* bagian 1. Bromo dan Jatim Park 2 */}
                                     <div className="grid gap-4">
                                         {/* bromo */}
                                         <div className="relative">
-                                            <div className="flex absolute -left-8 top-4 bg-white rounded-full gap-1 py-1 px-2 shadow-lg">
+                                            <div className="flex absolute -left-8 top-4 bg-white  animate-bounce rounded-full gap-1 py-1 px-2 shadow-lg">
                                                 <img
                                                     src={IconLocation}
                                                     alt=""
@@ -80,7 +82,7 @@ function HeroCarousel() {
                                         </div>
                                         {/* jatim park */}
                                         <div className="relative">
-                                            <div className="flex absolute -right-2 -bottom-2 bg-white rounded-full gap-1 py-1 px-2 shadow-xl">
+                                            <div className="flex absolute -right-2 -bottom-2 bg-white animate-bounce rounded-full gap-1 py-1 px-2 shadow-xl">
                                                 <img
                                                     src={IconLocation}
                                                     alt=""
@@ -102,7 +104,7 @@ function HeroCarousel() {
                                     <div className="grid self-center">
                                         {/* patung sura baya */}
                                         <div className="relative">
-                                            <div className="flex absolute -right-8 top-4 bg-white rounded-full gap-1 py-1 px-2 shadow-xl">
+                                            <div className="flex absolute -right-8 top-4 bg-white animate-bounce rounded-full gap-1 py-1 px-2 shadow-xl">
                                                 <img
                                                     src={IconLocation}
                                                     alt=""

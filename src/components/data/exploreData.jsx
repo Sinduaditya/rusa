@@ -23,7 +23,12 @@ export const exploreData = [
             "\n" +
             "Saat penutupan pendakian gunung Ijen sebulan sekali juga bisa dimanfaatkan oleh komunitas atau masyarakat untuk bersih-bersih Gunung Ijen dan melakukan aktivitas lain yang berkaitan dengan lingkungan.",
         expect: "Tahap awal pemesanan, pemerintah akan meluncurkan aplikasi berbasis smartphone yang bisa diunduh dari Play Store, untuk memesan tiket masuk Kawasan Taman Wisata Alam Kawah Ijen. Meski sudah dicanangkan booking tiket online, namun pembayaran transfer masih belum berlaku. Pembayaran tiket dibayarkan tunai di Pos Pendakian Paltuding, Kawah Ijen. Pemesanan sudah bisa online, namun pembayaran masih tunai sambil menunggu sinergi dengan aturan dan sistem di pemerintah.",
-        link: "https://maps.app.goo.gl/8EF5eWxNzG8QeSRaA"
+        link: "https://maps.app.goo.gl/8EF5eWxNzG8QeSRaA",
+        userRate: "Azriel Sebastian",
+        titleRate: "Pengalaman Luar biasa",
+        descRate: "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
+        lastRead: "Desember 2023",
+        writeRate: "6 Januari 2024"
     },
     {
         id: 2,
@@ -44,7 +49,13 @@ export const exploreData = [
         priceChild: "Rp. 75.000",
         kategori2: "Anak-Anak ( 3-12 Tahun )",
         diskon: "Tiket Keluarga ( 2 Dewasa + 2 anak-anak ) Rp. 350.000",
-        link: "https://maps.app.goo.gl/ATxuxGLLCPEpGEVo9"
+        link: "https://maps.app.goo.gl/ATxuxGLLCPEpGEVo9",
+        userRate: "Raina Aqila",
+        titleRate: "Kenangan bersama keluarga",
+        descRate: "Saya dr Jogja, perjalanan berangkat jam 21 lewat Klaten-Solo-Ngawi-Nganjuk-Sidoarjo-Malang sampe Batu Malang hari berikutnya jam 12an siang. Telat sih itungannya, krn di jatimpark bs sampe 4jam keliling smua area.\n" +
+            "Dan area disana beneran WORTH TO TRY!",
+        lastRead: "Desember 2023",
+        writeRate: "6 Januari 2024"
     },
     {
         id: 3,
@@ -59,6 +70,11 @@ export const exploreData = [
         diskon: "Masjid Al Akbar terbuka untuk umum dan tidak memungut biaya masuk. Namun, pengunjung dapat memberikan sumbangan sukarela untuk pemeliharaan masjid",
         expect: "Masjid Al Akbar memukau pengunjung dengan arsitektur yang megah dan artistik. Dari kubah besar hingga menara yang menjulang tinggi, setiap detail bangunan ini memancarkan keindahan dan keagungan. Selain sebagai tempat ibadah, Masjid Al Akbar juga menjadi pusat kegiatan keagamaan dan sosial. Pengunjung dapat mengikuti berbagai kegiatan seperti ceramah, kelas agama, dan acara kultural. Pengunjung dapat mengikuti tur yang diselenggarakan di masjid ini untuk memahami sejarah, arsitektur, dan kegiatan keagamaan yang dilakukan di sana.",
         addInfo: "Masjid Al Akbar buka setiap hari dari subuh hingga malam hari. Namun, untuk tur dan kegiatan khusus, jadwal bisa berbeda. Disarankan untuk menghubungi pihak masjid untuk informasi lebih lanjut. Masjid Al Akbar dilengkapi dengan fasilitas seperti area parkir yang luas, ruang wudu, dan toko suvenir yang menjual beragam barang religius. Sebagai tempat ibadah, pengunjung diharapkan untuk menjaga sikap yang sopan dan menghormati aturan yang berlaku di masjid. Wanita diharapkan untuk memakai hijab dan semua pengunjung diharapkan untuk melepas alas kaki saat memasuki area masjid.",
+        userRate: "Almer",
+        titleRate: "Pengalaman Tak terlupakan",
+        descRate: "masjid nya megah dan luas, dipakai berbagai acara (pernikahan, kajian, dll) dengan banyak tamu, jamaah, dll dalam satu waktu tapi masih tidak tampak crowded. parkiran mobilnya pun luas sekali. pintu masjid nya banyak, sama kaya di masjid madinah. begitu pula tempat wudhu dan toilet nya dibeberapa tempat. tp td sempat keliling cari toilet, trnyata cuma 1 area toilet yang dibuka, dan lumayan jauh jalannya. ada banyak taman dan wisata menara juga.",
+        lastRead: "Januari 2023",
+        writeRate: "6 Januari 2024"
     },
     {
         id: 4,
@@ -82,7 +98,12 @@ export const exploreData = [
         kategori3: "Telur Asin",
         hargaKategori3: "Rp 7.000",
         kategori4: "Sambal",
-        hargaKategori4:"Rp 3.000"
+        hargaKategori4:"Rp 3.000",
+        userRate: "Simbolon",
+        titleRate: "Nikmatnyaa !",
+        descRate: "Rawon dan soto dagingnya enak affordable banget, dengan potongan daging yang besar-besar, citarasa gurih dan mantap banget, tempatnya rame banget pas kesana, kondisi di rumah makan padat, lumayan panas, tapi ada kipas anginnya. Pelayanan gesit dan cekatan. Parkirnya mudah dan banyak, ada tukang parkirnya. Lokasi strategis berada di Taman Bungkul. Selain rawon dan soto daging, ada juga lauk tambahan seperti babat, paru, telur asin, perkedel, kerupuk rambak, kerupuk udang dan emping. Bisa request seperti nasi dipisah dan nggak pake toge. Mungkin keunikan disini, karena Bapak kasirnya itu tidak menghitung biaya makan menggunakan kalkulator meskipun pesanan pelanggannya banyak, oleh karenanya rumah makan ini dinamakan \"Rawon Kalkulator\".",
+        lastRead: "Desember 2023",
+        writeRate: "6 Januari 2024"
     },
     {
         id: 5,
@@ -103,5 +124,10 @@ export const exploreData = [
         addInfo: "Kusuma Agrowisata buka setiap hari dari pukul 08.00 pagi hingga 17.00 sore.\n" +
             "Tempat parkir luas tersedia di area kompleks. Terdapat juga restoran dan kios makanan yang menyajikan hidangan lokal dan minuman segar.\n" +
             "Pengunjung dapat memesan tiket masuk secara online melalui situs resmi Kusuma Agrowisata untuk menghindari antrian di lokasi.\n",
-  }
+        userRate: "Dylan",
+        titleRate: "",
+        descRate: "Salah satu tmpt wisata yg harus dikunjungi di Malang, karna ada wisata petik buahnya, ada Apel, Jambu Kristal & Buah Naga. Areanya luas & sejuk. Disini jg ada Rumah Petani yang desain semua isinya benar2 jadul banget smua ada disini, mengingatkanku dgn masa kecil dulu dan bisa kasih tau ke anak2 klo dulu Kita hidupnya begitu, memakai alat2 seperti itu..",
+        lastRead: "September 2023",
+        writeRate: "7 Februaru 2024"
+    }
 ];

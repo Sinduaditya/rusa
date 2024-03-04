@@ -33,7 +33,7 @@ function GetTips() {
                             </div>
                             <a
                                 href={"/stories/"}
-                                className="btn btn-square btn-info text-white w-fit px-8 rounded-full"
+                                className="bg-primary py-2 hover:bg-midnight text-white w-fit px-8 rounded-full"
                             >
                                 Read Stories
                             </a>

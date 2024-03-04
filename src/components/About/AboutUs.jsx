@@ -1,4 +1,4 @@
-import AboutSection from "../../assets/about/image_about.svg";
+import AboutSection from "../../assets/about/image_about.png";
 
 function AboutUs() {
     return (
