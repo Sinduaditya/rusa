@@ -31,12 +31,12 @@ function GetTips() {
                                     </ul>
                                 </div>
                             </div>
-                            <a
-                                href={"/stories/"}
+                            <Link
+                                to={"/stories/"}
                                 className="bg-primary py-2 hover:bg-midnight text-white w-fit px-8 rounded-full"
                             >
                                 Read Stories
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* bagian Text dan CTA */}

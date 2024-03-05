@@ -16,12 +16,12 @@ function PopularDestination() {
                             </p>
                         </div>
                         <div className="hidden md:flex md:flex-wrap md:place-self-center">
-                            <a
-                                href={`/explore/`}
+                            <Link
+                                to={`/explore/`}
                                 className="underline text-sm text-secondary"
                             >
                                 Lihat Semua
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* Destinasi Populer - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
@@ -31,12 +31,12 @@ function PopularDestination() {
                         <PopDestiCard />
                     </div>
                     <div className="flex w-full justify-end md:hidden">
-                        <a
-                            href={`/explore/`}
+                        <Link
+                            to={`/explore/`}
                             className="underline text-sm text-secondary"
                         >
                             Lihat Semua
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>

@@ -17,12 +17,12 @@ function WhatsNext() {
                             </p>
                         </div>
                         <div className="hidden md:flex md:flex-wrap md:place-self-center">
-                            <a
-                                href={`/explore/`}
+                            <Link
+                                to={`/explore/`}
                                 className="underline text-sm text-secondary"
                             >
                                 Lihat Semua
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* Mungkin Kamu Suka - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
@@ -34,12 +34,12 @@ function WhatsNext() {
                     </div>
 
                     <div className="flex w-full justify-end md:hidden">
-                        <a
-                            href={`/explore/`}
+                        <Link
+                            to={`/explore/`}
                             className="underline text-sm text-secondary"
                         >
                             Lihat Semua
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
