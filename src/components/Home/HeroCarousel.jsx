@@ -3,6 +3,7 @@ import Bromo from "../../assets/gunung-bromo-explore.jpg";
 import JatimPark from "../../assets/jatim-park-2.jpg";
 import Suro from "../../assets/patung-suro-boyo.jpg";
 import IconLocation from "../../assets/location2.svg";
+import { motion } from "framer-motion";
 
 function HeroCarousel() {
     return (
@@ -126,8 +127,19 @@ function HeroCarousel() {
                     </div>
                 </section>
 
-                <div className="w-56 h-56 sm:w-80 sm:h-80 -left-[60px] -top-[50px] bg-gradient-to-tl from-blob to-skyblue z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
-                <div className="w-36 h-36 sm:w-48 sm:h-48 -right-[10px] sm:-right-[20px] -bottom-[45px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                <motion.div
+                    animate={{ y: -450 }}
+                    transition={{ stiffness: 100, delay: 2 }}
+                >
+                    <div className="w-56 h-56 sm:w-80 sm:h-80 -left-[60px] -top-[50px] bg-gradient-to-tl from-blob to-skyblue z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                </motion.div>
+
+                <motion.div
+                    animate={{ y: 400 }}
+                    transition={{ stiffness: 100, delay: 2 }}
+                >
+                    <div className="w-36 h-36 sm:w-48 sm:h-48 -right-[10px] sm:-right-[10px] bottom-[350px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                </motion.div>
             </div>
         </>
     );

@@ -20,7 +20,7 @@ const Header = () => {
                     <div className="flex h-16 items-center font-medium justify-between">
                         <div className="flex gap-2">
                             <img src={LogoDr} className="h-10 w-10" alt="" />
-                            <a href="{`\`}" className="font-bold text-3xl mt-2">
+                            <a href={`/`} className="font-bold text-3xl mt-2">
                                 Dolan<span className="text-primary">Rek.</span>
                             </a>
                         </div>
@@ -94,9 +94,12 @@ const Header = () => {
                                 </Link>
 
                                 <div className="flex">
-                                    <a className="bg-primary rounded-3xl p-2 pl-4 pr-4 text-white">
+                                    <Link
+                                        to={"/signup"}
+                                        className="bg-primary rounded-3xl p-2 pl-4 pr-4 text-white"
+                                    >
                                         Sign up
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
 
