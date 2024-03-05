@@ -9,8 +9,8 @@ function HeroCarousel() {
         <>
             <div className="relative z-10 my-20">
                 <section className="max-w-6xl mx-auto overflow-hidden rounded-[64px] bg-glass bg-opacity-70 px-4 py-10 lg:p-10 border-2 border-white border-opacity-50 backdrop-blur-3xl lg:pt-[10px] lg:pb-[40px] relative z-20 font-poppins">
-                    <div className="container max-w-5xl  mx-auto">
-                        <div className="grid gap-4 max-w-5xl mx-auto lg:flex items-center justify-between">
+                    <div className="container max-w-5xl  mx-auto ">
+                        <div className="grid gap-4 max-w-5xl mx-auto lg:flex items-center justify-center lg:justify-between">
                             {/* text */}
                             <div className="grid gap-4 text-center lg:gap-8 lg:text-left">
                                 <div className="grid gap-1 lg:gap-3 ">
@@ -59,8 +59,7 @@ function HeroCarousel() {
                             {/* end text */}
                             {/* caroursel */}
                             <div className="w-full px-4 lg:w-6/12 pr-8 ">
-                                <div
-                                    className="grid lg:flex gap-4 max-w-[540px] w-full lg:max-h-[424px] h-full justify-center">
+                                <div className="grid lg:flex gap-4 max-w-[540px] w-full lg:max-h-[424px] h-full justify-center">
                                     {/* bagian 1. Bromo dan Jatim Park 2 */}
                                     <div className="grid gap-4">
                                         {/* bromo */}
