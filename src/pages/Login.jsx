@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import LoginImg from "../assets/login/login.svg";
 import message from "../assets/login/sms.svg";
 import lock from "../assets/login/lock.svg";
 import eyeSlash from "../assets/login/eye-slash.svg";
 import google from "../assets/login/google.svg";
 import fb from "../assets/login/facebook.svg";
+import {Link} from "react-router-dom";
 
 function ImageLogin() {
     return (
@@ -32,7 +33,7 @@ function Login() {
                 <div className="w-full h-full md:col-span-2">
                     <div className="rounded-[64px]  w-screen  flex md:w-[544px] py-12 flex-col gap-[8px] justify-center items-center flex-nowrap md:mx-auto my-0">
                         <form className="">
-                            <div className="flex w-screen px-6 md:w-[480px] flex-col gap-10 items-start shrink-0 flex-nowrap">
+                            <div className="flex w-screen px-6 md:w-[480px] flex-col gap-6 items-start shrink-0 flex-nowrap">
                                 <div className="flex md:w-[480px] flex-col gap-[48px] items-start shrink-0">
                                     <h1 className="font-poppins text-[40px] font-bold leading-[60px] text-midnight">
                                         Welcome Back
@@ -42,7 +43,7 @@ function Login() {
                                     <div className="w-full flex flex-col gap-[10px] items-start shrink-0 flex-nowrap">
                                         <label
                                             htmlFor="email"
-                                            className="h-[30px] shrink-0 basis-auto font-['Poppins'] text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap"
+                                            className="h-[30px] shrink-0 basis-auto font-poppins text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap"
                                         >
                                             Email
                                         </label>
@@ -56,7 +57,7 @@ function Login() {
                                             </div>
                                             <input
                                                 id="email"
-                                                className="h-16 w-full font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
+                                                className="h-16 w-full font-poppins text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
                                                 placeholder="michie@member.jkt48.com"
                                             />
                                         </div>
@@ -64,14 +65,17 @@ function Login() {
                                 </div>
                                 <div className="w-full flex flex-col gap-[10px] items-start shrink-0 flex-nowrap">
                                     <div className="flex justify-between items-center self-stretch shrink-0 flex-wrap">
-                                        <span className="h-[30px] basis-auto  text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap z-[14]">
+                                        <span
+                                            className="h-[30px] basis-auto  text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap z-[14]">
                                             Password
                                         </span>
-                                        <span className="h-[18px] basis-auto font-['Poppins'] text-[11px] font-normal leading-[17.798px] text-[#00b5ef] tracking-[0.03px]  text-left underline whitespace-nowrap ">
+                                        <span
+                                            className="h-[18px] basis-auto font-poppins text-[11px] font-normal leading-[17.798px] text-[#00b5ef] tracking-[0.03px]  text-left underline whitespace-nowrap ">
                                             Forgot Password?
                                         </span>
                                     </div>
-                                    <div className="w-full bg-white flex h-[64px] px-4 gap-2 justify-left items-start rounded-[9px] border-solid border-2 border-[#8c9fb5] overflow-hidden">
+                                    <div
+                                        className="w-full bg-white flex h-[64px] px-4 gap-2 justify-left items-start rounded-[9px] border-solid border-2 border-[#8c9fb5] overflow-hidden">
                                         <div className="grid px-4 h-full shrink-0 content-center">
                                             <img
                                                 src={lock}
@@ -86,7 +90,7 @@ function Login() {
                                                     : "password"
                                             }
                                             id="password"
-                                            className="h-16 w-full font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
+                                            className="h-16 w-full font-poppins text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
                                             placeholder="••••••••••••••••"
                                         />
                                         <div
@@ -105,23 +109,28 @@ function Login() {
                                         </div>
                                     </div>
                                 </div>
-
+                                <p className="">Dont have an account yet?
+                                    <Link to="/signup" className="pl-2">
+                                        <span className="text-primary font-medium">Register</span>
+                                    </Link>
+                                </p>
                                 <div className="grid md:flex w-full md:w-[457px] gap-[16px] items-start shrink-0 flex-nowrap  z-[28]">
-                                    <button className="border w-full flex md:w-[210px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] justify-center shrink-0 flex-nowrap rounded-[8px] border-solid border-[#8c9fb5]  pointer">
+
+                                    <button className="border w-full flex md:w-[210px] items-center pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] justify-center shrink-0 flex-nowrap rounded-[8px] border-solid border-[#8c9fb5]  pointer">
                                         <img src={google} alt="" />
-                                        <span className="h-[24px] shrink-0 basis-auto font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#304862]  text-left whitespace-nowrap ">
+                                        <span className="h-[24px] shrink-0 basis-auto font-poppins text-[14px] font-medium leading-[24px] text-[#304862]  text-left whitespace-nowrap ">
                                             Sign in with Google
                                         </span>
                                     </button>
-                                    <button className="flex w-full justify-center md:w-[231px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] items-center shrink-0 flex-nowrap bg-[#316ff6] rounded-[8px] border-none  pointer">
+                                    <button className="flex w-full justify-center md:w-[200px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] items-center shrink-0 flex-nowrap bg-[#316ff6] rounded-[8px] border-none  pointer">
                                         <img src={fb} alt="" />
-                                        <span className="h-[24px] shrink-0 basis-auto font-['Poppins'] text-[16px] font-medium leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
+                                        <span className="h-[24px] shrink-0 basis-auto font-poppins text-[14px] font-medium leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
                                             Sign in with Facebook
                                         </span>
                                     </button>
                                 </div>
-                                <button className="flex w-full md:w-[480px] pt-[20px] pr-[16px] pb-[20px] pl-[16px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#9382f2] rounded-[8px] border-none  pointer">
-                                    <span className="h-[24px] shrink-0 basis-auto font-['Poppins'] text-[16px] font-bold leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
+                                <button className="flex w-full md:w-full pt-[20px] pr-[16px] pb-[20px] pl-[16px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#9382f2] rounded-[8px] border-none  pointer">
+                                    <span className="h-[24px] shrink-0 basis-auto font-poppins text-[16px] font-bold leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
                                         Sign In
                                     </span>
                                 </button>

@@ -13,6 +13,7 @@ import IntroAi from "./components/Home/IntroAi.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 import PageNotFound from "./pages/NotFound.jsx";
 import SignUp from "./pages/signup.jsx";
+import SignupLayout from "./layouts/SignupLayout.jsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -71,6 +72,16 @@ function App() {
                 {
                     path: "/login",
                     element: <Login />,
+                },
+            ],
+        },
+        {
+            path: "/signup",
+            element: <SignupLayout />,
+            children: [
+                {
+                    path: "/signup",
+                    element: <SignUp />,
                 },
             ],
         },
