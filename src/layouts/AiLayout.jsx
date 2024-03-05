@@ -1,13 +1,11 @@
-import Header from "../components/Header.jsx";
+// import Header from "../components/Header.jsx";
 import AiPage from "../components/Ai/AiPage.jsx";
-
-
 
 const AiLayout = () => {
     return (
         <>
-            <Header/>
-            <AiPage/>
+            {/* <Header/> */}
+            <AiPage />
         </>
     );
 };

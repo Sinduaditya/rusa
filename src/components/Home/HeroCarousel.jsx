@@ -41,6 +41,7 @@ function HeroCarousel() {
                                         Temukan pesona eksklusif Jawa Timur dan
                                         Mulai rencanakan perjalananmu bersama
                                         <span className="text-midnight font-bold">
+                                            {" "}
                                             Dolan
                                         </span>
                                         <span className="text-primary font-bold">
