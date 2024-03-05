@@ -1,4 +1,5 @@
 import GetTipsCard from "./GetTIpsCard.jsx";
+import { Link } from "react-router-dom";
 
 function GetTips() {
     return (

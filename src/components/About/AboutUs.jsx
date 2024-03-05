@@ -1,5 +1,6 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import AboutSection from "../../assets/about/image_about.png";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
     return (
