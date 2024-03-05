@@ -1,3 +1,5 @@
+import { motion, useAnimation, useViewportScroll } from "framer-motion";
+import { useEffect } from "react";
 import GetTips from "../components/Home/GetTips.jsx";
 import HeroCarousel from "../components/Home/HeroCarousel.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
