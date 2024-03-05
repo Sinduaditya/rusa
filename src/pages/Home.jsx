@@ -1,5 +1,4 @@
-import { motion, useAnimation, useViewportScroll } from "framer-motion";
-import { useEffect } from "react";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import GetTips from "../components/Home/GetTips.jsx";
 import HeroCarousel from "../components/Home/HeroCarousel.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
@@ -10,6 +9,11 @@ import Ai from "../assets/home/ai.svg";
 import IntroAi from "../components/Home/IntroAi.jsx";
 
 const Home = () => {
+    const { scrollYProgress } = useViewportScroll();
+    const scale = useTransform(scrollYProgress, [0, 0.6], [0.3, 1]);
+    const scale2 = useTransform(scrollYProgress, [0, 0.8], [0.3, 1]);
+    const scale3 = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
+
     return (
         <>
             <div className="bg-bluelight">
@@ -25,15 +29,25 @@ const Home = () => {
                     {/* WhatsNExt */}
                     <WhatsNext />
                     {/* End Ehats */}
-                    {/*Introduce AI*/}
-                    <IntroAi />
-                    {/*End Introduce*/}
-                    {/* Get Tips from Travellers */}
-                    <GetTips />
-                    {/* END Get Tips from Travellers */}
-                    {/* Review dan Testimonial */}
-                    <Review />
-                    {/* END Review dan Testimonial */}
+                    <motion.div style={{ scale }}>
+                        {/*Introduce AI*/}
+                        <IntroAi />
+                        {/*End Introduce*/}
+                    </motion.div>
+                    <motion.div style={{ scale: scale2 }}>
+                        {" "}
+                        {/* Corrected scale value */}
+                        {/* Get Tips from Travellers */}
+                        <GetTips />
+                        {/* END Get Tips from Travellers */}
+                    </motion.div>
+                    <motion.div style={{ scale: scale3 }}>
+                        {" "}
+                        {/* Corrected scale value */}
+                        {/* Review dan Testimonial */}
+                        <Review />
+                        {/* END Review dan Testimonial */}
+                    </motion.div>
                 </div>
             </div>
         </>
