@@ -3,7 +3,9 @@ import JatimPark from "../../assets/explore/jawa-timur-park-2.jpg";
 import MasjidAlAkbar from "../../assets/explore/masjid-alakbar.jpg";
 import Rawon from "../../assets/explore/rawon-kalkulator.jpg";
 import Kusuma from "../../assets/explore/kusuma-agrowisata.jpeg";
-
+import AirterjunMadakaripura from "../../assets/explore/air-terjun-madakaripura.jpg";
+import PantaiKlayar from "../../assets/explore/pantai-klayar.jpg";
+import TelagaSarangan from "../../assets/explore/telaga-sarangan.jpg";
 export const exploreData = [
     {
         id: 1,
@@ -12,36 +14,38 @@ export const exploreData = [
         rating: 178,
         image: KawahIjen,
         categories: ["Pilihan Terbaik", "Rekreasi & Santai"],
-        description:
-            "Keindahan Kawah ijen dengan fenomena alam yang mendunia tidak terbantahkan. Api Biru menjadi salah satu daya tarik utama dari Kawah ijen, saat selimut malam tiba memunculkan pijar api biru dari dasar kawah Ijen. Fenomena alam yang diakibatkan oleh sublimasi gas belerang hingga mencapai suhu 200 derajat lebih memunculkan Blue fire yang hanya ada dua di Dunia. ketika mentari pagi mulai menyapu kegelapan malam, tampak Pemandangan alam yang sangat eksotis. Kawah dengan zat asam terbesar di dunia, guratan alam yang terbentuk di sekeliling tebing kawah, Kegiatan Para Penambang belerang dan para pendaki berpadu menjadi pemandangan yang eksotis.",
+        description: "Keindahan Kawah ijen dengan fenomena alam yang mendunia tidak terbantahkan...",
         kategori: "WNI",
         price: " Masuk",
         priceAdult: "Rp 7.500",
         kategori2: "WNA",
         priceChild: "Rp 100.000",
         diskon: "Kawah Ijen akan ditutup secara rutin setiap hari Jumat !",
-        addInfo:
-            "Kawah Ijen akan ditutup secara rutin setiap hari Jum'at, minggu pertama setiap bulannya. Penutupan tersebut bertujuan untuk memberikan waktu bagi alam untuk sedikit bernapas lega dari ramainya pengunjung yang setiap hari memadati tempat wisata.\n" +
-            "\n" +
-            "Saat penutupan pendakian gunung Ijen sebulan sekali juga bisa dimanfaatkan oleh komunitas atau masyarakat untuk bersih-bersih Gunung Ijen dan melakukan aktivitas lain yang berkaitan dengan lingkungan.",
-        expect: "Tahap awal pemesanan, pemerintah akan meluncurkan aplikasi berbasis smartphone yang bisa diunduh dari Play Store, untuk memesan tiket masuk Kawasan Taman Wisata Alam Kawah Ijen. Meski sudah dicanangkan booking tiket online, namun pembayaran transfer masih belum berlaku. Pembayaran tiket dibayarkan tunai di Pos Pendakian Paltuding, Kawah Ijen. Pemesanan sudah bisa online, namun pembayaran masih tunai sambil menunggu sinergi dengan aturan dan sistem di pemerintah.",
+        addInfo: "Kawah Ijen akan ditutup secara rutin setiap hari Jum'at...",
+        expect: "Tahap awal pemesanan, pemerintah akan meluncurkan aplikasi berbasis smartphone...",
         link: "https://maps.app.goo.gl/8EF5eWxNzG8QeSRaA",
         comments: [
             {
                 userRate: "Azriel Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
+                titleRate: "Keren sihh kata kuu !",
+                descRate: "Waw... Sungguh luar biasa. Tanjakan nya mantep pol, bagi kalian yang tidak pernah mendaki gunung banyak jasa ojek dengan bandrol harga yang berbeda2, view untuk foto sangat bagus dan tidak mengecewakan. Harap hati2 saat menanjak dan jangan buang sampah sembarang",
                 lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                writeRate: "6 Desember 2023",
             },
             {
-                userRate: "Budi Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Calvin",
+                titleRate: "Pemandangannya itu loo kerenn",
+                descRate: "sangat worth it, walaupun perjalanannya sangat menguras tenaga. biaya masuknya 7.5k, wajib pesan lewat online terlebih dahulu dan membawa surat ket sehat dari dokter.\n" +
+                    "start pendakian dibuka dari jam 02.00 sampe jam 12.00 dengan estimasi perjalanan 3 jam.",
+                lastRead: "November 2023",
+                writeRate: "6 November 2023",
+            },
+            {
+                userRate: "Jamhari",
+                titleRate: "Gabisa Berkata kata lagi !",
+                descRate: "Kawah Ijen adalah tempat yang harus dikunjungi bagi pencinta petualangan alam. Pengalaman mendaki gunung dan melihat blue fire membuat perjalanan ini sangat berkesan. Sangat direkomendasikan!",
+                lastRead: "April 2023",
+                writeRate: "10 April 2023",
             },
         ],
     },
@@ -52,15 +56,9 @@ export const exploreData = [
         image: JatimPark,
         rating: 215,
         categories: ["Pilihan Terbaik", "Rekreasi & Santai"],
-        description:
-            "Jawa Timur Park 2, terletak di Kota Batu, Jawa Timur, adalah salah satu destinasi wisata yang menawarkan pengalaman seru bagi pengunjung dari segala usia. Park ini adalah bagian dari kompleks Jawa Timur Park yang terkenal, menawarkan berbagai wahana dan atraksi yang menghibur serta edukatif.\n" +
-            "\n" +
-            "Park ini dikenal dengan konsepnya yang inovatif, menggabungkan hiburan dengan pendidikan. Di sini, pengunjung dapat menikmati beragam atraksi, termasuk wahana permainan, museum interaktif, dan zona edukasi. Dari koleksi taman bunga yang menakjubkan hingga simulasi gempa, Jawa Timur Park 2 memiliki sesuatu untuk semua orang.\n",
-        expect: "Jawa Timur Park 2 menawarkan berbagai wahana permainan yang menarik, mulai dari roller coaster hingga wahana air yang menyenangkan. Pengunjung dapat memperoleh pengetahuan baru melalui museum interaktif yang menghadirkan informasi sejarah dan sains dengan cara yang menarik. Dengan berbagai eksperimen dan demonstrasi, pengunjung dapat belajar banyak hal baru tentang alam, sains, dan lingkungan.",
-        addInfo:
-            "Jawa Timur Park 2 buka setiap hari dari pukul 09.00 pagi hingga 17.00 sore.\n" +
-            "Parkir luas tersedia di area kompleks dengan biaya tambahan. Terdapat juga restoran dan kios makanan di dalam park yang menyajikan berbagai pilihan kuliner.\n" +
-            "Disarankan untuk mengenakan pakaian yang nyaman dan membawa perlengkapan seperti topi, kacamata hitam, dan tabir surya untuk melindungi diri dari sinar matahari.\n",
+        description: "Jawa Timur Park 2, terletak di Kota Batu, Jawa Timur, adalah salah satu destinasi wisata yang menawarkan pengalaman seru bagi pengunjung dari segala usia...",
+        expect: "Jawa Timur Park 2 menawarkan berbagai wahana permainan yang menarik...",
+        addInfo: "Jawa Timur Park 2 buka setiap hari dari pukul 09.00 pagi hingga 17.00 sore...",
         kategori: "Dewasa",
         priceAdult: "Rp. 100.000",
         priceChild: "Rp. 75.000",
@@ -69,20 +67,25 @@ export const exploreData = [
         link: "https://maps.app.goo.gl/ATxuxGLLCPEpGEVo9",
         comments: [
             {
-                userRate: "Azriel Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Rina Cahyani",
+                titleRate: "Liburan Keluarga yang Seru",
+                descRate: "Kami menghabiskan waktu yang menyenangkan di Jawa Timur Park 2. Anak-anak senang dengan berbagai wahana permainan dan kami juga belajar banyak dari museum interaktif. Suasana yang menyenangkan untuk liburan keluarga!",
+                lastRead: "Maret 2023",
+                writeRate: "5 Maret 2023",
             },
             {
-                userRate: "Budi Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Ahmad Prasetyo",
+                titleRate: "Penuh Hiburan dan Edukasi",
+                descRate: "Jawa Timur Park 2 tidak hanya menyenangkan, tetapi juga edukatif. Saya terkesan dengan konsepnya yang menggabungkan hiburan dengan pembelajaran. Pengalaman yang sangat berharga!",
+                lastRead: "Maret 2023",
+                writeRate: "10 Maret 2023",
+            },
+            {
+                userRate: "Siti Aisyah",
+                titleRate: "Tempat Wisata Favorit Keluarga",
+                descRate:  "Kami sering mengunjungi Jawa Timur Park 2 bersama keluarga. Selalu ada hal baru untuk dinikmati setiap kali kami datang. Pengalaman yang menyenangkan dan tidak pernah membosankan!",
+                lastRead: "Maret 2023",
+                writeRate: "15 Maret 2023",
             },
         ],
     },
@@ -93,30 +96,33 @@ export const exploreData = [
         rating: 190,
         image: MasjidAlAkbar,
         categories: ["Religi", "Rekreasi & Santai"],
-        description:
-            "Masjid Al Akbar, juga dikenal sebagai Masjid Agung Surabaya, adalah salah satu masjid terbesar di Indonesia dan menjadi landmark penting di Kota Surabaya, Jawa Timur. Dibangun pada tahun 1995, masjid ini merupakan karya arsitektur megah yang memadukan desain modern dan tradisional Islam.",
+        description: "Masjid Al Akbar, juga dikenal sebagai Masjid Agung Surabaya, adalah salah satu masjid terbesar di Indonesia dan menjadi landmark penting di Kota Surabaya, Jawa Timur...",
         link: "https://maps.app.goo.gl/GUB1wGGSwmAGFUQ39",
         price: "Masuk",
-        diskon: "Masjid Al Akbar terbuka untuk umum dan tidak memungut biaya masuk. Namun, pengunjung dapat memberikan sumbangan sukarela untuk pemeliharaan masjid",
-        expect: "Masjid Al Akbar memukau pengunjung dengan arsitektur yang megah dan artistik. Dari kubah besar hingga menara yang menjulang tinggi, setiap detail bangunan ini memancarkan keindahan dan keagungan. Selain sebagai tempat ibadah, Masjid Al Akbar juga menjadi pusat kegiatan keagamaan dan sosial. Pengunjung dapat mengikuti berbagai kegiatan seperti ceramah, kelas agama, dan acara kultural. Pengunjung dapat mengikuti tur yang diselenggarakan di masjid ini untuk memahami sejarah, arsitektur, dan kegiatan keagamaan yang dilakukan di sana.",
-        addInfo:
-            "Masjid Al Akbar buka setiap hari dari subuh hingga malam hari. Namun, untuk tur dan kegiatan khusus, jadwal bisa berbeda. Disarankan untuk menghubungi pihak masjid untuk informasi lebih lanjut. Masjid Al Akbar dilengkapi dengan fasilitas seperti area parkir yang luas, ruang wudu, dan toko suvenir yang menjual beragam barang religius. Sebagai tempat ibadah, pengunjung diharapkan untuk menjaga sikap yang sopan dan menghormati aturan yang berlaku di masjid. Wanita diharapkan untuk memakai hijab dan semua pengunjung diharapkan untuk melepas alas kaki saat memasuki area masjid.",
+        diskon: "Masjid Al Akbar terbuka untuk umum dan tidak memungut biaya masuk...",
+        expect: "Masjid Al Akbar memukau pengunjung dengan arsitektur yang megah dan artistik...",
+        addInfo: "Masjid Al Akbar buka setiap hari dari subuh hingga malam hari...",
         comments: [
             {
-                userRate: "Azriel Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Dewi Kartika",
+                titleRate: "Keindahan Arsitektur yang Memukau",
+                descRate:  "Saya sangat terkesan dengan keindahan Masjid Al-Akbar. Arsitekturnya yang megah dan artistik benar-benar memukau. Suasana spiritual yang hening membuat kunjungan saya menjadi sangat berarti.",
+                lastRead: "Februari 2023",
+                writeRate: "10 Februari 2023",
             },
             {
-                userRate: "Budi Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Yusuf Abdullah",
+                titleRate: "Pusat Kegiatan Keagamaan yang Berarti",
+                descRate:  "Masjid Al-Akbar bukan hanya tempat ibadah, tetapi juga pusat kegiatan keagamaan dan sosial. Saya senang bisa ikut serta dalam berbagai kegiatan yang diselenggarakan di sini. Pengalaman yang mendalam!",
+                lastRead: "Maret 2023",
+                writeRate: "15 Maret 2023",
+            },
+            {
+                userRate: "Nurul Hidayah",
+                titleRate: "Tempat yang Menyentuh Hati",
+                descRate: "Saya sering mengunjungi Masjid Al-Akbar untuk mencari ketenangan dan kedamaian. Suasana yang tenang dan keindahan arsitekturnya selalu membuat saya merasa dekat dengan Tuhan. Tempat yang sangat berharga bagi saya.",
+                lastRead: "Maret 2023",
+                writeRate: "20 Maret 2023",
             },
         ],
     },
@@ -127,16 +133,11 @@ export const exploreData = [
         rating: 198,
         image: Rawon,
         categories: ["Kuliner", "Rekreasi & Santai"],
-        description:
-            "Rawon Kalkulator adalah sebuah restoran yang terletak di Surabaya, Jawa Timur, yang terkenal dengan hidangan khasnya, Rawon. Restoran ini menawarkan pengalaman kuliner yang autentik dengan cita rasa tradisional yang khas dari masakan Jawa Timur.",
+        description: "Rawon Kalkulator adalah sebuah restoran yang terletak di Surabaya, Jawa Timur, yang terkenal dengan hidangan khasnya, Rawon...",
         price: " Dan Menu",
-        diskon: "Catatan: Harga dapat berubah tanpa pemberitahuan sebelumnya.",
-        expect:
-            "Rawon Kalkulator dikenal dengan rawon-nya yang lezat, dengan kuah kental berwarna hitam pekat dan daging sapi yang empuk. Hidangan ini biasanya disajikan dengan nasi putih, telur asin, dan sambal, menciptakan perpaduan rasa yang menggugah selera.\n" +
-            "Restoran ini menawarkan suasana yang nyaman dan ramah, cocok untuk santai bersama keluarga atau teman-teman. Selain rawon, restoran ini juga menyajikan berbagai hidangan lainnya seperti soto, tongseng, dan masakan Jawa Timur lainnya untuk memenuhi selera berbagai pengunjung.\n",
-        addInfo:
-            "Restoran Rawon Kalkulator buka setiap hari dari pukul 10.00 pagi hingga 22.00 malam.\n" +
-            "Pengunjung dapat memesan makanan secara online melalui platform pemesanan makanan populer atau menghubungi restoran langsung untuk layanan pesan antar.\n",
+        diskon: "Catatan: Harga dapat berubah tanpa pemberitahuan sebelumnya...",
+        expect: "Rawon Kalkulator dikenal dengan rawon-nya yang lezat...",
+        addInfo: "Restoran Rawon Kalkulator buka setiap hari dari pukul 10.00 pagi hingga 22.00 malam...",
         kategori: "Rawon",
         link: "https://maps.app.goo.gl/hBD9TedVmigJatkg6",
         priceAdult: "Mulai dari Rp 25.000",
@@ -148,20 +149,25 @@ export const exploreData = [
         hargaKategori4: "Rp 3.000",
         comments: [
             {
-                userRate: "Azriel Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Widya Nur",
+                titleRate: "Sarapan Pagi yang Mantap",
+                descRate: "rawonnya enak, rasanya sangat autentik khas rawon surabaya yang tidak ada di tempat lainnya. Pilihan menunya juga banyak dan pilihan lauk tambahannya tak kalah banyak mulai dari telur asin, babat sapi, perkedel, dan lainnya. Sangat memanjakan rasa lapar saya, harganya juga masih terjangkau untuk rasa yang didapat",
+                lastRead: "Februari 2023",
+                writeRate: "10 Februari 2023",
             },
             {
-                userRate: "Budi Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-                lastRead: "Desember 2023",
-                writeRate: "6 Januari 2024",
+                userRate: "Rian Setiawan",
+                titleRate: "Makan Siang yang Memuaskan",
+                descRate: "Rawon dan soto dagingnya enak affordable banget, dengan potongan daging yang besar-besar, citarasa gurih dan mantap banget, tempatnya rame banget pas kesana, kondisi di rumah makan padat, lumayan panas, tapi ada kipas anginnya. Pelayanan gesit dan cekatan.",
+                lastRead: "Maret 2023",
+                writeRate: "15 Maret 2023",
+            },
+            {
+                userRate: "Ayu Lestari",
+                titleRate: "Hidangan Lezat dengan Harga Terjangkau",
+                descRate: "Parkirnya mudah dan banyak, ada tukang parkirnya. Lokasi strategis berada di Taman Bungkul. Selain rawon dan soto daging, ada juga lauk tambahan seperti babat, paru, telur asin, perkedel, kerupuk rambak, kerupuk udang dan emping. Bisa request seperti nasi dipisah dan nggak pake toge.",
+                lastRead: "Maret 2023",
+                writeRate: "20 Maret 2023",
             },
         ],
     },
@@ -189,18 +195,156 @@ export const exploreData = [
             "Pengunjung dapat memesan tiket masuk secara online melalui situs resmi Kusuma Agrowisata untuk menghindari antrian di lokasi.\n",
         comments: [
             {
-                userRate: "Azriel Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
+                userRate: "Wildan",
+                titleRate: "Seruu bangett",
+                descRate: "Banyak sekali kegiatan yang bisa saya lakukan dengan berada di kusuma argowisata sangatt worth itt !!",
                 lastRead: "Desember 2023",
                 writeRate: "6 Januari 2024",
             },
             {
-                userRate: "Budi Sebastian",
-                titleRate: "Pengalaman Luar biasa",
-                descRate:
-                    "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
+                userRate: "Raina",
+                titleRate: "Pengalaman Berkesann",
+                descRate: "Tur ke kebun buah di Kusuma Agrowisata sangat menyenangkan! Saya belajar banyak hal baru tentang budidaya buah-buahan tropis dan menikmati segarnya udara di sana.",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Aqila",
+                titleRate: "Mantapp Suasananya",
+                descRate: "pekerja nya ramah ramahhh kami di ajari banyak hal dan di berikan beberpa pengetahuann !",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+        ],
+    },
+    {
+        id: 6,
+        name: "Air terjun Madakaripura",
+        location: "Probolinggo, Jawa Timur",
+        image: AirterjunMadakaripura,
+        rating: 500,
+        categories: ["Wisata Alam", "Pilihan Terbaik"],
+        description: "Air Terjun Madakaripura adalah air terjun tertinggi di Jawa Timur dan merupakan bagian dari Taman Nasional Bromo Tengger Semeru. Dikelilingi oleh tebing-tebing curam yang menjulang tinggi, air terjun ini menawarkan pemandangan yang spektakuler dan nuansa alam yang memukau. Air terjun Madakaripura terkenal karena keindahan alamnya yang menakjubkan serta legenda sejarahnya yang melibatkan sosok legendaris, Gajah Mada. Perjalanan menuju air terjun ini melewati jalur pendakian yang menantang namun sebanding dengan keindahan alam yang ditawarkannya.",
+        priceAdult: "Rp. 12.000",
+        link: "https://maps.app.goo.gl/4koY247Eatsqz3iS8",
+        price: " Masuk",
+        expect: "Meskipun untuk menuju ke Air Terjun Madakaripura wisatawan harus trekking terlebih dahulu, namun pesona yang ditawarkan sangat sepadan dengan perjuangan tersebut. Rasa lelah akan terbayar lunas sesampainya Sobat Parekraf di air terjun ini.\n" +
+            "\n" +
+            "Salah satu daya tarik dari Air Terjun Madakaripura adalah tinggi tebing sekitar 200 meter. Ketinggian ini sekaligus menobatkan Madakaripura sebagai air terjun tertinggi di Pulau Jawa dan salah satu air terjun tertinggi di Indonesia.",
+        addInfo: "Terletak di Kabupaten Probolinggo, Jawa Timur, Air Terjun Madakaripura memiliki pesona alam yang tak terbantahkan. Tidak hanya menawarkan keindahan alam saja, Air Terjun Madakaripura juga punya potensi storynomic tourism yang layak untuk dikembangkan.\n" +
+            "\n" +
+            "Konon, Air Terjun Madakaripura menjadi tempat bertapa Patih Gadjah Mada untuk terakhir kalinya, sebelum moksa. Mitos ini merujuk pada pemilihan nama Madakaripura yang diambil dari tiga kata yang saling berhubungan.\n" +
+            "\n" +
+            "Mada merupakan penggalan dari Gadjah Mada, Kari yang berarti peninggalan, dan Pura bermakna sembahyang atau semedi. Berdasarkan cerita tersebut, masyarakat setempat percaya bahwa Air Terjun Madakaripura adalah air terjun abadi. Pasalnya, selama ini Air Terjun Madakaripura tidak pernah mengalami kekeringan.",
+        comments: [
+            {
+                userRate: "Yanto",
+                titleRate: "Seruu bangett",
+                descRate: "Saya senang bisa melihat keindahan air terjun yang sangat kerenn",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Bagus",
+                titleRate: "Pengalaman Mantapp",
+                descRate: "Wuishh air terjunnya keren broo cuma perjalanan nya cukup jauhh sih tapi terbayarkan dengan keindahan  alam nya yang sangat masyaallah banget.",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Budi",
+                titleRate: "Capek tapi Terbayarkan",
+                descRate: "satu kata MANTAPPPP !",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+        ],
+    },
+    {
+        id: 7,
+        name: "Pantai Klayar",
+        location: "Pacitan, Jawa Timur",
+        image: PantaiKlayar,
+        rating: 300,
+        categories: ["Wisata Alam", "Rekreasi & Santai"],
+        description: "Pantai Klayar adalah salah satu pantai terindah yang terletak di Pacitan, Jawa Timur. Pantai ini terkenal dengan pasir putihnya yang lembut, air lautnya yang jernih, dan tebing karang yang menjulang tinggi di sekitarnya. Pengunjung dapat menikmati keindahan alam pantai ini sambil menikmati ombak yang memecah di karang-karang yang indah. Pantai Klayar juga menjadi tempat yang populer untuk menikmati matahari terbenam yang spektakuler. Dengan suasana yang tenang dan pemandangan alam yang menakjubkan, Pantai Klayar menjadi destinasi yang ideal bagi para wisatawan yang mencari ketenangan dan keindahan alam di Jawa Timur.",
+        kategori: "Dewasa",
+        priceAdult: "Rp. 15.000",
+        kategori2: "Anak-Anak ( 3-12 Tahun )",
+        priceChild: "Rp 10.000",
+        link: "https://maps.app.goo.gl/crEVJsaYTsnDLLsY6",
+        price: " Masuk",
+        expect: "Pantai Klayar Pacitan menyimpan banyak keindahan yang unik dan juga menyimpan misteri. Keindahan yang ada di antaranya pasir putih, karang raksasa mirip Sphinx di Mesir, seruling laut, air mancur alami, air terjun, dan batu karang indah. Lebih banyak turis mancanegara yang mengenal Pantai Klayar dibanding wisatawan domestik dikarenakan Pantai Klayar lebih dikenal melalui internet dibandingkan melalui pemberitaan di media offline.",
+       addInfo: "Ada 2 alternatif jalan yang dapat ditempuh untuk menuju objek wisata Pantai Klayar, yakni dari Jawa Timur dan dari Yogyakarta–Wonosari-Wonogiri. Jalur yang kedua ini hanya memakan waktu 3-4 jam saja dan dapat ditempuh dengan menyewa mobil selama 24 jam atau membawa kendaraan pribadi.",
+        comments: [
+            {
+                userRate: "Wildan",
+                titleRate: "Seruu bangett",
+                descRate: "Banyak sekali kegiatan yang bisa saya lakukan dengan berada di pantai klayar sangatt worth itt !!",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Raina",
+                titleRate: "Pengalaman Berkesann",
+                descRate: "Keren bangettt pasir putihh nyaaaa.",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Dylan",
+                titleRate: "Mantapp Suasananya",
+                descRate: "Kemarin terakhir kesini barengg keluarga sekarang bareng pasangann hahaa keren bangett intinyaa ! pengalaman yang tak terlupakan",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+        ],
+    },
+    {
+        id: 8,
+        name: "Telaga Sarangan",
+        location: "Magetan, Jawa Timur",
+        image: TelagaSarangan,
+        rating: 250,
+        categories: ["Wisata Alam", "Pilihan Terbaik"],
+        description: "\n" +
+            "Telaga Sarangan adalah danau indah yang terletak di lereng Gunung Lawu, Kabupaten Magetan, Jawa Timur. Dikelilingi oleh pegunungan hijau, danau ini menjadi destinasi populer untuk berbagai aktivitas seperti bersepeda, berperahu, atau sekadar bersantai menikmati keindahan alam. Dengan beragam fasilitas wisata di sekitarnya, Telaga Sarangan menjadi tempat yang menarik untuk dikunjungi di Jawa Timur.\n",
+        kategori: "Dewasa",
+        priceAdult: "Rp. 20.000",
+        kategori2: "Anak-Anak ( 3-12 Tahun )",
+        priceChild: "Rp 15.000",
+        link: "https://maps.app.goo.gl/DuqrfeKgMCh7KfJN8",
+        price: " Masuk",
+        expect: "\n" +
+            "Selain menikmati pemandangan di pinggir Telaga Sarangan, pengunjung juga bisa mengelilingi telaga dengan menggunakan kapal cepat alias speedboat.\n" +
+            "\n" +
+            "Tarif sewa speedboat sebesar Rp80 ribu per kapal dengan kapasitas tiga sampai empat penumpang. Selain dapat menikmati pemandangan di Telaga Sarangan, aktivitas speedboat dapat menambah keseruan berwisata dan memacu adrenalin.\n" +
+            "\n" +
+            "Pengunjung pun akan mendapat pengalaman yang berbeda dari sekadar menikmati pemandangan dari pinggir Telaga Sarangan. Jangan lupa lakukan swafoto di atas speedboat.\n" +
+            "\n" +
+            "Baca artikel CNN Indonesia \"Telaga Sarangan: Lokasi, Aktivitas, dan Harga Tiket Masuk 2023\" selengkapnya di sini: https://www.cnnindonesia.com/gaya-hidup/20230706102323-275-970078/telaga-sarangan-lokasi-aktivitas-dan-harga-tiket-masuk-2023.\n" +
+            "\n" +
+            "Download Apps CNN Indonesia sekarang https://app.cnnindonesia.com/",
+        addInfo: "Destinasi wisata favorit ini menawarkan pemandangan telaga, udara yang sejuk serta nuansa alam khas gunung Lawu. Sangat cocok dijadikan tujuan rekreasi dengan keluarga tercinta, teman hingga rekan kerja. Akses menuju Telaga Sarangan pun terbilang aman dan mudah dijangkau. Begitu juga dengan harga tiket masuk yang tergolong murah, menjadi salah satu alasan banyak wisatawan yang datang." ,
+        comments: [
+            {
+                userRate: "Parjo",
+                titleRate: "Seruu bangett",
+                descRate: "Banyak sekali kegiatan yang bisa saya lakukan dengan berada di Telaga sarangann sangatt worth itt !!",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Jovan",
+                titleRate: "Pengalaman Berkesann",
+                descRate: "Dingin bangett tapi sangatt menyenangkan karna saya bersama keluarga keluarga sayaa.",
+                lastRead: "Desember 2023",
+                writeRate: "6 Januari 2024",
+            },
+            {
+                userRate: "Arya",
+                titleRate: "Mantapp Suasananya",
+                descRate: "Kemarin terakhir kesini barengg keluarga sekarang bareng pasangann hahaa keren bangett intinyaa ! pengalaman yang tak terlupakan",
                 lastRead: "Desember 2023",
                 writeRate: "6 Januari 2024",
             },

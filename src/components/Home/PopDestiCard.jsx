@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Love2 from "../../assets/heartko.svg";
 import { exploreData } from "../data/exploreData";
 import Star from "../Star.jsx";
