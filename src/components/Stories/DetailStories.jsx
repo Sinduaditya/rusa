@@ -1,10 +1,11 @@
 import Save from "../../assets/stories/archive.svg";
-import {storiesData} from "../data/storiesData.jsx";
-import {useParams} from "react-router-dom";
+import { storiesData } from "../data/storiesData.jsx";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import profilePicture from "../../assets/profile-icon.svg";
 
-function DetailStories(){
-    const {id} = useParams();
+function DetailStories() {
+    const { id } = useParams();
     const selectedItem = storiesData.find((item) => item.id === parseInt(id));
     if (!selectedItem) {
         return <div>Item tidak ditemukan</div>;
@@ -15,42 +16,51 @@ function DetailStories(){
                 <div className="mx-auto max-w-screen-xl px-4  pt-[40px] font-poppins">
                     <main className="mt-10">
                         <div className="mb-4 md:mb-0 w-full mx-auto relative">
-                            <a href={`/stories/`}
-                               className="pl-4 pt-2 pb-2 rounded-3xl hover:bg-midnight hover:text-white items-center border pr-4">Kembali</a>
+                            <Link
+                                to={`/stories/`}
+                                className="pl-4 pt-2 pb-2 rounded-3xl hover:bg-midnight hover:text-white items-center border pr-4"
+                            >
+                                Kembali
+                            </Link>
                             <div className="px-4 lg:px-0 mt-10">
-                                <span className="text-secondary font-light ml-1  text-md">{selectedItem.category}</span>
+                                <span className="text-secondary font-light ml-1  text-md">
+                                    {selectedItem.category}
+                                </span>
                                 <h2 className="sm:text-xl md:text-6xl mt-2 font-semibold text-gray-800 leading-tight">
                                     {selectedItem.title}
                                 </h2>
                                 <div className="flex justify-between mb-5">
-                                    <div
-                                        className="w-auto h-auto mt-5  justify-start items-center gap-4 inline-flex">
-                                        <img className="w-12 h-12 rounded-full"
-                                             src={profilePicture}/>
+                                    <div className="w-auto h-auto mt-5  justify-start items-center gap-4 inline-flex">
+                                        <img
+                                            className="w-12 h-12 rounded-full"
+                                            src={profilePicture}
+                                        />
                                         <div className="flex-col justify-start items-start inline-flex ">
-                                            <div
-                                                className="text-slate-700 text-sm font-bold font-poppins leading-snug tracking-tight">
+                                            <div className="text-slate-700 text-sm font-bold font-poppins leading-snug tracking-tight">
                                                 {selectedItem.author}
                                             </div>
-                                            <div
-                                                className="text-secondary text-xs font-normal font-poppins">
+                                            <div className="text-secondary text-xs font-normal font-poppins">
                                                 {selectedItem.date}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="flex items-end">
-                                        <a className="border border-midnight rounded-full inline-flex gap-4 p-2 pl-3 pr-3">
+                                        <Link className="border border-midnight rounded-full inline-flex gap-4 p-2 pl-3 pr-3">
                                             Save
-                                            <img src={Save} className="h-auto w-auto" alt=""/>
-                                        </a>
+                                            <img
+                                                src={Save}
+                                                className="h-auto w-auto"
+                                                alt=""
+                                            />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                             <img
                                 src={selectedItem.image}
                                 className="w-full object-cover rounded-2xl"
-                                style={{height: "28em"}}
+                                style={{ height: "28em" }}
                             />
                         </div>
                         <div className="flex flex-col lg:flex-row lg:space-x-12">
@@ -82,19 +92,21 @@ function DetailStories(){
                                             className="h-10 w-10 rounded-full mr-2 object-cover"
                                         />
                                         <div>
-                                        <p className="font-semibold text-gray-700 text-sm">
+                                            <p className="font-semibold text-gray-700 text-sm">
                                                 {selectedItem.author}
                                             </p>
-                                            <p className="font-semibold text-gray-600 text-xs"> Editor </p>
+                                            <p className="font-semibold text-gray-600 text-xs">
+                                                {" "}
+                                                Editor{" "}
+                                            </p>
                                         </div>
                                     </div>
                                     <p className="text-gray-700 py-3">
                                         {selectedItem.intro}
                                     </p>
-                                    <button
-                                        className="px-2 py-1 border hover:border-none hover:text-white hover:bg-midnight flex w-full items-center justify-center rounded">
+                                    <button className="px-2 py-1 border hover:border-none hover:text-white hover:bg-midnight flex w-full items-center justify-center rounded">
                                         Follow
-                                        <i className="bx bx-user-plus ml-2"/>
+                                        <i className="bx bx-user-plus ml-2" />
                                     </button>
                                 </div>
                             </div>
@@ -103,7 +115,7 @@ function DetailStories(){
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default DetailStories;

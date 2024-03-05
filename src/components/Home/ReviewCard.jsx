@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Quote from "../../assets/quote-down.svg";
 import { reviewUser } from "../data/reviewUser";
+import { Link } from "react-router-dom";
 
 function ReviewCard() {
     const [destination, setDestinations] = useState([]);
