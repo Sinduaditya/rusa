@@ -6,7 +6,7 @@ import explore from "../../assets/explore/export.svg";
 import DestinasiSekitar from "./DestinasiSekitar.jsx";
 import Star from "../Star.jsx";
 import { exploreData } from "../data/exploreData.jsx";
-import { comment } from "postcss";
+import profilePicture from "../../assets/profile-icon.svg";
 
 function DetailExplore() {
     const { id } = useParams();
@@ -269,8 +269,8 @@ function DetailExplore() {
                                     <blockquote className="rounded-2xl bg-white p-6 shadow-lg sm:p-8 border-[1px] border-bluelight">
                                         <div className="flex items-center gap-4">
                                             <img
-                                                alt=""
-                                                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                                alt="user"
+                                                src={profilePicture}
                                                 className="size-14 rounded-full object-cover"
                                             />
 
@@ -306,6 +306,7 @@ function DetailExplore() {
                             </div>
                         </div>
                     </section>
+
                     {/*    arek says end*/}
                 </div>
             </div>
