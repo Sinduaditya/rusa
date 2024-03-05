@@ -23,7 +23,7 @@ const Team = () => {
             role: "Designer And Frontend Dev",
             picture: Calvin,
             description:
-                "Halo semuanya 👋, Gadis koleris yang suka berimajinasi, terangi hari-Mu dengan senyum caramelku, halo semuanya aku Freya!",
+                "Bagai kucing yang kalem, tapi selalu mengikat hati. Halo semuanya aku Calvin",
             facebookURL: "",
             twitterURL: "",
             linkedinURL: "https://www.linkedin.com/in/aplicalvin",
@@ -34,8 +34,7 @@ const Team = () => {
             lastname: "Arya",
             role: "UI Design And Illustrator",
             picture: Arya,
-            description:
-                "Diam bukan berarti tak memperhatikanmu, halo semuanya aku, Gita!",
+            description: "Seperti Simphoni yang menenangkan hati, hai aku Sen!",
             facebookURL: "",
             twitterURL: "",
             linkedinURL: "",
