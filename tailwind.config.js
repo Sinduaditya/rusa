@@ -20,6 +20,7 @@ export default {
             purple: "#d8b4fe",
             yellow: "#fde047",
             pink: "#f9a8d4",
+            active: "#304862",
         },
         fontFamily: {
             poppins: ["Poppins", "sans-serif"],
