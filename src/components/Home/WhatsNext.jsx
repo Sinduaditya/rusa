@@ -1,4 +1,5 @@
 import WhatsNextCard from "./WhatsNextCard.jsx";
+import { Link } from "react-router-dom";
 
 function WhatsNext() {
     return (

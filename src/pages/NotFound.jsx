@@ -1,4 +1,6 @@
 import Cry from "../assets/notfound/cry.svg";
+import { Link } from "react-router-dom";
+
 function NotFound() {
     return (
         <>
@@ -25,12 +27,12 @@ function NotFound() {
                                 </span>
                             </div>
                             <button className="flex w-[213px] pt-[12px] pr-[24px] pb-[12px] pl-[24px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#00b5ef] rounded-[48px] border-none relative z-[16] pointer">
-                                <a
-                                    href={"/"}
+                                <Link
+                                    to={"/"}
                                     className="flex w-[165px] h-[23px] justify-center items-start shrink-0 basis-auto font-['Poppins'] text-[14px] font-bold leading-[22.652px] text-[#fff] tracking-[0.04px] relative text-center whitespace-nowrap z-[17]"
                                 >
                                     Kembali ke Homepage
-                                </a>
+                                </Link>
                             </button>
                         </div>
                     </div>

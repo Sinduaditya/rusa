@@ -7,6 +7,7 @@ import Review from "../components/Home/Review.jsx";
 import WhatsNext from "../components/Home/WhatsNext.jsx";
 import FloatingButtonIcon from "../assets/home/floating-button.svg"; // Renamed import
 import IntroAi from "../components/Home/IntroAi.jsx";
+import { Link } from "react-router-dom";
 
 const FloatingButton = () => {
     return (

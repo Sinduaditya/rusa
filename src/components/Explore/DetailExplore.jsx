@@ -7,6 +7,7 @@ import DestinasiSekitar from "./DestinasiSekitar.jsx";
 import Star from "../Star.jsx";
 import { exploreData } from "../data/exploreData.jsx";
 import profilePicture from "../../assets/profile-icon.svg";
+import { Link } from "react-router-dom";
 
 function DetailExplore() {
     const { id } = useParams();
@@ -22,12 +23,12 @@ function DetailExplore() {
                 <div className="mx-auto max-w-screen-xl px-4 font-poppins pt-[80px]">
                     <div className="container  mx-auto px-4 md:px-0">
                         <div className="mb-12">
-                            <a
-                                href={`/explore/`}
+                            <Link
+                                to={`/explore/`}
                                 className="pl-4 pt-2 pb-2 rounded-3xl hover:bg-midnight hover:text-white items-center border pr-4"
                             >
                                 Kembali
-                            </a>
+                            </Link>
                             <h1 className="text-black sm:text-6xl text-4xl pb-3 mt-10 font-bold font-poppins">
                                 {selectedItem.name}
                             </h1>
@@ -216,8 +217,8 @@ function DetailExplore() {
                                     className="rounded-xl"
                                     alt=""
                                 />
-                                <a
-                                    href={selectedItem.link}
+                                <Link
+                                    to={selectedItem.link}
                                     className="flex justify-center items-center gap-4"
                                     target="_blank"
                                 >
@@ -229,7 +230,7 @@ function DetailExplore() {
                                         className="h-4 w-4 mt-1"
                                         alt=""
                                     />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

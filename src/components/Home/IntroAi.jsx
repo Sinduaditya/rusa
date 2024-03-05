@@ -1,4 +1,5 @@
 import AiIllustration from "../../assets/home/aiintro.png";
+import { Link } from "react-router-dom";
 
 function IntroAi() {
     return (

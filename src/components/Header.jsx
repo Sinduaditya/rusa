@@ -20,9 +20,12 @@ const Header = () => {
                     <div className="flex h-16 items-center font-medium justify-between">
                         <div className="flex gap-2">
                             <img src={LogoDr} className="h-10 w-10" alt="" />
-                            <a href={`/`} className="font-bold text-3xl mt-2">
+                            <Link
+                                href={`/`}
+                                className="font-bold text-3xl mt-2"
+                            >
                                 Dolan<span className="text-primary">Rek.</span>
-                            </a>
+                            </Link>
                         </div>
 
                         <div className="hidden md:block">

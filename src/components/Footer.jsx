@@ -1,4 +1,4 @@
-import {Link, Route, useLocation} from "react-router-dom";
+import { Link, Route, useLocation } from "react-router-dom";
 import BGImage from "../assets/footer/footerIllustration.png";
 import Logo from "../assets/header/dolanrek.svg";
 
@@ -18,15 +18,15 @@ function FooterContent() {
                                                 className="h-10 w-10"
                                                 alt=""
                                             />
-                                            <a
-                                                href="#"
+                                            <Link
+                                                to=""
                                                 className="font-bold text-3xl mt-2"
                                             >
                                                 Dolan
                                                 <span className="text-primary">
                                                     Rek.
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </div>
 
                                         <p className="mt-4 max-w-xs text-gray-500">
@@ -43,35 +43,53 @@ function FooterContent() {
 
                                             <ul className="mt-6 space-y-4 text-sm">
                                                 <li>
-                                                    <Link to={"/explore"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/explore"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Pilihan terbaik
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/explore"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/explore"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Wisata Alam
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/explore"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/explore"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Kuliner
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/explore"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/explore"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Religi
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={"/explore"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/explore"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Argowisata
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link to={"/explore"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/explore"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Landmark
                                                     </Link>
                                                 </li>
@@ -85,37 +103,55 @@ function FooterContent() {
 
                                             <ul className="mt-6 space-y-4 text-sm">
                                                 <li>
-                                                    <Link to={"/stories"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/stories"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Activity
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/stories"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/stories"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Knowledge
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/stories"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/stories"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Tips & Trick
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/stories"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/stories"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Kuliner dan Masakan
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/stories"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/stories"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Budaya dan Sejarah
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/stories"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/stories"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Petualangan
                                                     </Link>
                                                 </li>
@@ -129,13 +165,19 @@ function FooterContent() {
 
                                             <ul className="mt-6 space-y-4 text-sm">
                                                 <li>
-                                                    <Link to={"/about"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/about"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Apa itu DolanRek?
                                                     </Link>
                                                 </li>
 
                                                 <li>
-                                                    <Link to={"/about"} className="text-gray-700 transition hover:opacity-75">
+                                                    <Link
+                                                        to={"/about"}
+                                                        className="text-gray-700 transition hover:opacity-75"
+                                                    >
                                                         Tim Developer
                                                     </Link>
                                                 </li>
