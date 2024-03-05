@@ -37,7 +37,7 @@ const Header = () => {
                                             className={clsx(
                                                 "nav-link ",
                                                 splitLocation[1] === ""
-                                                    ? "font-semibold text-[#304862]"
+                                                    ? "font-medium text-primary"
                                                     : ""
                                             )}
                                         >
@@ -50,7 +50,7 @@ const Header = () => {
                                             className={clsx(
                                                 "nav-link ",
                                                 splitLocation[1] === "explore"
-                                                    ? "font-semibold text-[#304862]"
+                                                    ? "font-medium text-primary"
                                                     : ""
                                             )}
                                         >
@@ -63,7 +63,7 @@ const Header = () => {
                                             className={clsx(
                                                 "nav-link ",
                                                 splitLocation[1] === "stories"
-                                                    ? "font-semibold text-[#304862]"
+                                                    ? "font-medium text-primary"
                                                     : ""
                                             )}
                                         >
@@ -76,7 +76,7 @@ const Header = () => {
                                             className={clsx(
                                                 "nav-link ",
                                                 splitLocation[1] === "about"
-                                                    ? "font-semibold text-[#304862]"
+                                                    ? "font-medium text-primary"
                                                     : ""
                                             )}
                                         >
@@ -91,15 +91,15 @@ const Header = () => {
                             <div className="flex gap-2 lg:gap-4">
                                 <Link
                                     to="/login"
-                                    className="hidden md:flex hover:font-semibold rounded-3xl p-2 pl-4 pr-4 bg-bluelight  text-black"
+                                    className="hidden md:flex hover:font-semibold rounded-3xl py-2 px-4 bg-bluelight  text-black"
                                 >
                                     Login
                                 </Link>
 
-                                <div className="flex">
+                                <div className="flex ">
                                     <Link
                                         to={"/signup"}
-                                        className="hidden md:flex bg-primary rounded-3xl p-2 pl-4 pr-4 text-white"
+                                        className="hidden md:flex bg-primary rounded-3xl py-2 px-4 text-white"
                                     >
                                         Sign up
                                     </Link>
