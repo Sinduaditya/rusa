@@ -1,11 +1,12 @@
 import Loc from "../../assets/location2.svg";
 import Love from "../../assets/explore/heart.svg";
 import { useParams } from "react-router-dom";
-import { exploreData } from "../data/exploreData.jsx";
 import getCategoryImage from "../data/categoryImages.jsx";
 import explore from "../../assets/explore/export.svg";
 import DestinasiSekitar from "./DestinasiSekitar.jsx";
 import Star from "../Star.jsx";
+import { exploreData } from "../data/exploreData.jsx";
+import { comment } from "postcss";
 
 function DetailExplore() {
     const { id } = useParams();
@@ -13,6 +14,8 @@ function DetailExplore() {
     if (!selectedItem) {
         return <div>Item tidak ditemukan</div>;
     }
+
+    const commentsData = selectedItem.comments;
     return (
         <>
             <div className="bg-bluelight ">
@@ -35,7 +38,7 @@ function DetailExplore() {
                                 </div>
                             </div>
                             <div className="flex gap-3  items-center">
-                                <Star/>
+                                <Star />
                                 <p className="text-sm pt-1 text-gray-400">
                                     {selectedItem.rating}
                                 </p>
@@ -262,42 +265,44 @@ function DetailExplore() {
                             </h2>
 
                             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
-                                <blockquote className="rounded-2xl bg-white p-6 shadow-lg sm:p-8 border-[1px] border-bluelight">
-                                    <div className="flex items-center gap-4">
-                                        <img
-                                            alt=""
-                                            src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-                                            className="size-14 rounded-full object-cover"
-                                        />
+                                {commentsData.map((comment) => (
+                                    <blockquote className="rounded-2xl bg-white p-6 shadow-lg sm:p-8 border-[1px] border-bluelight">
+                                        <div className="flex items-center gap-4">
+                                            <img
+                                                alt=""
+                                                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                                className="size-14 rounded-full object-cover"
+                                            />
 
+                                            <div>
+                                                <p className="mt-0.5 text-lg font-medium text-gray-900">
+                                                    {comment.userRate}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex mt-3 justify-start gap-0.5 text-green-500">
+                                            <Star />
+                                        </div>
+                                        <h3 className="font-poppins font-semibold mt-2">
+                                            {comment.titleRate}
+                                        </h3>
                                         <div>
-                                            <p className="mt-0.5 text-lg font-medium text-gray-900">
-                                                {selectedItem.userRate}
+                                            <p className="mt-2 text-gray-700 font-cabin">
+                                                {comment.descRate}
                                             </p>
                                         </div>
-                                    </div>
-
-                                    <div className="flex mt-3 justify-start gap-0.5 text-green-500">
-                                       <Star/>
-                                    </div>
-                                    <h3 className="font-poppins font-semibold mt-2">
-                                        {selectedItem.titleRate}
-                                    </h3>
-                                    <div>
-                                        <p className="mt-2 text-gray-700 font-cabin">
-                                            {selectedItem.descRate}
-                                        </p>
-                                    </div>
-                                    <div className="text-sm font-poppins mt-2 font-light">
-                                        <p>
-                                            Dikunjungi{" "}
-                                            <span className="font-semibold">
-                                                {selectedItem.lastRead}
-                                            </span>
-                                        </p>
-                                        <p>Ditulis {selectedItem.writeRate}</p>
-                                    </div>
-                                </blockquote>
+                                        <div className="text-sm font-poppins mt-2 font-light">
+                                            <p>
+                                                Dikunjungi{" "}
+                                                <span className="font-semibold">
+                                                    {comment.lastRead}
+                                                </span>
+                                            </p>
+                                            <p>Ditulis {comment.writeRate}</p>
+                                        </div>
+                                    </blockquote>
+                                ))}
                             </div>
                         </div>
                     </section>
