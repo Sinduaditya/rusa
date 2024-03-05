@@ -23,8 +23,8 @@ function PopDestiCard() {
                     className="card card-compact w-full relative"
                     key={destination.id}
                 >
-                    <a
-                        href={`/detail-explore/${destination.id}`}
+                    <Link
+                        to={`/detail-explore/${destination.id}`}
                         key={destination.id}
                     >
                         <figure className="relative">
@@ -42,15 +42,17 @@ function PopDestiCard() {
                             </div>
                         </figure>
                         <div className="card-body">
-                            <h2 className="card-title py-2 px-2">{destination.name}</h2>
+                            <h2 className="card-title py-2 px-2">
+                                {destination.name}
+                            </h2>
                             <div className="flex gap-3 px-1">
-                                <Star/>
+                                <Star />
                                 <p className="text-secondary">
                                     {destination.rating}
                                 </p>
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             ))}
         </>

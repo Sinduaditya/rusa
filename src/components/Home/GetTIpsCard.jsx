@@ -14,7 +14,7 @@ function GetTipsCard() {
     return (
         <>
             {destinations.map((story) => (
-                <a href={`/detail-stories/${story.id}`} key={story.id}>
+                <Link to={`/detail-stories/${story.id}`} key={story.id}>
                     <div className="flex px-2 py-5 gap-4 max-w-sm">
                         <img
                             src={story.image}
@@ -43,7 +43,7 @@ function GetTipsCard() {
                         </div>
                         {/* Caption dan Keterangan */}
                     </div>
-                </a>
+                </Link>
             ))}
         </>
     );

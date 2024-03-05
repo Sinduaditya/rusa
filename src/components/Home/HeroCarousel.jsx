@@ -49,12 +49,12 @@ function HeroCarousel() {
                                 </div>
 
                                 <div className=" flex justify-center lg:justify-start">
-                                    <a
-                                        href={"/explore"}
+                                    <Link
+                                        to={"/explore"}
                                         className="w-fit  py-2 text-sm lg:text-base font-medium text-center text-white border border-transparent rounded-3xl px-8 bg-primary hover:bg-opacity-90"
                                     >
                                         Explore
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             {/* end text */}
