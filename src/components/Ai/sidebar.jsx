@@ -5,6 +5,7 @@ import compas from "../../assets/ai/compas.svg";
 import bed from "../../assets/ai/sleep.svg";
 import kereta from "../../assets/ai/kereta.svg";
 import food from "../../assets/ai/coffe.svg";
+import { Link } from "react-router-dom";
 
 function ListItem({ text }) {
     return (
@@ -23,6 +24,14 @@ function Sidebar() {
                 {/* Blob */}
                 <div className="absolute top-1/2 -left-[20px] transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 z-10 rounded-full bg-gradient-to-tl from-blob to-skyblue mix-blend-multiply blur-[500px]" />
 
+                <div className="flex items-center justify-center h-16">
+                    <Link
+                        to={"/"}
+                        className="text-white flex gap-2 rounded-lg  items-center py-2 px-12 bg-gradient-to-r from-[#1B8DFF] to-[#00B5EF]"
+                    >
+                        <span className="pt-1">Kembali</span>
+                    </Link>
+                </div>
                 <div className="flex items-center justify-center h-16">
                     <button className="text-white flex gap-2 rounded-lg pl-[20px] pr-16 items-center py-3 px-12 bg-gradient-to-r from-[#1B8DFF] to-[#00B5EF]">
                         <img src={message} className="h-5 w-5" alt="" />
