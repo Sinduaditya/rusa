@@ -15,10 +15,10 @@ const FloatingButton = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
         >
-            <a href={"/dolanrek-ai"}>
+            <Link to={"/dolanrek-ai"}>
                 <img src={FloatingButtonIcon} alt="Floating Button" />{" "}
                 {/* Use the imported SVG icon */}
-            </a>
+            </Link>
         </motion.button>
     );
 };

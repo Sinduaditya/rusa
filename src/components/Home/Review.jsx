@@ -18,12 +18,12 @@ function Review() {
                             </p>
                         </div>
                         <div className="hidden lg:flex flex-wrap place-self-center">
-                            <a
-                                href={`/about#review`}
+                            <Link
+                                to={`/about#review`}
                                 className="underline text-sm text-secondary"
                             >
                                 Lihat Semua
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     {/* Review - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
@@ -32,12 +32,12 @@ function Review() {
                         <ReviewCard />
                     </div>
                     <div className="flex flex-wrap place-self-end lg:hidden">
-                        <a
-                            href={`/about#review`}
+                        <Link
+                            to={`/about#review`}
                             className="underline text-sm text-secondary"
                         >
                             Lihat Semua
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {/* Review - End */}
