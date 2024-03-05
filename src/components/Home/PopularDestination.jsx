@@ -1,4 +1,5 @@
 import PopDestiCard from "./PopDestiCard.jsx";
+import { Link } from "react-router-dom";
 
 function PopularDestination() {
     return (

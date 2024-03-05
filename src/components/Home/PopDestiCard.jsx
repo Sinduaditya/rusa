@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Love2 from "../../assets/heartko.svg";
 import { exploreData } from "../data/exploreData";
 import Star from "../Star.jsx";
+import { Link } from "react-router-dom";
 
 function PopDestiCard() {
     const [destinations, setDestinations] = useState([]);

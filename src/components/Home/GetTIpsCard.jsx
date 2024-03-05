@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Bromo from "../../assets/gunung-bromo.jpg";
 import { storiesData } from "../data/storiesData";
+import { Link } from "react-router-dom";
 
 function GetTipsCard() {
     const [destinations, setDestinations] = useState([]);

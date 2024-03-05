@@ -1,4 +1,5 @@
 import ReviewCard from "./ReviewCard.jsx";
+import { Link } from "react-router-dom";
 
 function Review() {
     return (

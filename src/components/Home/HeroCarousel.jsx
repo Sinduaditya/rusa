@@ -4,6 +4,7 @@ import JatimPark from "../../assets/jatim-park-2.jpg";
 import Suro from "../../assets/patung-suro-boyo.jpg";
 import IconLocation from "../../assets/location2.svg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function HeroCarousel() {
     return (

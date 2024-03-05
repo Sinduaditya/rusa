@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Calvin from "../../assets/about/calvin.jpeg";
 import Arya from "../../assets/about/senarya.jpeg";
 import Sindu from "../../assets/about/sindu.jpg";
+import { Link } from "react-router-dom";
 
 const Team = () => {
     const people = [
