@@ -1,26 +1,47 @@
 export const arekSayData = [
     {
-        id: 1,
         name: "Sindu Aditya",
-        title: "unforgotable hiking",
-        description: "Meskipun cuaca buruk dan cuaca dingin, pengalaman di Kawah Ijen adalah hal yang tak terlupakan. Pendakian menuju api biru memang menantang, tetapi melihat keindahan alam yang luar biasa di puncaknya sangatlah memuaskan. Meskipun perjalanan turunnya agak sulit, tetapi melihat keajaiban alam seperti ini membuat segala usaha terbayar lunas.",
-        visited: "Desember 2023",
-        write: "6 Januari 2023"
+        description: "DolanRek benar-benar menyelamatkan liburan saya! Saya tidak punya banyak waktu untuk merencanakan, tetapi dengan DolanRek, saya bisa menemukan tempat-tempat wisata terbaik di Jawa Timur dengan cepat dan mudah.",
+        rate: "230"
     },
     {
-        id: 2,
-        name: "Adam Setiawan",
-        title: "Blue Fire",
-        description: "Meskipun pemandangannya luar biasa, saya kecewa dengan perlakuan staf kereta. Mereka mengomentari berat badan saya dan membuat saya turun beberapa kali saat melewati tanjakan. Saya berharap staf kereta dapat diberi pelatihan lebih lanjut agar tidak melakukan hal-hal yang membuat pelanggan merasa tidak nyaman",
-        visited: "Desember 2023",
-        write: "8 April 2023"
+        name: "Sen Arya",
+        description: "Saya suka bagaimana DolanRek menyajikan informasi tentang tempat wisata di Jawa Timur dengan jelas dan mudah dimengerti.",
+        rate: "240"
     },
     {
-        id: 3,
+        name: "Calvin",
+        description: "Saya merekomendasikan DolanRek kepada siapa pun yang ingin menemukan tempat-tempat wisata di Jawa Timur. Pengalaman pengguna yang baik dan konten yang bermanfaat.",
+        rate: "220"
+    },
+    {
         name: "Sebastian",
-        title: "Indah",
-        description: "Setelah menapaki jalur pendakian di tengah kabut dini hari, suasana di puncak Ijen benar-benar menyiratkan kepenatan yang tak layak diperbincangkan. Meskipun tidak dapat menyaksikan blue fire karena matahari mulai bersinar, keindahan alam Ijen tetaplah menakjubkan.",
-        visited: "November 2023",
-        write: "10 Mei 2023"
-    }
+        description: "Dengan DolanRek, saya merasa lebih siap dan yakin menjelajahi Jawa Timur. Saya mendapatkan semua informasi yang saya butuhkan dalam satu tempat.",
+        rate: "250"
+    },
+    {
+        name: "Nico",
+        description: "Saya sangat merekomendasikan DolanRek kepada siapa pun yang ingin menjelajahi Jawa Timur. Fitur-fitur yang disediakan sangat lengkap dan informatif, membuatnya menjadi satu-satunya alat yang saya butuhkan untuk merencanakan liburan saya.",
+        rate: "210"
+    },
+    {
+        name: "Sindu",
+        description: "Saya telah menggunakan DolanRek beberapa kali sekarang dan saya sangat puas dengan pengalaman saya setiap kali. Konten yang informatif dan rekomendasi yang akurat membuat saya merasa lebih percaya diri dalam merencanakan liburan saya.",
+        rate: "180"
+    },
+    {
+        name: "Budi",
+        description: "Saya sangat kagum dengan fitur Ai nya sangat membantu saya yang kesusahan dalam mencari rekomendasi tempat wisata.",
+        rate: "300"
+    },
+    {
+        name: "Wibi",
+        description: "Waktu saya awal coba pertama kaget sih dengan adanya fitur AI yang membuat perjalanan dan rekomendasi rekomendasinya intinya mantep banget nih aplikasi nya keren bangett.",
+        rate: "160"
+    },
+    {
+        name: "Sena",
+        description: "Dengan DolanRek aku jadi lebih mudah mau explore Jatim tanpa harus takut dan bingung mau kemana dengan fitur fitur lengkapnya sungguh keren sih.",
+        rate: "130"
+    },
 ];
