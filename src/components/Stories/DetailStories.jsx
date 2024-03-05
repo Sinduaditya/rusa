@@ -1,6 +1,7 @@
 import Save from "../../assets/stories/archive.svg";
 import {storiesData} from "../data/storiesData.jsx";
 import {useParams} from "react-router-dom";
+import profilePicture from "../../assets/profile-icon.svg";
 
 function DetailStories(){
     const {id} = useParams();
@@ -25,7 +26,7 @@ function DetailStories(){
                                     <div
                                         className="w-auto h-auto mt-5  justify-start items-center gap-4 inline-flex">
                                         <img className="w-12 h-12 rounded-full"
-                                             src="https://via.placeholder.com/48x48"/>
+                                             src={profilePicture}/>
                                         <div className="flex-col justify-start items-start inline-flex ">
                                             <div
                                                 className="text-slate-700 text-sm font-bold font-poppins leading-snug tracking-tight">
@@ -77,7 +78,7 @@ function DetailStories(){
                                 <div className="p-4 border-t border-b md:border md:rounded">
                                     <div className="flex py-2">
                                         <img
-                                            src="https://randomuser.me/api/portraits/men/97.jpg"
+                                            src={profilePicture}
                                             className="h-10 w-10 rounded-full mr-2 object-cover"
                                         />
                                         <div>
