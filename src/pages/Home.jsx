@@ -1,3 +1,5 @@
+import { motion, useAnimation, useViewportScroll } from "framer-motion";
+import { useEffect } from "react";
 import GetTips from "../components/Home/GetTips.jsx";
 import HeroCarousel from "../components/Home/HeroCarousel.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
@@ -12,29 +14,28 @@ const Home = () => {
         <>
             <div className="bg-bluelight">
                 <div className="mx-auto max-w-screen-xl px-4 pt-[40px]  font-poppins">
-                    <HeroSection/>
+                    <HeroSection />
                     {/*End header*/}
                     {/* Explore*/}
-                    <HeroCarousel/>
+                    <HeroCarousel />
                     {/*Explore.jsx */}
                     {/*Destination Popular*/}
-                    <PopularDestination/>
+                    <PopularDestination />
                     {/*End Destination Popular*/}
                     {/* WhatsNExt */}
-                    <WhatsNext/>
+                    <WhatsNext />
                     {/* End Ehats */}
                     {/*Introduce AI*/}
-                    <IntroAi/>
+                    <IntroAi />
                     {/*End Introduce*/}
                     {/* Get Tips from Travellers */}
-                    <GetTips/>
+                    <GetTips />
                     {/* END Get Tips from Travellers */}
                     {/* Review dan Testimonial */}
-                    <Review/>
+                    <Review />
                     {/* END Review dan Testimonial */}
                 </div>
             </div>
-
         </>
     );
 };
