@@ -42,7 +42,7 @@ function GetTips() {
                     </div>
                     {/* bagian Text dan CTA */}
                     {/* Bagian Item  of Tips*/}
-                    <div>
+                    <div data-aos="fade-left">
                         <GetTipsCard />
                     </div>
                     {/* END Bagian Item  of Tips*/}

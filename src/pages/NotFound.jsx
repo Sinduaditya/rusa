@@ -1,7 +1,12 @@
 import Cry from "../assets/notfound/cry.svg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from 'aos';
 
-function NotFound() {
+const NotFound = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); 
+    }, []);
     return (
         <>
             <div className="relative z-20">
@@ -12,7 +17,9 @@ function NotFound() {
                     {/* blob */}
 
                     <div className="flex w-full flex-col gap-8 items-center shrink-0 flex-nowrap relative">
+                        <div data-aos="fade-up">
                         <img src={Cry} alt="" />
+                        </div>
                         <div className="flex w-full flex-col gap-10 items-center shrink-0 flex-nowrap relative z-[12]">
                             <div className="flex w-full flex-col gap-[16px] items-center shrink-0 flex-nowrap relative z-[13]">
                                 <span className="w-full text-center shrink-0 basis-auto font-['Poppins'] text-[34px] font-bold leading-[45.56px] text-midnight tracking-[0.1px] relative z-[14]">

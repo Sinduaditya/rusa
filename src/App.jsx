@@ -56,16 +56,6 @@ function App() {
             ],
         },
         {
-            path: "/dolanrek-ai",
-            element: <AiLayout />,
-            children: [
-                {
-                    path: "/dolanrek-ai",
-                    element: <IntroAi />,
-                },
-            ],
-        },
-        {
             path: "/login",
             element: <AuthLayout />,
             children: [

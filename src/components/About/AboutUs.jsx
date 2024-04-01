@@ -1,4 +1,3 @@
-import { motion, useTransform, useViewportScroll } from "framer-motion";
 import AboutSection from "../../assets/about/image_about.png";
 import { Link } from "react-router-dom";
 
@@ -29,13 +28,6 @@ function AboutUs() {
                                 </div>
                             </div>
                             <div className="w-full px-4 lg:w-1/2">
-                                <motion.div
-                                    animate={{ y: 10, yoyo: Infinity }}
-                                    transition={{
-                                        type: "spring",
-                                        stiffness: 100,
-                                    }}
-                                >
                                     <div className="py-20 pl-4">
                                         <img
                                             src={AboutSection}
@@ -43,7 +35,6 @@ function AboutUs() {
                                             className="w-full h-full"
                                         />
                                     </div>
-                                </motion.div>
                             </div>
                         </div>
                     </div>
