@@ -201,12 +201,14 @@ function FooterContent() {
 function FooterIllustration() {
     return (
         <>
-            <div className="bg-bluelight">
+            <div className="bg-bluelight" >
+                <div data-aos="fade-up">
                 <img
                     src={BGImage}
                     className="w-96 md:w-full md:max-w-3xl  mx-auto"
                     alt=""
                 />
+                </div>
                 <div className="bg-[#576B81] w-full h-[51px] -mt-8"></div>
             </div>
         </>

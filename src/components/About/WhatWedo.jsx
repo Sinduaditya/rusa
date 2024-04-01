@@ -2,8 +2,13 @@ import Inspire from "../../assets/about/search-normal.svg";
 import Recomend from "../../assets/about/location-tick.svg";
 import Educate from "../../assets/about/lamp-on.svg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from 'aos';
 
-function WhatWedo() {
+const WhatWedo = () => {
+    useEffect(() => {
+        AOS.init({ duration: 2000 }); 
+    }, []);
     return (
         <>
             <section className="py-10  sm:py-16 lg:py-24 ">
@@ -14,6 +19,7 @@ function WhatWedo() {
                         </h2>
                     </div>
                     <div className="grid max-w-xl grid-cols-1 mx-auto mt-10 text-center lg:max-w-full lg:mt-20 lg:grid-cols-3 gap-x-2 xl:gap-x-4">
+                    <div data-aos="fade-right">
                         <div className="overflow-hidden bg-transparent rounded-md">
                             <div className="px-8 py-28">
                                 <img
@@ -29,6 +35,8 @@ function WhatWedo() {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    <div data-aos="fade-down">
                         <div className="overflow-hidden bg-transparent rounded-md">
                             <div className="px-8 py-28">
                                 <img
@@ -45,6 +53,8 @@ function WhatWedo() {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    <div data-aos="fade-left">
                         <div className="overflow-hidden bg-transparent rounded-md">
                             <div className="px-8 py-28">
                                 <img
@@ -60,6 +70,7 @@ function WhatWedo() {
                                 </p>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </section>
