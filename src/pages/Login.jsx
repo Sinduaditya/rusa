@@ -6,15 +6,22 @@ import eyeSlash from "../assets/login/eye-slash.svg";
 import google from "../assets/login/google.svg";
 import fb from "../assets/login/facebook.svg";
 import {Link} from "react-router-dom";
+import { useEffect } from "react";
+import AOS from 'aos';
 
 function ImageLogin() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 }); 
+    }, []);
     return (
         <div className="max-md:order-1 h-screen min-h-full">
+            <div data-aos="fade-right">
             <img
                 src={LoginImg}
                 className="w-full h-full object-cover"
                 alt="login-image"
             />
+            </div>
         </div>
     );
 }
