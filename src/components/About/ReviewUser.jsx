@@ -1,55 +1,52 @@
 import profilePicture from "../../assets/profile-icon.svg";
 import Star from "../Star.jsx";
 import { arekSayData } from "../data/arekSayData.jsx";
-import { Link } from "react-router-dom";
 
 function ReviewUser() {
     return (
-        <>
-            <div className="bg-bluelight" id="review">
-                <section className="bg-transparent mx-auto max-w-screen-xl px-4 font-poppins ">
-                    <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-                        <h2 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                            Ulasan{" "}
-                            <span className="text-primary">Pengguna</span>
-                        </h2>
+        <section className="py-16 px-6">
+            <div className="max-w-screen-xl mx-auto">
+                <div className="text-center mb-12">
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">
+                        ULASAN
+                    </span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-display">
+                        Ulasan <span className="text-primary">Pengguna</span>
+                    </h2>
+                </div>
 
-                        <div className="mt-16 [column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
-                            {arekSayData.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className="mb-8 sm:break-inside-avoid"
-                                >
-                                    <blockquote className="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
-                                        <div className="flex items-center gap-4">
-                                            <img
-                                                alt="profilUser"
-                                                src={profilePicture}
-                                                className="size-14 rounded-full object-cover"
-                                            />
-                                            <div>
-                                                <p className="mt-0.5 text-lg font-medium text-gray-900">
-                                                    {item.name}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="flex gap-3 items-center mt-2">
-                                            <Star />
-                                            <p className="text-normal text-gray-400 pt-1 ">
-                                                {item.rate}
-                                            </p>
-                                        </div>
-                                        <p className="mt-4 text-gray-700">
-                                            {item.description}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {arekSayData.map((item, index) => (
+                        <div
+                            key={index}
+                            className="backdrop-blur-xl bg-white/70 border border-white/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300"
+                        >
+                            <div className="flex items-center gap-4">
+                                <img
+                                    alt="profilUser"
+                                    src={profilePicture}
+                                    className="w-12 h-12 rounded-full object-cover"
+                                />
+                                <div>
+                                    <p className="font-semibold text-gray-900">
+                                        {item.name}
+                                    </p>
+                                    <div className="flex items-center gap-2 mt-1">
+                                        <Star />
+                                        <p className="text-sm text-gray-400">
+                                            {item.rate}
                                         </p>
-                                    </blockquote>
+                                    </div>
                                 </div>
-                            ))}
+                            </div>
+                            <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+                                {item.description}
+                            </p>
                         </div>
-                    </div>
-                </section>
+                    ))}
+                </div>
             </div>
-        </>
+        </section>
     );
 }
 

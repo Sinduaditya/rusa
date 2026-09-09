@@ -7,43 +7,40 @@ function WhatsNextCard() {
     const [destinations, setDestinations] = useState([]);
 
     useEffect(() => {
-        // Mengambil seluruh data destinasi dari exploreData.jsx
         setDestinations(exploreData);
     }, []);
 
     return (
-        <div className="flex pl-8 lg:pl-0 overflow-auto scroll-m-0 gap-4">
-            {destinations.map((destination) => (
-                <div
-                    className="card card-compact w-[250px]"
+        <div className="flex gap-4 sm:gap-5 w-max">
+            {destinations.map((destination, index) => (
+                <Link
                     key={destination.id}
+                    to={`/detail-explore/${destination.id}`}
+                    className="group focus-ring w-[260px] sm:w-[280px] shrink-0"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 50}
                 >
-                    <Link
-                        to={`/detail-explore/${destination.id}`}
-                        key={destination.id}
-                    >
-                        <figure className="w-[250px] h-[175px] aspect-video">
+                    <article className="bg-surface-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
+                        <div className="relative aspect-[16/10] overflow-hidden">
                             <img
                                 src={destination.image}
-                                className="rounded-3xl w-[250px] h-[175px] object-cover"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                 alt={destination.name}
                             />
-                        </figure>
-                        <div className="card-body">
-                            <h2 className="card-title py-2 px-2">
+                        </div>
+                        <div className="p-4">
+                            <h3 className="font-display font-bold text-sm sm:text-base text-midnight group-hover:text-primary transition-colors line-clamp-2">
                                 {destination.name}
-                            </h2>
-                            <div className="flex gap-3 px-1">
-                                <div className="rating rating-sm">
-                                    <Star />
-                                </div>
-                                <p className="text-secondary">
+                            </h3>
+                            <div className="flex items-center gap-2 mt-2">
+                                <Star />
+                                <span className="text-xs font-medium text-secondary">
                                     {destination.rating}
-                                </p>
+                                </span>
                             </div>
                         </div>
-                    </Link>
-                </div>
+                    </article>
+                </Link>
             ))}
         </div>
     );

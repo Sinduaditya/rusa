@@ -1,37 +1,40 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Quote from "../../assets/quote-down.svg";
 import { reviewUser } from "../data/reviewUser";
-import { Link } from "react-router-dom";
 
 function ReviewCard() {
-    const [destination, setDestinations] = useState([]);
+    const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        const limitedReview = reviewUser.slice(0, 3);
-        setDestinations(limitedReview);
-    }, [reviewUser]); // Add reviewUser as a dependency
+        setReviews(reviewUser.slice(0, 3));
+    }, []);
 
     return (
         <>
-            {destination.map(
-                (
-                    review,
-                    index // Added index parameter to map function
-                ) => (
-                    <div
-                        key={index}
-                        className="w-fit h-36 bg-[#5FB0F4] p-0.5 rounded-2xl"
-                    >
-                        <div className="grid bg-[#5FB0F4] w-fit h-full p-4 rounded-2xl justify-between text-white">
-                            <img src={Quote} alt="" />
-                            <h1 className="text-xs  font-normal">
-                                {review.review}
-                            </h1>
-                            <p className="text-xs font-bold">{review.name}</p>
-                        </div>
+            {reviews.map((review, index) => (
+                <div
+                    key={index}
+                    className="bg-white rounded-2xl p-5 sm:p-6 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                >
+                    <div>
+                        <img
+                            src={Quote}
+                            alt=""
+                            className="w-8 h-8 opacity-20 mb-3"
+                        />
+                        <p className="text-sm sm:text-[15px] text-midnight/80 leading-relaxed">
+                            {review.review}
+                        </p>
                     </div>
-                )
-            )}
+                    <div className="mt-5 pt-4 border-t border-surface">
+                        <p className="font-display font-bold text-sm text-midnight">
+                            {review.name}
+                        </p>
+                    </div>
+                </div>
+            ))}
         </>
     );
 }

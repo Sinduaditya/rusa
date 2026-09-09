@@ -1,120 +1,183 @@
 import Save from "../../assets/stories/archive.svg";
 import { storiesData } from "../data/storiesData.jsx";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import profilePicture from "../../assets/profile-icon.svg";
+import { useState, useEffect } from "react";
 
 function DetailStories() {
     const { id } = useParams();
     const selectedItem = storiesData.find((item) => item.id === parseInt(id));
-    if (!selectedItem) {
-        return <div>Item tidak ditemukan</div>;
-    }
-    return (
-        <>
-            <div className="bg-bluelight">
-                <div className="mx-auto max-w-screen-xl px-4  pt-[40px] font-poppins">
-                    <main className="mt-10">
-                        <div className="mb-4 md:mb-0 w-full mx-auto relative">
-                            <Link
-                                to={`/stories/`}
-                                className="pl-4 pt-2 pb-2 rounded-3xl hover:bg-midnight hover:text-white items-center border pr-4"
-                            >
-                                Kembali
-                            </Link>
-                            <div className="px-4 lg:px-0 mt-10">
-                                <span className="text-secondary font-light ml-1  text-md">
-                                    {selectedItem.category}
-                                </span>
-                                <h2 className="sm:text-xl md:text-6xl mt-2 font-semibold text-gray-800 leading-tight">
-                                    {selectedItem.title}
-                                </h2>
-                                <div className="flex justify-between mb-5">
-                                    <div className="w-auto h-auto mt-5  justify-start items-center gap-4 inline-flex">
-                                        <img
-                                            className="w-12 h-12 rounded-full"
-                                            src={profilePicture}
-                                        />
-                                        <div className="flex-col justify-start items-start inline-flex ">
-                                            <div className="text-slate-700 text-sm font-bold font-poppins leading-snug tracking-tight">
-                                                {selectedItem.author}
-                                            </div>
-                                            <div className="text-secondary text-xs font-normal font-poppins">
-                                                {selectedItem.date}
-                                            </div>
-                                        </div>
-                                    </div>
+    const [isVisible, setIsVisible] = useState(false);
 
-                                    <div className="flex items-end">
-                                        <Link className="border border-midnight rounded-full inline-flex gap-4 p-2 pl-3 pr-3">
-                                            Save
-                                            <img
-                                                src={Save}
-                                                className="h-auto w-auto"
-                                                alt=""
-                                            />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                            <img
-                                src={selectedItem.image}
-                                className="w-full object-cover rounded-2xl"
-                                style={{ height: "28em" }}
-                            />
-                        </div>
-                        <div className="flex flex-col lg:flex-row lg:space-x-12">
-                            <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
-                                <p className="pb-6">
-                                    {selectedItem.description}
-                                </p>
-                                <p className="pb-6">
-                                    {selectedItem.paragraphOne}
-                                </p>
-                                <p className="pb-6">
-                                    {selectedItem.paragraphTwo}
-                                </p>
-                                <p className="pb-6">
-                                    {selectedItem.paragraphThree}
-                                </p>
-                                <p className="pb-6">
-                                    {selectedItem.paragraphFour}
-                                </p>
-                                <div className="border-l-4 border-gray-500 pl-4 mb-6 italic rounded">
-                                    {selectedItem.paragraphFive}
-                                </div>
-                            </div>
-                            <div className="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
-                                <div className="p-4 border-t border-b md:border md:rounded">
-                                    <div className="flex py-2">
-                                        <img
-                                            src={profilePicture}
-                                            className="h-10 w-10 rounded-full mr-2 object-cover"
-                                        />
-                                        <div>
-                                            <p className="font-semibold text-gray-700 text-sm">
-                                                {selectedItem.author}
-                                            </p>
-                                            <p className="font-semibold text-gray-600 text-xs">
-                                                {" "}
-                                                Editor{" "}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <p className="text-gray-700 py-3">
-                                        {selectedItem.intro}
-                                    </p>
-                                    <button className="px-2 py-1 border hover:border-none hover:text-white hover:bg-midnight flex w-full items-center justify-center rounded">
-                                        Follow
-                                        <i className="bx bx-user-plus ml-2" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+
+    if (!selectedItem) {
+        return (
+            <div className="min-h-screen bg-surface flex items-center justify-center">
+                <div className="text-center">
+                    <p className="text-gray-500 text-lg">Cerita tidak ditemukan</p>
+                    <Link
+                        to="/stories"
+                        className="mt-4 inline-block text-primary hover:underline"
+                    >
+                        Kembali ke Stories
+                    </Link>
                 </div>
             </div>
-        </>
+        );
+    }
+
+    return (
+        <section className="min-h-screen bg-surface">
+            {/* Hero Image */}
+            <div className="relative h-[50vh] min-h-[350px] overflow-hidden">
+                <img
+                    src={selectedItem.image}
+                    alt={selectedItem.title}
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
+
+                {/* Back Button */}
+                <div className="absolute top-6 left-6 z-10">
+                    <Link
+                        to="/stories"
+                        className="inline-flex items-center gap-2 px-4 py-2.5 bg-white/95 backdrop-blur-sm rounded-xl text-sm font-medium text-gray-900 hover:bg-white transition-colors shadow-sm"
+                    >
+                        <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M15 19l-7-7 7-7"
+                            />
+                        </svg>
+                        Kembali
+                    </Link>
+                </div>
+
+                {/* Title Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+                    <div className="max-w-screen-xl mx-auto">
+                        <div
+                            className={`transition-all duration-700 ease-out ${
+                                isVisible
+                                    ? "opacity-100 translate-y-0"
+                                    : "opacity-0 translate-y-8"
+                            }`}
+                        >
+                            <span className="inline-block px-3 py-1 bg-white/15 backdrop-blur-sm rounded-full text-white/90 text-xs font-medium tracking-wide mb-4">
+                                {selectedItem.category}
+                            </span>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-display leading-tight max-w-3xl">
+                                {selectedItem.title}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Content */}
+            <div className="max-w-screen-xl mx-auto px-6 py-8 md:py-12">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Main Content */}
+                    <div className="lg:col-span-2">
+                        {/* Author & Meta */}
+                        <div
+                            className={`flex flex-wrap items-center justify-between gap-4 mb-8 transition-all duration-700 delay-200 ${
+                                isVisible
+                                    ? "opacity-100 translate-y-0"
+                                    : "opacity-0 translate-y-8"
+                            }`}
+                        >
+                            <div className="flex items-center gap-3">
+                                <img
+                                    src={profilePicture}
+                                    alt={selectedItem.author}
+                                    className="w-12 h-12 rounded-full object-cover bg-surface"
+                                />
+                                <div>
+                                    <p className="font-semibold text-gray-900">
+                                        {selectedItem.author}
+                                    </p>
+                                    <p className="text-sm text-gray-500">
+                                        {selectedItem.date}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button className="flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm">
+                                <img src={Save} alt="" className="h-4 w-4" />
+                                Save
+                            </button>
+                        </div>
+
+                        {/* Article Content */}
+                        <div
+                            className={`bg-white rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-700 delay-300 ${
+                                isVisible
+                                    ? "opacity-100 translate-y-0"
+                                    : "opacity-0 translate-y-8"
+                            }`}
+                        >
+                            <div className="prose prose-lg max-w-none font-body text-gray-700 leading-relaxed space-y-6">
+                                <p>{selectedItem.description}</p>
+                                <p>{selectedItem.paragraphOne}</p>
+                                <p>{selectedItem.paragraphTwo}</p>
+                                <p>{selectedItem.paragraphThree}</p>
+                                <p>{selectedItem.paragraphFour}</p>
+
+                                {selectedItem.paragraphFive && (
+                                    <blockquote className="border-l-4 border-primary pl-6 py-2 my-8 bg-surface rounded-r-xl">
+                                        <p className="text-gray-700 italic text-lg">
+                                            {selectedItem.paragraphFive}
+                                        </p>
+                                    </blockquote>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Sidebar */}
+                    <div className="lg:col-span-1">
+                        <div
+                            className={`sticky top-24 bg-white rounded-2xl p-6 shadow-sm transition-all duration-700 delay-400 ${
+                                isVisible
+                                    ? "opacity-100 translate-y-0"
+                                    : "opacity-0 translate-y-8"
+                            }`}
+                        >
+                            <div className="text-center">
+                                <img
+                                    src={profilePicture}
+                                    alt={selectedItem.author}
+                                    className="w-20 h-20 rounded-full object-cover mx-auto bg-surface"
+                                />
+                                <h3 className="mt-4 font-bold text-gray-900 font-display">
+                                    {selectedItem.author}
+                                </h3>
+                                <p className="text-sm text-gray-500 mt-1">
+                                    Editor
+                                </p>
+                                <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+                                    {selectedItem.intro}
+                                </p>
+                                <button className="mt-6 w-full py-2.5 bg-primary text-white rounded-xl font-medium hover:bg-primary-600 transition-colors shadow-md shadow-primary/25">
+                                    Follow
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }
 

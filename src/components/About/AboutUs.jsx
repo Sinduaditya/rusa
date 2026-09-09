@@ -1,48 +1,46 @@
 import AboutSection from "../../assets/about/image_about.png";
-import { Link } from "react-router-dom";
 
 function AboutUs() {
     return (
-        <>
-            <div className="relative z-10">
-                <section className="overflow-hidden rounded-[64px] border-white border-opacity-50 backdrop-blur-3xl bg-glass bg-opacity-70 mt-[20px] relative z-20  font-poppins">
-                    <div className="container mx-auto ">
-                        <div className="flex flex-wrap items-center justify-evenly">
-                            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-                                <div className="mt-10 lg:mt-0">
-                                    <h2 className="mb-1 text-5xl font-bold">
-                                        Portal Digital Wisata{" "}
-                                        <span className="text-primary">
-                                            Jawa Timur
-                                        </span>
-                                    </h2>
-                                    <p className="mt-10 text-midnight font-medium">
-                                        DolanRek membawa anda menemukan pesona
-                                        Jawa Timur secara digital dengan inovasi
-                                        terkini, memberikan akses yang lebih
-                                        mudah dan informatif kepada masyarakat
-                                        untuk lebih mengenal Jawa Timur, serta
-                                        mendukung pertumbuhan pariwisata di
-                                        wilayah ini.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="w-full px-4 lg:w-1/2">
-                                    <div className="py-20 pl-4">
-                                        <img
-                                            src={AboutSection}
-                                            alt=""
-                                            className="w-full h-full"
-                                        />
-                                    </div>
-                            </div>
+        <section className="relative px-6 pt-24 pb-16 overflow-hidden">
+            {/* Decorative blobs */}
+            <div className="absolute top-20 right-0 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+
+            <div className="max-w-screen-xl mx-auto relative z-10">
+                <div className="backdrop-blur-xl bg-white/70 border border-white/50 rounded-3xl shadow-xl overflow-hidden">
+                    <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 p-8 lg:p-12">
+                        {/* Content */}
+                        <div className="flex-1 text-center lg:text-left">
+                            <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">
+                                TENTANG KAMI
+                            </span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 font-display leading-tight">
+                                Portal Digital Wisata{" "}
+                                <span className="text-primary">Jawa Timur</span>
+                            </h2>
+                            <p className="mt-6 text-gray-600 leading-relaxed font-body">
+                                DolanRek membawa anda menemukan pesona Jawa Timur
+                                secara digital dengan inovasi terkini, memberikan
+                                akses yang lebih mudah dan informatif kepada
+                                masyarakat untuk lebih mengenal Jawa Timur, serta
+                                mendukung pertumbuhan pariwisata di wilayah ini.
+                            </p>
+                        </div>
+
+                        {/* Image */}
+                        <div className="flex-1 flex justify-center">
+                            <img
+                                src={AboutSection}
+                                alt="About DolanRek"
+                                className="w-full max-w-md h-auto"
+                            />
                         </div>
                     </div>
-                </section>
-                <div className="w-32 h-32 md:w-72 md:h-72 -right-[10px] md:-right-[80px] -top-[40px] bg-gradient-to-tl from-blob to-skyblue z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
-                <div className="w-36 h-36 md:w-40 md:h-40 -left-[100px] md:-right-[90px] -bottom-[70px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-10 rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
+                </div>
             </div>
-        </>
+        </section>
     );
 }
+
 export default AboutUs;

@@ -3,45 +3,70 @@ import { Link } from "react-router-dom";
 
 function PopularDestination() {
     return (
-        <>
-            <section className="bg-transparent">
-                <div className=" grid gap-4 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 lg:py-16">
-                    {/* Destinasi Populer - Bagian Atas (Tulisan dan link "Lihat Semua") */}
-                    <div className=" flex w-full justify-between">
-                        <div className="">
-                            <h1 className="text-sky-950 font-semibold text-2xl">
-                                Destinasi Populer
-                            </h1>
-                            <p className="text-xs text-secondary">
-                                Rencanakan perjalananmu, Disini!
-                            </p>
-                        </div>
-                        <div className="hidden md:flex md:flex-wrap md:place-self-center">
-                            <Link
-                                to={`/explore/`}
-                                className="underline text-sm text-secondary"
-                            >
-                                Lihat Semua
-                            </Link>
-                        </div>
+        <section className="py-12 sm:py-16 lg:py-20">
+            <div className="container-app">
+                {/* Section Header */}
+                <div className="flex items-end justify-between mb-8 sm:mb-10">
+                    <div>
+                        <p className="text-primary font-semibold text-sm tracking-wide uppercase mb-2">
+                            Destinasi Populer
+                        </p>
+                        <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-midnight tracking-tight">
+                            Yang Paling Disukai
+                        </h2>
                     </div>
-                    {/* Destinasi Populer - End of Bagian Atas (Tulisan dan link "Lihat Semua") */}
-
-                    <div className=" grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 justify-center">
-                        {/* sudah difilter di PopDestiCard. hanya tampil yang "Pilihan Terbaik" saja dilimit ke 3 teratas. */}
-                        <PopDestiCard />
-                    </div>
-                    <div className="flex w-full justify-end md:hidden">
-                        <Link
-                            to={`/explore/`}
-                            className="underline text-sm text-secondary"
+                    <Link
+                        to="/explore"
+                        className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-600 transition-colors focus-ring"
+                    >
+                        Lihat Semua
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
                         >
-                            Lihat Semua
-                        </Link>
-                    </div>
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </Link>
                 </div>
-            </section>
-        </>
+
+                {/* Cards Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                    <PopDestiCard />
+                </div>
+
+                {/* Mobile CTA */}
+                <div className="mt-6 sm:hidden">
+                    <Link
+                        to="/explore"
+                        className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-primary/20 text-primary font-medium text-sm hover:bg-primary/5 transition-colors focus-ring"
+                    >
+                        Lihat Semua Destinasi
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </Link>
+                </div>
+            </div>
+        </section>
     );
 }
 

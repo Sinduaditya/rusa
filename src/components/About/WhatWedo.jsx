@@ -1,80 +1,62 @@
 import Inspire from "../../assets/about/search-normal.svg";
 import Recomend from "../../assets/about/location-tick.svg";
 import Educate from "../../assets/about/lamp-on.svg";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import AOS from 'aos';
 
-const WhatWedo = () => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 }); 
-    }, []);
+const services = [
+    {
+        icon: Inspire,
+        title: "Inspire",
+        description: "Membangkitkan minat wisata domestik",
+    },
+    {
+        icon: Recomend,
+        title: "Recommend",
+        description: "Menyajikan pilihan tempat wisata terbaik",
+    },
+    {
+        icon: Educate,
+        title: "Educate",
+        description: "Mengupas budaya & sejarah secara menarik",
+    },
+];
+
+function WhatWedo() {
     return (
-        <>
-            <section className="py-10  sm:py-16 lg:py-24 ">
-                <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                    <div className="max-w-2xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-4xl">
-                            What We <span className="text-primary">Do ?</span>
-                        </h2>
-                    </div>
-                    <div className="grid max-w-xl grid-cols-1 mx-auto mt-10 text-center lg:max-w-full lg:mt-20 lg:grid-cols-3 gap-x-2 xl:gap-x-4">
-                    <div data-aos="fade-right">
-                        <div className="overflow-hidden bg-transparent rounded-md">
-                            <div className="px-8 py-28">
-                                <img
-                                    className="object-cover w-36 h-36 mx-auto "
-                                    src={Inspire}
-                                    alt=""
-                                />
-                                <h1 className="text-4xl font-semibold  mt-9">
-                                    Inspire
-                                </h1>
-                                <p className="mt-3 text-base text-secondary">
-                                    Membangkitkan minat wisata domestik
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-down">
-                        <div className="overflow-hidden bg-transparent rounded-md">
-                            <div className="px-8 py-28">
-                                <img
-                                    className="object-cover w-36 h-36 mx-auto "
-                                    src={Recomend}
-                                    alt=""
-                                />
-                                <h1 className="text-4xl font-semibold  mt-9">
-                                    Recommend
-                                </h1>
-                                <p className="mt-3 text-base text-secondary">
-                                    Menyajikan pilihan tempat wisata terbaik
-                                    Membangkitkan minat wisata domestik
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-left">
-                        <div className="overflow-hidden bg-transparent rounded-md">
-                            <div className="px-8 py-28">
-                                <img
-                                    className="object-cover w-36 h-36 mx-auto "
-                                    src={Educate}
-                                    alt=""
-                                />
-                                <h1 className="text-4xl font-semibold  mt-9">
-                                    Educate
-                                </h1>
-                                <p className="mt-3 text-base text-secondary">
-                                    Mengupas budaya & sejarah secara menarik
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+        <section className="py-16 px-6">
+            <div className="max-w-screen-xl mx-auto">
+                <div className="text-center mb-12">
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-4">
+                        LAYANAN KAMI
+                    </span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-display">
+                        What We <span className="text-primary">Do?</span>
+                    </h2>
                 </div>
-            </section>
-        </>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {services.map((service) => (
+                        <div
+                            key={service.title}
+                            className="backdrop-blur-xl bg-white/70 border border-white/50 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                        >
+                            <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center">
+                                <img
+                                    src={service.icon}
+                                    alt=""
+                                    className="w-10 h-10"
+                                />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900 font-display mb-2">
+                                {service.title}
+                            </h3>
+                            <p className="text-gray-500 text-sm leading-relaxed">
+                                {service.description}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 }
 

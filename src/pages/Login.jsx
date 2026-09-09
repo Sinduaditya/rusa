@@ -1,149 +1,121 @@
-import { useState } from "react";
-import LoginImg from "../assets/login/login.svg";
+import { useState, useEffect } from "react";
 import message from "../assets/login/sms.svg";
 import lock from "../assets/login/lock.svg";
 import eyeSlash from "../assets/login/eye-slash.svg";
+import eye from "../assets/login/eye-slash.svg";
 import google from "../assets/login/google.svg";
 import fb from "../assets/login/facebook.svg";
-import {Link} from "react-router-dom";
-import { useEffect } from "react";
-import AOS from 'aos';
-
-function ImageLogin() {
-    useEffect(() => {
-        AOS.init({ duration: 1000 }); 
-    }, []);
-    return (
-        <div className="max-md:order-1 h-screen min-h-full">
-            <div data-aos="fade-right">
-            <img
-                src={LoginImg}
-                className="w-full h-full object-cover"
-                alt="login-image"
-            />
-            </div>
-        </div>
-    );
-}
+import { Link } from "react-router-dom";
 
 function Login() {
     const [showPassword, setShowPassword] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     return (
-        <div className="font-poppins bg-bluelight">
-            <div className="grid md:grid-cols-3 items-center lg:gap-10 gap-4">
-                <ImageLogin />
-                <div className="w-full h-full md:col-span-2">
-                    <div className="rounded-[64px]  w-screen  flex md:w-[544px] py-12 flex-col gap-[8px] justify-center items-center flex-nowrap md:mx-auto my-0">
-                        <form className="">
-                            <div className="flex w-screen px-6 md:w-[480px] flex-col gap-6 items-start shrink-0 flex-nowrap">
-                                <div className="flex md:w-[480px] flex-col gap-[48px] items-start shrink-0">
-                                    <h1 className="font-poppins text-[40px] font-bold leading-[60px] text-midnight">
-                                        Welcome Back
-                                    </h1>
-                                </div>
-                                <div className="w-full flex flex-col gap-[24px] items-start shrink-0 flex-nowrap ">
-                                    <div className="w-full flex flex-col gap-[10px] items-start shrink-0 flex-nowrap">
-                                        <label
-                                            htmlFor="email"
-                                            className="h-[30px] shrink-0 basis-auto font-poppins text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap"
-                                        >
-                                            Email
-                                        </label>
-                                        <div className="w-full bg-white flex h-[64px] px-4 gap-2 justify-left items-start rounded-[9px] border-solid border-2 border-[#8c9fb5] overflow-hidden">
-                                            <div className="grid px-4 h-full shrink-0 content-center">
-                                                <img
-                                                    src={message}
-                                                    className="w-6 h-6"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <input
-                                                id="email"
-                                                className="h-16 w-full font-poppins text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
-                                                placeholder="michie@member.jkt48.com"
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="w-full flex flex-col gap-[10px] items-start shrink-0 flex-nowrap">
-                                    <div className="flex justify-between items-center self-stretch shrink-0 flex-wrap">
-                                        <span
-                                            className="h-[30px] basis-auto  text-[20px] font-medium leading-[30px] text-[#304862] text-left whitespace-nowrap z-[14]">
-                                            Password
-                                        </span>
-                                        <span
-                                            className="h-[18px] basis-auto font-poppins text-[11px] font-normal leading-[17.798px] text-[#00b5ef] tracking-[0.03px]  text-left underline whitespace-nowrap ">
-                                            Forgot Password?
-                                        </span>
-                                    </div>
-                                    <div
-                                        className="w-full bg-white flex h-[64px] px-4 gap-2 justify-left items-start rounded-[9px] border-solid border-2 border-[#8c9fb5] overflow-hidden">
-                                        <div className="grid px-4 h-full shrink-0 content-center">
-                                            <img
-                                                src={lock}
-                                                className="w-6 h-6"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <input
-                                            type={
-                                                showPassword
-                                                    ? "text"
-                                                    : "password"
-                                            }
-                                            id="password"
-                                            className="h-16 w-full font-poppins text-[16px] font-medium leading-[24px] text-[#8c9fb5] text-left whitespace-nowrap"
-                                            placeholder="••••••••••••••••"
-                                        />
-                                        <div
-                                            className="grid px-4 h-full shrink-0 content-center"
-                                            onClick={togglePasswordVisibility}
-                                        >
-                                            <img
-                                                src={
-                                                    showPassword
-                                                        ? eyeSlash
-                                                        : eyeSlash
-                                                }
-                                                className="w-6 h-6 cursor-pointer"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="">Dont have an account yet?
-                                    <Link to="/signup" className="pl-2">
-                                        <span className="text-primary font-medium">Register</span>
-                                    </Link>
-                                </p>
-                                <div className="grid md:flex w-full md:w-[457px] gap-[16px] items-start shrink-0 flex-nowrap  z-[28]">
+        <div className="min-h-screen bg-white flex">
+            {/* Left Side - Illustration */}
+            <div className="hidden lg:flex lg:w-1/2 bg-[#F4F9FF] items-center justify-center p-8">
+                <img
+                    src="/src/assets/login/login.svg"
+                    alt=""
+                    className="w-full h-auto max-h-[90vh] object-contain"
+                />
+            </div>
 
-                                    <button className="border w-full flex md:w-[210px] items-center pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] justify-center shrink-0 flex-nowrap rounded-[8px] border-solid border-[#8c9fb5]  pointer">
-                                        <img src={google} alt="" />
-                                        <span className="h-[24px] shrink-0 basis-auto font-poppins text-[14px] font-medium leading-[24px] text-[#304862]  text-left whitespace-nowrap ">
-                                            Sign in with Google
-                                        </span>
-                                    </button>
-                                    <button className="flex w-full justify-center md:w-[200px] pt-[16px] pr-[16px] pb-[16px] pl-[16px] gap-[8px] items-center shrink-0 flex-nowrap bg-[#316ff6] rounded-[8px] border-none  pointer">
-                                        <img src={fb} alt="" />
-                                        <span className="h-[24px] shrink-0 basis-auto font-poppins text-[14px] font-medium leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
-                                            Sign in with Facebook
-                                        </span>
-                                    </button>
-                                </div>
-                                <button className="flex w-full md:w-full pt-[20px] pr-[16px] pb-[20px] pl-[16px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#9382f2] rounded-[8px] border-none  pointer">
-                                    <span className="h-[24px] shrink-0 basis-auto font-poppins text-[16px] font-bold leading-[24px] text-[#fff]  text-left whitespace-nowrap ">
-                                        Sign In
-                                    </span>
+            {/* Right Side - Form */}
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-6 md:p-12">
+                <div
+                    className={`w-full max-w-md transition-all duration-700 ease-out ${
+                        isVisible
+                            ? "opacity-100 translate-y-0"
+                            : "opacity-0 translate-y-8"
+                    }`}
+                >
+                    <div className="mb-8">
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-display">
+                            Welcome Back
+                        </h1>
+                        <p className="mt-2 text-gray-500">
+                            Masuk ke akun Anda untuk melanjutkan
+                        </p>
+                    </div>
+
+                    <form className="space-y-5">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Email
+                            </label>
+                            <div className="relative">
+                                <img src={message} alt="" className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                                <input
+                                    type="email"
+                                    className="w-full h-14 pl-12 pr-4 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                                    placeholder="michie@member.jkt48.com"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="flex justify-between items-center mb-2">
+                                <label className="text-sm font-medium text-gray-700">
+                                    Password
+                                </label>
+                                <Link to="#" className="text-xs text-primary hover:text-primary-600 font-medium">
+                                    Forgot Password?
+                                </Link>
+                            </div>
+                            <div className="relative">
+                                <img src={lock} alt="" className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    className="w-full h-14 pl-12 pr-12 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+                                    placeholder="••••••••••••••••"
+                                />
+                                <button
+                                    type="button"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                >
+                                    <img src={showPassword ? eye : eyeSlash} alt="" className="h-5 w-5" />
                                 </button>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <p className="text-sm text-gray-500">
+                            Don&apos;t have an account yet?{" "}
+                            <Link to="/signup" className="text-primary font-semibold hover:text-primary-600">
+                                Register
+                            </Link>
+                        </p>
+
+                        <div className="grid grid-cols-2 gap-3">
+                            <button type="button" className="flex items-center justify-center gap-2 px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all">
+                                <img src={google} alt="" className="h-5 w-5" />
+                                Google
+                            </button>
+                            <button type="button" className="flex items-center justify-center gap-2 px-4 py-3 bg-[#316ff6] rounded-xl text-sm font-medium text-white hover:bg-[#2d63d9] transition-all">
+                                <img src={fb} alt="" className="h-5 w-5" />
+                                Facebook
+                            </button>
+                        </div>
+
+                        <div className="relative">
+                            <div className="absolute inset-0 flex items-center">
+                                <div className="w-full border-t border-gray-200" />
+                            </div>
+                            <div className="relative flex justify-center text-sm">
+                                <span className="px-4 bg-white text-gray-400">atau</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" className="w-full py-4 bg-primary text-white rounded-xl font-semibold hover:bg-primary-600 transition-all shadow-md shadow-primary/25">
+                            Sign In
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

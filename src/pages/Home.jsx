@@ -1,4 +1,4 @@
-import AOS from 'aos';
+import AOS from "aos";
 import GetTips from "../components/Home/GetTips.jsx";
 import HeroCarousel from "../components/Home/HeroCarousel.jsx";
 import HeroSection from "../components/Home/HeroSection.jsx";
@@ -10,42 +10,39 @@ import { useEffect } from "react";
 
 const Home = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000 }); 
+        AOS.init({
+            duration: 800,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 50,
+        });
     }, []);
 
     return (
-        <>
-            <div className="bg-bluelight">
-                <div className="mx-auto max-w-screen-xl px-4 pt-[40px]  font-poppins">
-                    <HeroSection />
-                    {/*End header*/}
-                    {/* Explore*/}
-                    <div data-aos="fade-up">
-                        <HeroCarousel />
-                    </div>
-                    {/*Explore.jsx */}
-                    {/*Destination Popular*/}
-                    <div data-aos="fade-right">
-                    <PopularDestination />
-                    </div>
-                    {/*End Destination Popular*/}
-                    {/* WhatsNExt */}
-                    <WhatsNext />
-                    {/* End Whats */}
-                    {/*Introduce AI*/}
-                    <IntroAi />
-                    {/*End Introduce*/}
-                    {/* Corrected scale value */}
-                    {/* Get Tips from Travellers */}
-                    <GetTips />
-                    {/* END Get Tips from Travellers */}
-                    {/* Corrected scale value */}
-                    {/* Review dan Testimonial */}
-                    <Review />
-                    {/* END Review dan Testimonial */}
-                </div>
-            </div>
-        </>
+        <div className="bg-surface min-h-screen">
+            {/* Hero */}
+            <section className="pt-4 pb-0 sm:pt-6">
+                <HeroSection />
+            </section>
+
+            {/* Lifestyle / Explore */}
+            <HeroCarousel />
+
+            {/* Popular Destinations */}
+            <PopularDestination />
+
+            {/* What's Next / Recommendations */}
+            <WhatsNext />
+
+            {/* AI Feature */}
+            <IntroAi />
+
+            {/* Travel Tips */}
+            <GetTips />
+
+            {/* Reviews */}
+            <Review />
+        </div>
     );
 };
 

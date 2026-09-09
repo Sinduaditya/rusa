@@ -1,4 +1,3 @@
-import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.jsx";
 import Home from "./pages/Home.jsx";
@@ -8,12 +7,11 @@ import Stories from "./pages/Stories.jsx";
 import Login from "./pages/Login.jsx";
 import DetailStories from "./components/Stories/DetailStories.jsx";
 import About from "./pages/About.jsx";
-import AiLayout from "./layouts/AiLayout.jsx";
-import IntroAi from "./components/Home/IntroAi.jsx";
 import AuthLayout from "./layouts/AuthLayout.jsx";
 import PageNotFound from "./pages/NotFound.jsx";
 import SignUp from "./pages/signup.jsx";
 import SignupLayout from "./layouts/SignupLayout.jsx";
+import AiLayout from "./layouts/AiLayout.jsx";
 
 function App() {
     const router = createBrowserRouter([
@@ -74,6 +72,11 @@ function App() {
                     element: <SignUp />,
                 },
             ],
+        },
+        // Route for HaloRek AI
+        {
+            path: "/dolanrek-ai",
+            element: <AiLayout />,
         },
         // Route for Page Not Found
         {

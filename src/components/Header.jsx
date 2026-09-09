@@ -1,211 +1,213 @@
 import { Link, useLocation } from "react-router-dom";
 import LogoDr from "../assets/header/dolanrek.svg";
 import { clsx } from "clsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const navLinks = [
+    { to: "/", label: "Home", match: "" },
+    { to: "/explore", label: "Explore", match: "explore" },
+    { to: "/stories", label: "Stories", match: "stories" },
+    { to: "/about", label: "About", match: "about" },
+];
 
 const Header = () => {
     const location = useLocation();
     const { pathname } = location;
     const splitLocation = pathname.split("/");
-    const [isMenuOpen, setIsMenuOpen] = useState(false); // State variable to control menu visibility
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isMenuOpen]);
 
     return (
         <>
-            <header className="bg-bluelight">
-                <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-                    <div className="flex h-16 items-center font-medium justify-between">
-                        <div className="flex gap-2">
-                            <img src={LogoDr} className="h-10 w-10" alt="" />
-                            <Link
-                                href={`/`}
-                                className="font-bold text-3xl mt-2"
-                            >
+            <header
+                className={clsx(
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+                    scrolled
+                        ? "glass-strong shadow-soft py-3"
+                        : "bg-transparent py-4"
+                )}
+            >
+                <div className="container-app">
+                    <div className="flex items-center justify-between">
+                        {/* Logo */}
+                        <Link
+                            to="/"
+                            className="flex items-center gap-2.5 focus-ring group"
+                        >
+                            <img
+                                src={LogoDr}
+                                className="h-9 w-9 transition-transform group-hover:scale-105"
+                                alt="DolanRek Logo"
+                            />
+                            <span className="font-display font-bold text-xl text-midnight">
                                 Dolan<span className="text-primary">Rek.</span>
-                            </Link>
-                        </div>
+                            </span>
+                        </Link>
 
-                        <div className="hidden md:block">
-                            <nav aria-label="Global">
-                                <ul className="flex items-center gap-6 text-sm">
-                                    <li>
-                                        <Link
-                                            to="/"
-                                            className={clsx(
-                                                "nav-link ",
-                                                splitLocation[1] === ""
-                                                    ? "font-medium text-primary"
-                                                    : ""
-                                            )}
-                                        >
-                                            Home
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/explore"
-                                            className={clsx(
-                                                "nav-link ",
-                                                splitLocation[1] === "explore"
-                                                    ? "font-medium text-primary"
-                                                    : ""
-                                            )}
-                                        >
-                                            Explore
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/stories"
-                                            className={clsx(
-                                                "nav-link ",
-                                                splitLocation[1] === "stories"
-                                                    ? "font-medium text-primary"
-                                                    : ""
-                                            )}
-                                        >
-                                            Stories
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to="/about"
-                                            className={clsx(
-                                                "nav-link ",
-                                                splitLocation[1] === "about"
-                                                    ? "font-medium text-primary"
-                                                    : ""
-                                            )}
-                                        >
-                                            About
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-
-                        <div className="flex items-center gap-4">
-                            <div className="flex gap-2 lg:gap-4">
+                        {/* Desktop Nav */}
+                        <nav
+                            className="hidden md:flex items-center gap-1"
+                            aria-label="Global"
+                        >
+                            {navLinks.map((link) => (
                                 <Link
-                                    to="/login"
-                                    className="hidden md:flex hover:font-semibold rounded-3xl py-2 px-4 bg-bluelight  text-black"
+                                    key={link.to}
+                                    to={link.to}
+                                    aria-current={
+                                        splitLocation[1] === link.match
+                                            ? "page"
+                                            : undefined
+                                    }
+                                    className={clsx(
+                                        "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 focus-ring",
+                                        splitLocation[1] === link.match
+                                            ? "text-primary bg-primary/10"
+                                            : "text-midnight/70 hover:text-midnight hover:bg-midnight/5"
+                                    )}
                                 >
-                                    Login
+                                    {link.label}
                                 </Link>
+                            ))}
+                        </nav>
 
-                                <div className="flex ">
-                                    <Link
-                                        to={"/signup"}
-                                        className="hidden md:flex bg-primary rounded-3xl py-2 px-4 text-white"
-                                    >
-                                        Sign up
-                                    </Link>
-                                </div>
-                            </div>
-
-                            <div className="block md:hidden">
-                                <button
-                                    className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-                                    onClick={toggleMenu} // Toggle menu visibility on button click
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-5 w-5"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M4 6h16M4 12h16M4 18h16"
-                                        />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            {/* Hamburger menu */}
-            {isMenuOpen && (
-                <div className="md:hidden bg-bluelight w-full py-4">
-                    <ul className="flex flex-col items-center gap-4 text-sm">
-                        <li>
-                            <Link
-                                to="/"
-                                className={clsx(
-                                    "nav-link ",
-                                    splitLocation[1] === ""
-                                        ? "font-semibold text-[#304862]"
-                                        : ""
-                                )}
-                            >
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/explore"
-                                className={clsx(
-                                    "nav-link ",
-                                    splitLocation[1] === "explore"
-                                        ? "font-semibold text-[#304862]"
-                                        : ""
-                                )}
-                            >
-                                Explore
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/stories"
-                                className={clsx(
-                                    "nav-link ",
-                                    splitLocation[1] === "stories"
-                                        ? "font-semibold text-[#304862]"
-                                        : ""
-                                )}
-                            >
-                                Stories
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/about"
-                                className={clsx(
-                                    "nav-link ",
-                                    splitLocation[1] === "about"
-                                        ? "font-semibold text-[#304862]"
-                                        : ""
-                                )}
-                            >
-                                About
-                            </Link>
-                        </li>
-                        <li>
+                        {/* Desktop CTA */}
+                        <div className="hidden md:flex items-center gap-3">
                             <Link
                                 to="/login"
-                                className="flex md:hidden hover:font-semibold rounded-3xl p-2 pl-4 pr-4 bg-bluelight  text-black"
+                                className="px-5 py-2 rounded-full text-sm font-medium text-midnight/80 hover:text-midnight hover:bg-midnight/5 transition-all focus-ring"
                             >
                                 Login
                             </Link>
-                        </li>
-                        <li>
                             <Link
-                                to={"/signup"}
-                                className="flex md:hidden bg-primary rounded-3xl p-2 pl-4 pr-4 text-white"
+                                to="/signup"
+                                className="px-5 py-2 rounded-full text-sm font-semibold text-white bg-primary hover:bg-primary-600 shadow-sm hover:shadow-md transition-all focus-ring"
                             >
                                 Sign up
                             </Link>
-                        </li>
-                    </ul>
+                        </div>
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            className="md:hidden p-2 rounded-xl text-midnight hover:bg-midnight/5 transition-colors focus-ring"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-expanded={isMenuOpen}
+                            aria-controls="mobile-menu"
+                            aria-label={
+                                isMenuOpen ? "Close menu" : "Open menu"
+                            }
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-6 w-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                            >
+                                {isMenuOpen ? (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                ) : (
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M4 6h16M4 12h16M4 18h16"
+                                    />
+                                )}
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            )}
+            </header>
+
+            {/* Mobile Menu Overlay */}
+            <div
+                className={clsx(
+                    "fixed inset-0 z-40 md:hidden transition-all duration-300",
+                    isMenuOpen
+                        ? "opacity-100 pointer-events-auto"
+                        : "opacity-0 pointer-events-none"
+                )}
+            >
+                {/* Backdrop */}
+                <div
+                    className="absolute inset-0 bg-midnight/20 backdrop-blur-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                />
+
+                {/* Menu Panel */}
+                <div
+                    className={clsx(
+                        "absolute top-0 right-0 h-full w-[280px] bg-white shadow-elevated p-6 pt-20 transition-transform duration-300",
+                        isMenuOpen ? "translate-x-0" : "translate-x-full"
+                    )}
+                >
+                    <nav className="flex flex-col gap-1" aria-label="Mobile">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.to}
+                                to={link.to}
+                                onClick={() => setIsMenuOpen(false)}
+                                aria-current={
+                                    splitLocation[1] === link.match
+                                        ? "page"
+                                        : undefined
+                                }
+                                className={clsx(
+                                    "px-4 py-3 rounded-xl text-base font-medium transition-all focus-ring",
+                                    splitLocation[1] === link.match
+                                        ? "text-primary bg-primary/10"
+                                        : "text-midnight/70 hover:text-midnight hover:bg-surface"
+                                )}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </nav>
+
+                    <div className="mt-8 flex flex-col gap-3">
+                        <Link
+                            to="/login"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="px-4 py-3 rounded-xl text-center text-sm font-medium text-midnight border border-midnight/10 hover:bg-surface transition-all focus-ring"
+                        >
+                            Login
+                        </Link>
+                        <Link
+                            to="/signup"
+                            onClick={() => setIsMenuOpen(false)}
+                            className="px-4 py-3 rounded-xl text-center text-sm font-semibold text-white bg-primary hover:bg-primary-600 transition-all focus-ring"
+                        >
+                            Sign up
+                        </Link>
+                    </div>
+                </div>
+            </div>
+
+            {/* Spacer for fixed header */}
+            <div className="h-16 md:h-18" />
         </>
     );
 };

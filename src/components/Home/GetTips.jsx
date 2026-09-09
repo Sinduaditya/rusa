@@ -3,58 +3,76 @@ import { Link } from "react-router-dom";
 
 function GetTips() {
     return (
-        <>
-            <div className="relative z-10">
-                {/* Bagian Tips */}
-                <div className="justify-center grid gap-6 md:flex font-poppins max-w-screen-lg mx-auto my-12 px-12 py-6 bg-glass bg-opacity-70 rounded-[64px] border-2 border-white border-opacity-50 backdrop-blur-4xl md:justify-center md:gap-36 md:content-center">
-                    {/* bagian Text dan CTA */}
-                    <div className=" grid content-center">
-                        <div className="text-blue-950 grid gap-8 w-72 my-auto">
-                            <div className="grid gap-6">
-                                <h1 className="text-3xl font-medium">
-                                    Dapatkan Tips Wisata dari{" "}
-                                    <span className="font-bold  italic">
-                                        Para Travelers
-                                    </span>
-                                </h1>
-                                <div className=" px-6">
-                                    <ul className="list-disc grid gap-2">
-                                        <li>
-                                            <p className="text-sm">
-                                                Tips berwisata
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <p className="text-sm">
-                                                Spot foto terbaik di Jawa Timur
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <Link
-                                to={"/stories/"}
-                                className="bg-primary py-2 hover:bg-midnight text-white w-fit px-8 rounded-full"
-                            >
-                                Read Stories
-                            </Link>
-                        </div>
+        <section className="py-12 sm:py-16 lg:py-20">
+            <div className="container-app">
+                {/* Section Header */}
+                <div className="flex items-end justify-between mb-8 sm:mb-10">
+                    <div>
+                        <p
+                            className="text-primary font-semibold text-sm tracking-wide uppercase mb-2"
+                            data-aos="fade-up"
+                        >
+                            Rekomendasi
+                        </p>
+                        <h2
+                            className="font-display text-2xl sm:text-3xl font-extrabold text-midnight tracking-tight"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            Mungkin Kamu{" "}
+                            <span className="text-primary italic">Suka</span>
+                        </h2>
                     </div>
-                    {/* bagian Text dan CTA */}
-                    {/* Bagian Item  of Tips*/}
-                    <div data-aos="fade-left">
-                        <GetTipsCard />
-                    </div>
-                    {/* END Bagian Item  of Tips*/}
+                    <Link
+                        to="/stories"
+                        className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-600 transition-colors focus-ring"
+                    >
+                        Lihat Semua
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </Link>
                 </div>
-                {/* END OF Bagian Tips */}
 
-                {/* blobs */}
-                <div className="w-56 h-56 sm:w-80 sm:h-80 -right-[10px] -top-[50px] bg-gradient-to-tl from-blob to-skyblue z-[-1] rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
-                <div className="w-36 h-36 sm:w-72 sm:h-72 -left-[20px] sm:-right-[100px] -bottom-[90px] lg:-bottom-[170px] bg-gradient-to-tl from-orangeBlob to-yellowBlob z-[-1] rounded-full blur-lg absolute mix-blend-multiply  animate-blob animation-delay-100" />
-                {/* blobs */}
+                {/* Carousel */}
+                <GetTipsCard />
+
+                {/* Mobile CTA */}
+                <div className="mt-6 sm:hidden">
+                    <Link
+                        to="/stories"
+                        className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-primary/20 text-primary font-medium text-sm hover:bg-primary/5 transition-colors focus-ring"
+                    >
+                        Lihat Semua Cerita
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M9 5l7 7-7 7"
+                            />
+                        </svg>
+                    </Link>
+                </div>
             </div>
-        </>
+        </section>
     );
 }
 

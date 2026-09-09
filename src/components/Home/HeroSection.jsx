@@ -3,68 +3,104 @@ import Loc from "../../assets/location.svg";
 import Nature from "../../assets/naturev2.svg";
 import Landmark from "../../assets/landmark.svg";
 import Culinary from "../../assets/culinary.svg";
-import { Link } from "react-router-dom";
+
+const categories = [
+    { icon: Nature, label: "Nature", desc: "Destinasi Wisata" },
+    { icon: Landmark, label: "Landmark", desc: "Destinasi Kota" },
+    { icon: Culinary, label: "Culinary", desc: "Destinasi Kuliner" },
+];
 
 function HeroSection() {
     return (
-        <>
-            {/*[1150px]*/}
-            <div
-                className="lg:h-[500px] relative bg-white bg-cover bg-center mx-auto rounded-2xl h-screen"
-                style={{ backgroundImage: `url(${Hero})` }}
-            >
-                <div className="text-center w-full h-full bg-gradient-to-b from-midnight/10 to-[#000000]/80 rounded-2xl flex justify-center items-center">
-                    <div className="max-w-md">
-                        <div className="lg:absolute -my-10 md:relative lg:bottom-[160px] text-center text-white items-center sm:bottom-24 sm:left-14">
-                            <div className="flex justify-start">
-                                <img src={Loc} className="w-4 mr-3" alt="" />
-                                <p className="font-medium">
-                                    Gunung Kawah Ijen, Jawa Timur
-                                </p>
-                            </div>
-                            <h1 className="text-center text-5xl font-bold sm:text-white sm:text-5xl md:text-7xl">
-                                Kawah Ijen
-                            </h1>
+        <section className="relative">
+            {/* Hero Image */}
+            <div className="relative h-[500px] sm:h-[550px] lg:h-[600px] overflow-hidden">
+                <img
+                    src={Hero}
+                    alt="Kawah Ijen, Jawa Timur"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-14">
+                    <div className="max-w-2xl">
+                        <div
+                            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md mb-4"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            <img src={Loc} className="w-3.5 h-3.5" alt="" />
+                            <span className="text-white/90 text-xs font-medium tracking-wide">
+                                Gunung Kawah Ijen, Jawa Timur
+                            </span>
                         </div>
+                        <h1
+                            className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            Jelajahi Pesona
+                            <br />
+                            <span className="text-primary-400">Jawa Timur</span>
+                        </h1>
+                        <p
+                            className="mt-4 text-white/80 text-sm sm:text-base max-w-md leading-relaxed"
+                            data-aos="fade-up"
+                            data-aos-delay="300"
+                        >
+                            Temukan destinasi wisata terbaik, kuliner khas, dan
+                            pengalaman tak terlupakan di Jawa Timur.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div className="hidden md:block bg-white rounded-lg  lg:mx-36 p-4 relative -mt-14 justify-center shadow-xl">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="col-span-1">
-                        <h3 className="font-bold text-xl pl-7">
-                            Feel the <br /> Local Experience
-                        </h3>
-                    </div>
-                    <div className="flex col-span-1 ml-8 sm:col-span-2 md:col-span-1">
-                        <img src={Nature} className="w-12" alt="" />
-                        <div className="pt-2 pl-2">
-                            <h1 className="font-semibold">Nature</h1>
-                            <p className="text-sm font-cabin">
-                                Destinasi Wisata
-                            </p>
+            {/* Category Bar */}
+            <div
+                className="relative -mt-8 mx-4 sm:mx-6 lg:mx-8 z-10"
+                data-aos="fade-up"
+                data-aos-delay="400"
+            >
+                <div className="glass-strong rounded-2xl shadow-elevated p-4 sm:p-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                        {/* Title */}
+                        <div className="flex items-center">
+                            <h3 className="font-display font-bold text-base sm:text-lg text-midnight leading-snug">
+                                Feel the
+                                <br />
+                                Local Experience
+                            </h3>
                         </div>
-                    </div>
-                    <div className="flex col-span-1 ml-8 sm:col-span-2 md:col-span-1">
-                        <img src={Landmark} className="w-12" alt="" />
-                        <div className="pt-2 pl-2">
-                            <h1 className="font-semibold">Landmark</h1>
-                            <p className="text-sm font-cabin">Destinasi Kota</p>
-                        </div>
-                    </div>
-                    <div className="flex col-span-1 ml- sm:col-span-2 md:col-span-1">
-                        <img src={Culinary} className="w-12" alt="" />
-                        <div className="pt-1 pl-2">
-                            <h1 className="font-semibold">Culinary</h1>
-                            <p className="text-sm font-cabin">
-                                Destinasi Kuliner
-                            </p>
-                        </div>
+
+                        {/* Categories */}
+                        {categories.map((cat) => (
+                            <div
+                                key={cat.label}
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-surface transition-colors cursor-pointer group"
+                            >
+                                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-colors">
+                                    <img
+                                        src={cat.icon}
+                                        className="w-6 h-6"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <p className="font-semibold text-sm text-midnight">
+                                        {cat.label}
+                                    </p>
+                                    <p className="text-xs text-secondary">
+                                        {cat.desc}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     );
 }
 
